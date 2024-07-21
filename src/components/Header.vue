@@ -102,13 +102,17 @@ const isMenuOpen = ref(false);
 	}
 	&__list {
 		flex-direction: column;
-		gap: 1.8rem;
 		@include list;
+		gap: 1.8rem;
 	}
 	&__item {
 		font-size: 17px;
 		font-weight: 500;
 		@include item;
+		a {
+			display: block;
+			width: 100%;
+		}
 	}
 
 	&__button {
