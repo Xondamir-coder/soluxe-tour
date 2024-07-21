@@ -101,14 +101,14 @@ const isMenuOpen = ref(false);
 		transform: translateX(150%);
 	}
 	&__list {
-		@include list;
 		flex-direction: column;
 		gap: 1.8rem;
+		@include list;
 	}
 	&__item {
-		@include item;
 		font-size: 17px;
 		font-weight: 500;
+		@include item;
 	}
 
 	&__button {
