@@ -11,13 +11,13 @@
 				<RouterLink to="/services">Services</RouterLink>
 			</li>
 			<li class="header__item">
-				<RouterLink to="/oman">Oman</RouterLink>
+				<RouterLink to="/uzbekistan">Uzbekistan</RouterLink>
 			</li>
 			<li class="header__item">
 				<RouterLink to="/mice">MICE</RouterLink>
 			</li>
 		</ul>
-		<button class="header__button button-secondary">Get in touch</button>
+		<button class="header__button button-secondary">Book a travel</button>
 		<div class="menu__button" @click="isMenuOpen = true">
 			<span></span>
 			<span></span>
@@ -35,7 +35,7 @@
 					<RouterLink to="/services">Services</RouterLink>
 				</li>
 				<li class="menu__item">
-					<RouterLink to="/oman">Oman</RouterLink>
+					<RouterLink to="/uzbekistan">Uzbekistan</RouterLink>
 				</li>
 				<li class="menu__item">
 					<RouterLink to="/mice">MICE</RouterLink>

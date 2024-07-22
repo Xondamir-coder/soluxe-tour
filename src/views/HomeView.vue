@@ -13,7 +13,6 @@
 					<img class="hero__image" src="@/assets/hero-image-8.webp" alt="hero img" />
 					<img class="hero__image" src="@/assets/hero-image-9.webp" alt="hero img" />
 				</div>
-				<div class="hero__overlay" :style="heroStyle"></div>
 				<h1 class="hero__title">
 					<span class="hero__letter">S</span>
 					<span class="hero__letter">h</span>
@@ -260,13 +259,47 @@
 			<img src="@/assets/img-8.webp" alt="banner" />
 			<img src="@/assets/img-9.webp" alt="banner" />
 		</section>
+		<section class="experts">
+			<div class="experts__head">
+				<p class="semi-bold spacing-point-4px">MICE</p>
+				<h1 class="heading-big">Experts in Corporate & M.I.C.E. travel</h1>
+				<p class="text-size-medium">
+					We make business travel easy, stress free and cost efficient while personalising
+					every aspect to meet your needs. We can help you plan and execute truly
+					memorable events for your business. We are committed to providing your team a
+					safe and delightful experience.
+				</p>
+			</div>
+			<div class="experts__container">
+				<div class="experts__box" v-for="content in expertsContent" :key="content.title">
+					<img :src="content.img" alt="banner" />
+					<h5 class="heading-5">{{ content.title }}</h5>
+					<p>{{ content.text }}</p>
+				</div>
+			</div>
+			<div class="experts__buttons">
+				<button class="button-primary">Make a MICE enquiry</button>
+				<button class="expert__button">
+					<span>Learn more</span>
+					<svg
+						width="16"
+						height="16"
+						viewBox="0 0 16 16"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg">
+						<path d="M6 3L11 8L6 13" stroke="CurrentColor" stroke-width="1.5"></path>
+					</svg>
+				</button>
+			</div>
+		</section>
 	</main>
 </template>
 
 <script setup>
 import gsap from 'gsap';
+import Lenis from 'lenis';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { computed, onMounted } from 'vue';
+import { onMounted, ref } from 'vue';
 gsap.registerPlugin(ScrollTrigger);
 import aboutImg1 from '@/assets/about-image-1.webp';
 import aboutImg2 from '@/assets/about-image-2.webp';
@@ -276,7 +309,10 @@ import baby from '@/assets/icons/baby.svg';
 import love from '@/assets/icons/love.svg';
 import mountain from '@/assets/icons/mountain.svg';
 import work from '@/assets/icons/work.svg';
-import Lenis from 'lenis';
+import partnersImg1 from '@/assets/partners-1.webp';
+import partnersImg2 from '@/assets/partners-2.webp';
+import partnersImg3 from '@/assets/partners-3.webp';
+import partnersImg4 from '@/assets/partners-4.webp';
 
 const aboutContent = [
 	{
@@ -326,10 +362,28 @@ const everyoneContent = [
 		text: 'Oman is a country with a rich history and culture. There are many historical sites to visit, including forts, mosques, and museums. The country also has a vibrant arts and culture scene.'
 	}
 ];
-
-const heroStyle = computed(() => ({
-	visibility: window.scrollY > window.innerHeight ? 'hidden' : 'visible'
-}));
+const expertsContent = [
+	{
+		img: partnersImg1,
+		title: 'Meetings',
+		text: 'We follow your guidelines and requirements to create the most meaningful meeting spaces enabling you to express the most innovative ideas.'
+	},
+	{
+		img: partnersImg2,
+		title: 'Incentives',
+		text: "We'll help you give your employees the incentive travel they deserve by creating the most memorable, engaging and unique experiences in Oman."
+	},
+	{
+		img: partnersImg3,
+		title: 'Conferences',
+		text: "Through our expert planners, strong networks and customised packages, we'll help take your conference events to the next level."
+	},
+	{
+		img: partnersImg4,
+		title: 'Events',
+		text: 'From half day to weeks long, we can help create something unique and unforgettable for your next corporate event.'
+	}
+];
 
 onMounted(() => {
 	const heroScrollTrigger = {
@@ -343,16 +397,6 @@ onMounted(() => {
 	gsap.to('.hero__title', {
 		opacity: 0,
 		scrollTrigger: heroScrollTrigger
-	});
-	gsap.to('.hero__overlay', {
-		opacity: 0,
-		scrollTrigger: heroScrollTrigger,
-		onUpdate: () => {
-			document.querySelector('.hero__overlay').classList.remove('hidden');
-		},
-		onComplete: () => {
-			document.querySelector('.hero__overlay').classList.add('hidden');
-		}
 	});
 	gsap.to('.hero__images', {
 		scale: 1,
@@ -412,6 +456,69 @@ gsap.ticker.lagSmoothing(0);
 </script>
 
 <style lang="scss" scoped>
+.experts {
+	background: var(--color-secondary);
+	color: var(--color-primary);
+	display: flex;
+	flex-direction: column;
+	gap: 10rem;
+	@media only screen and (max-width: 768px) {
+		gap: 6rem;
+	}
+	&__buttons {
+		display: flex;
+		gap: 2rem;
+		@media only screen and (max-width: 500px) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		button {
+			color: #fff;
+			border-color: #fff;
+			&:last-child {
+				border-color: transparent;
+				display: flex;
+				align-items: center;
+				gap: 1rem;
+				svg {
+					transition: transform 300ms;
+				}
+			}
+			&:first-child {
+				&:hover {
+					background-color: #fff;
+					color: var(--color-secondary);
+					& svg {
+						transform: translateX(5px);
+					}
+				}
+			}
+		}
+	}
+	&__head {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		max-width: 768px;
+	}
+	&__container {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: stretch;
+		gap: 4rem;
+	}
+	&__box {
+		min-width: 25rem;
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		img {
+			height: auto;
+			border-radius: 6px;
+		}
+	}
+}
 .images {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -456,8 +563,14 @@ gsap.ticker.lagSmoothing(0);
 	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 	column-gap: 8rem;
 	row-gap: 6rem;
+	overflow: hidden;
 	@media only screen and (max-width: 768px) {
 		row-gap: 3rem;
+	}
+	h1 {
+		@media only screen and (max-width: 415px) {
+			max-width: 30rem;
+		}
 	}
 	&__content {
 		display: grid;
@@ -476,6 +589,9 @@ gsap.ticker.lagSmoothing(0);
 				'culture culture';
 			row-gap: 3rem;
 		}
+		@media only screen and (max-width: 400px) {
+			width: 80%;
+		}
 	}
 	p.text-size-medium {
 		grid-area: head;
@@ -487,6 +603,11 @@ gsap.ticker.lagSmoothing(0);
 			'icon title'
 			'. text';
 		column-gap: 2rem;
+		@media only screen and (max-width: 400px) {
+			grid-template-areas:
+				'icon title'
+				'text text';
+		}
 		img {
 			width: 3.2rem;
 			height: 3.2rem;
@@ -815,16 +936,6 @@ gsap.ticker.lagSmoothing(0);
 		top: 0;
 		overflow: hidden;
 	}
-	&__overlay {
-		position: fixed;
-		inset: 0;
-		width: 100%;
-		height: 100%;
-		background-color: #0000006f;
-		&.hidden {
-			visibility: hidden !important;
-		}
-	}
 	&__images {
 		height: 100%;
 		display: grid;
@@ -862,7 +973,7 @@ gsap.ticker.lagSmoothing(0);
 }
 section {
 	&:not(.hero) {
-		padding: 7rem 10%;
+		padding: 7rem 8%;
 		@media only screen and (min-width: 1920px) {
 			padding: 7rem 15%;
 		}
