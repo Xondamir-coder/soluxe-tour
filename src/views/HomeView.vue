@@ -304,6 +304,44 @@
 			<div class="partners__content">
 				<h1 class="partners__title">Let us show you the best of Uzbekistan</h1>
 				<button class="partners__button button-secondary">Get in touch</button>
+				<ul class="partners__list">
+					<li class="partners__item">
+						<img src="@/assets/partners-1.webp" alt="partner" />
+					</li>
+					<li class="partners__item">
+						<img src="@/assets/partners-2.webp" alt="partner" />
+					</li>
+					<li class="partners__item">
+						<img src="@/assets/partners-3.png" alt="partner" />
+					</li>
+					<li class="partners__item">
+						<img src="@/assets/partners-4.png" alt="partner" />
+					</li>
+					<li class="partners__item">
+						<img src="@/assets/partners-5.png" alt="partner" />
+					</li>
+					<li class="partners__item">
+						<img src="@/assets/partners-6.webp" alt="partner" />
+					</li>
+					<li class="partners__item">
+						<img src="@/assets/partners-7.webp" alt="partner" />
+					</li>
+					<li class="partners__item">
+						<img src="@/assets/partners-8.png" alt="partner" />
+					</li>
+					<li class="partners__item">
+						<img src="@/assets/partners-9.webp" alt="partner" />
+					</li>
+					<li class="partners__item">
+						<img src="@/assets/partners-10.png" alt="partner" />
+					</li>
+					<li class="partners__item">
+						<img src="@/assets/partners-11.png" alt="partner" />
+					</li>
+					<li class="partners__item">
+						<img src="@/assets/partners-12.png" alt="partner" />
+					</li>
+				</ul>
 			</div>
 		</section>
 	</main>
@@ -323,10 +361,10 @@ import baby from '@/assets/icons/baby.svg';
 import love from '@/assets/icons/love.svg';
 import mountain from '@/assets/icons/mountain.svg';
 import work from '@/assets/icons/work.svg';
-import partnersImg1 from '@/assets/partners-1.webp';
-import partnersImg2 from '@/assets/partners-2.webp';
-import partnersImg3 from '@/assets/partners-3.webp';
-import partnersImg4 from '@/assets/partners-4.webp';
+import expertsImg1 from '@/assets/experts-1.webp';
+import expertsImg2 from '@/assets/experts-2.webp';
+import expertsImg3 from '@/assets/experts-3.webp';
+import expertsImg4 from '@/assets/experts-4.webp';
 
 const aboutContent = [
 	{
@@ -378,22 +416,22 @@ const everyoneContent = [
 ];
 const expertsContent = [
 	{
-		img: partnersImg1,
+		img: expertsImg1,
 		title: 'Meetings',
 		text: 'We follow your guidelines and requirements to create the most meaningful meeting spaces enabling you to express the most innovative ideas.'
 	},
 	{
-		img: partnersImg2,
+		img: expertsImg2,
 		title: 'Incentives',
 		text: "We'll help you give your employees the incentive travel they deserve by creating the most memorable, engaging and unique experiences in Uzbekistan."
 	},
 	{
-		img: partnersImg3,
+		img: expertsImg3,
 		title: 'Conferences',
 		text: "Through our expert planners, strong networks and customised packages, we'll help take your conference events to the next level."
 	},
 	{
-		img: partnersImg4,
+		img: expertsImg4,
 		title: 'Events',
 		text: 'From half day to weeks long, we can help create something unique and unforgettable for your next corporate event.'
 	}
@@ -475,6 +513,22 @@ gsap.ticker.lagSmoothing(0);
 
 <style lang="scss" scoped>
 .partners {
+	&__list {
+		align-self: stretch;
+		padding-top: 8px;
+		padding-bottom: 8px;
+		display: flex;
+		justify-content: space-evenly;
+		flex-wrap: wrap;
+		list-style: none;
+	}
+	&__item {
+		width: 8rem;
+		height: 8rem;
+		img {
+			object-fit: contain;
+		}
+	}
 	&__content {
 		padding-top: 7rem;
 		padding-bottom: 7rem;
