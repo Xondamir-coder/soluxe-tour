@@ -13,6 +13,7 @@
 					<img class="hero__image" src="@/assets/hero-image-8.webp" alt="hero img" />
 					<img class="hero__image" src="@/assets/hero-image-9.webp" alt="hero img" />
 				</div>
+				<div class="hero__overlay"></div>
 				<h1 class="hero__title">
 					<span class="hero__letter">S</span>
 					<span class="hero__letter">h</span>
@@ -400,6 +401,10 @@ onMounted(() => {
 	});
 	gsap.to('.hero__images', {
 		scale: 1,
+		scrollTrigger: heroScrollTrigger
+	});
+	gsap.to('.hero__overlay', {
+		backgroundColor: 'transparent',
 		scrollTrigger: heroScrollTrigger
 	});
 	gsap.to('.hero__letter', { opacity: 1, duration: 1, stagger: 0.05 });
@@ -915,8 +920,7 @@ gsap.ticker.lagSmoothing(0);
 	@media only screen and (max-width: 768px) {
 		flex-direction: column;
 	}
-	&__title {
-	}
+
 	&__text {
 		text-align: left;
 		letter-spacing: 0.2px;
@@ -925,6 +929,19 @@ gsap.ticker.lagSmoothing(0);
 }
 .hero {
 	height: 300vh;
+	&__overlay {
+		width: 100%;
+		height: 100%;
+		background-color: #00000090;
+		position: absolute;
+		inset: 0;
+		transition: opacity 300ms, visibility 300ms;
+		cursor: pointer;
+		&.hidden {
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
 	&__letter {
 		opacity: 0;
 	}
