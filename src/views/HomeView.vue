@@ -249,6 +249,17 @@
 				</div>
 			</div>
 		</section>
+		<section class="images">
+			<img src="@/assets/img-1.webp" alt="banner" />
+			<img src="@/assets/img-2.webp" alt="banner" />
+			<img src="@/assets/img-3.webp" alt="banner" />
+			<img src="@/assets/img-4.webp" alt="banner" />
+			<img src="@/assets/img-5.webp" alt="banner" />
+			<img src="@/assets/img-6.webp" alt="banner" />
+			<img src="@/assets/img-7.webp" alt="banner" />
+			<img src="@/assets/img-8.webp" alt="banner" />
+			<img src="@/assets/img-9.webp" alt="banner" />
+		</section>
 	</main>
 </template>
 
@@ -265,6 +276,7 @@ import baby from '@/assets/icons/baby.svg';
 import love from '@/assets/icons/love.svg';
 import mountain from '@/assets/icons/mountain.svg';
 import work from '@/assets/icons/work.svg';
+import Lenis from 'lenis';
 
 const aboutContent = [
 	{
@@ -316,7 +328,7 @@ const everyoneContent = [
 ];
 
 const heroStyle = computed(() => ({
-	visibility: window.scrollY > 2.5 * window.innerHeight ? 'hidden' : 'visible'
+	visibility: window.scrollY > window.innerHeight ? 'hidden' : 'visible'
 }));
 
 onMounted(() => {
@@ -377,15 +389,68 @@ onMounted(() => {
 			scrollTrigger: {
 				trigger: window.innerWidth < 1200 ? `.about__row-${index}` : `.about__box-${index}`,
 				toggleActions: 'play reverse play reverse',
-				start: 'top top',
+				start: 'top center',
 				end: 'bottom center'
 			}
 		});
 	});
 });
+
+const lenis = new Lenis();
+
+lenis.on('scroll', e => {
+	console.log(e);
+});
+
+lenis.on('scroll', ScrollTrigger.update);
+
+gsap.ticker.add(time => {
+	lenis.raf(time * 1000);
+});
+
+gsap.ticker.lagSmoothing(0);
 </script>
 
 <style lang="scss" scoped>
+.images {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 3rem;
+	row-gap: 3.2rem;
+	@media only screen and (max-width: 768px) {
+		grid-template-columns: 1fr;
+	}
+	img {
+		border-radius: 10px;
+		&:first-child {
+			grid-row: span 4;
+		}
+		&:nth-child(2) {
+			grid-row: span 5;
+		}
+		&:nth-child(3) {
+			grid-row: span 2;
+		}
+		&:nth-child(4) {
+			grid-row: span 4;
+		}
+		&:nth-child(5) {
+			grid-row: span 2;
+		}
+		&:nth-child(6) {
+			grid-row: span 2;
+		}
+		&:nth-child(7) {
+			grid-row: span 2;
+		}
+		&:nth-child(8) {
+			grid-row: span 2;
+		}
+		&:nth-child(9) {
+			grid-row: span 2;
+		}
+	}
+}
 .everyone {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
