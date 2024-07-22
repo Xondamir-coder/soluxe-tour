@@ -1,0 +1,34 @@
+.heading {
+	letter-spacing: 1.4px;
+	line-height: 1.2;
+	font-size: 4rem;
+	font-weight: 700;
+}
+.heading-big {
+	font-size: 4.8rem;
+	font-weight: 700;
+	line-height: 1.2;
+}
+@media only screen and (max-width: 991px) {
+	.heading-big {
+		font-size: 4.4rem;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.heading {
+		font-size: 3rem;
+	}
+	.heading-big {
+		font-size: 3.6rem;
+	}
+}
+.text-size-medium {
+	text-align: left;
+	letter-spacing: 0.2px;
+	font-size: 1.8rem;
+}
+.heading-6 {
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 1.4;
+}

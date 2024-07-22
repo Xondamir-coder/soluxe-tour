@@ -44,7 +44,7 @@
 			</div>
 		</section>
 		<section class="offer">
-			<h1 class="offer__title">
+			<h1 class="heading">
 				We offer travellers the most authentic experiences at the most affordable prices
 			</h1>
 			<p class="offer__text">
@@ -233,6 +233,22 @@
 				</div>
 			</div>
 		</section>
+		<section class="everyone">
+			<h1 class="heading-big">Oman has a little something for everyone</h1>
+			<div class="everyone__content">
+				<p class="text-size-medium">
+					Whether you're a thrill seeker, a family and leisure traveler, a corporate or
+					MICE group, or a culture seeker, Oman has something to offer you. From the
+					stunning mountains of Jebel Shams to the ancient city of Muscat, there's
+					something for everyone in this diverse country.
+				</p>
+				<div class="everyone__box" v-for="content in everyoneContent" :key="content.title">
+					<img :src="content.icon" alt="mountain" />
+					<h6 class="heading-6">{{ content.title }}</h6>
+					<p>{{ content.text }}</p>
+				</div>
+			</div>
+		</section>
 	</main>
 </template>
 
@@ -245,6 +261,10 @@ import aboutImg1 from '@/assets/about-image-1.webp';
 import aboutImg2 from '@/assets/about-image-2.webp';
 import aboutImg3 from '@/assets/about-image-3.webp';
 import aboutImg4 from '@/assets/about-image-4.webp';
+import baby from '@/assets/icons/baby.svg';
+import love from '@/assets/icons/love.svg';
+import mountain from '@/assets/icons/mountain.svg';
+import work from '@/assets/icons/work.svg';
 
 const aboutContent = [
 	{
@@ -272,6 +292,29 @@ const aboutContent = [
 		desc: "No request is too small or big for us. If it's important to you, it's important to us. We've catered to 1000s of requests from reservations and transfers to exquisitely tailor made tour packages for large groups. We go above and beyond for every client and any request."
 	}
 ];
+const everyoneContent = [
+	{
+		icon: mountain,
+		title: 'Thrill seekers',
+		text: 'Oman offers a variety of activities for thrill seekers, including sandboarding in the Wahiba Sands, hiking in the Jebel Akhdar mountains, and diving in the Daymaniyat Islands.'
+	},
+	{
+		icon: baby,
+		title: 'Family & leisure',
+		text: 'Oman is a great place to visit with the family. There are plenty of beaches, resorts, and waterparks to enjoy, as well as historical sites and cultural attractions.'
+	},
+	{
+		icon: work,
+		title: 'Corporate & MICE',
+		text: 'Oman is a popular destination for corporate events and MICE groups. The country offers a variety of venues, including hotels, conference centers, and gorgeous resorts.'
+	},
+	{
+		icon: love,
+		title: 'Culture explorers',
+		text: 'Oman is a country with a rich history and culture. There are many historical sites to visit, including forts, mosques, and museums. The country also has a vibrant arts and culture scene.'
+	}
+];
+
 const heroStyle = computed(() => ({
 	visibility: window.scrollY > 2.5 * window.innerHeight ? 'hidden' : 'visible'
 }));
@@ -343,6 +386,68 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
+.everyone {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	column-gap: 8rem;
+	row-gap: 6rem;
+	@media only screen and (max-width: 768px) {
+		row-gap: 3rem;
+	}
+	&__content {
+		display: grid;
+		row-gap: 5rem;
+		column-gap: 4rem;
+		grid-template-areas:
+			'head head'
+			'thrill family'
+			'mice culture';
+		@media only screen and (max-width: 768px) {
+			grid-template-areas:
+				'head head'
+				'thrill thrill'
+				'family family'
+				'mice mice'
+				'culture culture';
+			row-gap: 3rem;
+		}
+	}
+	p.text-size-medium {
+		grid-area: head;
+	}
+	&__box {
+		display: grid;
+		grid-template-columns: max-content 1fr;
+		grid-template-areas:
+			'icon title'
+			'. text';
+		column-gap: 2rem;
+		img {
+			width: 3.2rem;
+			height: 3.2rem;
+			grid-area: icon;
+		}
+		h6 {
+			grid-area: title;
+		}
+		p {
+			grid-area: text;
+		}
+
+		&:nth-child(2) {
+			grid-area: thrill;
+		}
+		&:nth-child(3) {
+			grid-area: family;
+		}
+		&:nth-child(4) {
+			grid-area: mice;
+		}
+		&:last-child {
+			grid-area: culture;
+		}
+	}
+}
 .explore {
 	display: flex;
 	flex-direction: column;
@@ -370,7 +475,6 @@ onMounted(() => {
 		gap: 1rem;
 		@media only screen and (max-width: 768px) {
 			max-width: initial;
-			text-align: left;
 		}
 		&-title {
 			font-size: 4.8rem;
@@ -626,13 +730,6 @@ onMounted(() => {
 		flex-direction: column;
 	}
 	&__title {
-		letter-spacing: 1.4px;
-		line-height: 1.2;
-		font-size: 4rem;
-		font-weight: 700;
-		@media only screen and (max-width: 768px) {
-			font-size: 3rem;
-		}
 	}
 	&__text {
 		text-align: left;
