@@ -511,8 +511,7 @@ onMounted(() => {
 					duration: 0.5,
 					scrollTrigger: {
 						trigger: section,
-						start: 'top+=100 center',
-						markers: true
+						start: 'top+=100 center'
 					}
 				}
 			);
