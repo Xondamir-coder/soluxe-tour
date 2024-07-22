@@ -23,8 +23,14 @@
 					<span class="hero__letter">n</span>
 					<span class="hero__letter">g</span> <span class="hero__letter">y</span>
 					<span class="hero__letter">o</span>
-					<span class="hero__letter">u</span> <span class="hero__letter">O</span>
-					<span class="hero__letter">m</span>
+					<span class="hero__letter">u</span> <span class="hero__letter">U</span>
+					<span class="hero__letter">z</span>
+					<span class="hero__letter">b</span>
+					<span class="hero__letter">e</span>
+					<span class="hero__letter">k</span>
+					<span class="hero__letter">i</span>
+					<span class="hero__letter">s</span>
+					<span class="hero__letter">t</span>
 					<span class="hero__letter">a</span>
 					<span class="hero__letter">n</span> <span class="hero__letter">t</span>
 					<span class="hero__letter">h</span>
@@ -32,11 +38,11 @@
 					<span class="hero__letter">o</span>
 					<span class="hero__letter">u</span>
 					<span class="hero__letter">g</span>
-					<span class="hero__letter">h</span> <span class="hero__letter">O</span>
-					<span class="hero__letter">m</span>
-					<span class="hero__letter">a</span>
-					<span class="hero__letter">n</span>
-					<span class="hero__letter">i</span> <span class="hero__letter">e</span>
+					<span class="hero__letter">h</span> <span class="hero__letter">U</span>
+					<span class="hero__letter">z</span>
+					<span class="hero__letter">b</span>
+					<span class="hero__letter">e</span>
+					<span class="hero__letter">k</span> <span class="hero__letter">e</span>
 					<span class="hero__letter">y</span>
 					<span class="hero__letter">e</span>
 					<span class="hero__letter">s</span>
@@ -51,7 +57,7 @@
 				As our business has been raised on the keynote “Devil is in the detail”, we are
 				specialized in servicing small & medium sized global tour operators in order to give
 				consideration to this statement and to provide premier experiences unparalleled in
-				Oman.
+				Uzbekistan.
 				<br />
 				<br />
 				Our quest is to provide high-quality services to our clients and to exceed their
@@ -159,7 +165,7 @@
 		<section class="explore">
 			<div class="explore__head">
 				<span class="explore__label">Tours</span>
-				<h1 class="explore__head-title">Explore the best Oman has to offer</h1>
+				<h1 class="explore__head-title">Explore the best Uzbekistan has to offer</h1>
 				<p class="explore__text">
 					Our team of experts sources eye-catching special offers; from private island
 					tours to thrilling adventure ones, our collection is simply irresistible.
@@ -169,13 +175,13 @@
 				<div class="explore__grid explore__grid--big">
 					<div class="explore__grid-content">
 						<span class="explore__label">Best selling</span>
-						<h1 class="explore__grid-title--big">Glimpse of Oman</h1>
+						<h1 class="explore__grid-title--big">Glimpse of Uzbekistan</h1>
 						<p class="explore__grid-text">
-							Our most popular package is called Best of Oman; it is a guaranteed both
-							Italian and german seat-in-coach program that takes place every week.
-							The program is carved out to include all the important and most
-							interesting sites in Oman offering the best combination of culture,
-							history and little bit of adventure
+							Our most popular package is called Best of Uzbekistan; it is a
+							guaranteed both Italian and german seat-in-coach program that takes
+							place every week. The program is carved out to include all the important
+							and most interesting sites in Uzbekistan offering the best combination
+							of culture, history and little bit of adventure
 						</p>
 					</div>
 					<img src="@/assets/grid-img-1.webp" alt="grid img" />
@@ -200,7 +206,7 @@
 						<h1 class="explore__grid-title--big">Nizwa Friday Market</h1>
 						<p class="explore__grid-text">
 							Nizwa Friday Market is one of the most attractive event for tourist
-							visiting Oman. It is an electrifying experience for the first time
+							visiting Uzbekistan. It is an electrifying experience for the first time
 							visitor as you would not see such action packed live stock trade
 							anywhere in the world. Here farmers and traders come to this one of the
 							best traditional market places in the Middle East, bringing their
@@ -216,7 +222,7 @@
 						<p class="explore__grid-text">
 							This is one of the few beaches in the world where you can see the green
 							backed turtle coming to lay eggs. Tours and observation of turtles rank
-							among the most well-liked ecotourism activities in Oman.
+							among the most well-liked ecotourism activities in Uzbekistan.
 						</p>
 					</div>
 				</div>
@@ -225,20 +231,21 @@
 						<img src="@/assets/icons/music.svg" alt="music" />
 						<h1 class="explore__grid-title--small">Royal opera house</h1>
 						<p class="explore__grid-text">
-							The Royal Opera House Muscat is the Sultanate of Oman's leading arts and
-							culture organization. The Opera House, located in Muscat, Oman, aspires
-							to be a centre of excellence in worldwide cultural engagement.
+							The Royal Opera House Muscat is the Sultanate of Uzbekistan's leading
+							arts and culture organization. The Opera House, located in Muscat,
+							Uzbekistan, aspires to be a centre of excellence in worldwide cultural
+							engagement.
 						</p>
 					</div>
 				</div>
 			</div>
 		</section>
 		<section class="everyone">
-			<h1 class="heading-big">Oman has a little something for everyone</h1>
+			<h1 class="heading-big">Uzbekistan has a little something for everyone</h1>
 			<div class="everyone__content">
 				<p class="text-size-medium">
 					Whether you're a thrill seeker, a family and leisure traveler, a corporate or
-					MICE group, or a culture seeker, Oman has something to offer you. From the
+					MICE group, or a culture seeker, Uzbekistan has something to offer you. From the
 					stunning mountains of Jebel Shams to the ancient city of Muscat, there's
 					something for everyone in this diverse country.
 				</p>
@@ -293,6 +300,12 @@
 				</button>
 			</div>
 		</section>
+		<section class="partners">
+			<div class="partners__content">
+				<h1 class="partners__title">Let us show you the best of Uzbekistan</h1>
+				<button class="partners__button button-secondary">Get in touch</button>
+			</div>
+		</section>
 	</main>
 </template>
 
@@ -320,13 +333,13 @@ const aboutContent = [
 		img: aboutImg1,
 		label: 'Experts in',
 		title: 'Destination management',
-		desc: "We are a group of passionate travellers and tourism professionals. Our profound love for and knowledge of our country inspires us to share the beauty of Oman with those who seek the unique experiences and hidden secrets of this blessed land. With our team's extensive knowledge of the destination, a dedicated account manager, 24x7 support and strong partnerships around the region, we believe working with us is a no-brainer."
+		desc: "We are a group of passionate travellers and tourism professionals. Our profound love for and knowledge of our country inspires us to share the beauty of Uzbekistan with those who seek the unique experiences and hidden secrets of this blessed land. With our team's extensive knowledge of the destination, a dedicated account manager, 24x7 support and strong partnerships around the region, we believe working with us is a no-brainer."
 	},
 	{
 		img: aboutImg2,
 		label: 'Driven to create',
 		title: 'Authentic experiences',
-		desc: 'Over decades, our team of superstars have learnt the secret behind the most memorable time in Oman. While catering to your every need we make sure the experiences remain authentic and off the beaten track'
+		desc: 'Over decades, our team of superstars have learnt the secret behind the most memorable time in Uzbekistan. While catering to your every need we make sure the experiences remain authentic and off the beaten track'
 	},
 	{
 		img: aboutImg3,
@@ -345,22 +358,22 @@ const everyoneContent = [
 	{
 		icon: mountain,
 		title: 'Thrill seekers',
-		text: 'Oman offers a variety of activities for thrill seekers, including sandboarding in the Wahiba Sands, hiking in the Jebel Akhdar mountains, and diving in the Daymaniyat Islands.'
+		text: 'Uzbekistan offers a variety of activities for thrill seekers, including sandboarding in the Wahiba Sands, hiking in the Jebel Akhdar mountains, and diving in the Daymaniyat Islands.'
 	},
 	{
 		icon: baby,
 		title: 'Family & leisure',
-		text: 'Oman is a great place to visit with the family. There are plenty of beaches, resorts, and waterparks to enjoy, as well as historical sites and cultural attractions.'
+		text: 'Uzbekistan is a great place to visit with the family. There are plenty of beaches, resorts, and waterparks to enjoy, as well as historical sites and cultural attractions.'
 	},
 	{
 		icon: work,
 		title: 'Corporate & MICE',
-		text: 'Oman is a popular destination for corporate events and MICE groups. The country offers a variety of venues, including hotels, conference centers, and gorgeous resorts.'
+		text: 'Uzbekistan is a popular destination for corporate events and MICE groups. The country offers a variety of venues, including hotels, conference centers, and gorgeous resorts.'
 	},
 	{
 		icon: love,
 		title: 'Culture explorers',
-		text: 'Oman is a country with a rich history and culture. There are many historical sites to visit, including forts, mosques, and museums. The country also has a vibrant arts and culture scene.'
+		text: 'Uzbekistan is a country with a rich history and culture. There are many historical sites to visit, including forts, mosques, and museums. The country also has a vibrant arts and culture scene.'
 	}
 ];
 const expertsContent = [
@@ -372,7 +385,7 @@ const expertsContent = [
 	{
 		img: partnersImg2,
 		title: 'Incentives',
-		text: "We'll help you give your employees the incentive travel they deserve by creating the most memorable, engaging and unique experiences in Oman."
+		text: "We'll help you give your employees the incentive travel they deserve by creating the most memorable, engaging and unique experiences in Uzbekistan."
 	},
 	{
 		img: partnersImg3,
@@ -461,6 +474,37 @@ gsap.ticker.lagSmoothing(0);
 </script>
 
 <style lang="scss" scoped>
+.partners {
+	&__content {
+		padding-top: 7rem;
+		padding-bottom: 7rem;
+		border-radius: 32px;
+		background-color: var(--color-secondary);
+		color: var(--color-primary);
+		display: flex;
+		flex-direction: column;
+		gap: 4rem;
+		align-items: center;
+		text-align: center;
+	}
+	&__title {
+		letter-spacing: 1.5px;
+		font-size: 7.2rem;
+		font-weight: 700;
+		line-height: 1.2;
+		@media screen and (max-width: 991px) {
+			font-size: 5.2rem;
+		}
+		@media only screen and (max-width: 768px) {
+			font-size: 4rem;
+		}
+	}
+	&__button {
+		background-color: var(--color-primary);
+		color: var(--color-secondary);
+		border-color: transparent;
+	}
+}
 .experts {
 	background: var(--color-secondary);
 	color: var(--color-primary);
@@ -687,22 +731,22 @@ gsap.ticker.lagSmoothing(0);
 	&__grids {
 		display: grid;
 		grid-template-areas:
-			'oman oman family family'
-			'oman oman nizwa nizwa'
+			'uzbekistan uzbekistan family family'
+			'uzbekistan uzbekistan nizwa nizwa'
 			'turtle music nizwa nizwa';
 		grid-auto-columns: 1fr;
 		// grid-auto-rows: 1fr;
 		gap: 3.2rem;
 		@media only screen and (max-width: 1000px) {
 			grid-template-areas:
-				'oman oman'
+				'uzbekistan uzbekistan'
 				'turtle music'
 				'family family'
 				'nizwa nizwa';
 		}
 		@media only screen and (max-width: 500px) {
 			grid-template-areas:
-				'oman oman'
+				'uzbekistan uzbekistan'
 				'turtle turtle'
 				'music music'
 				'family family'
@@ -775,7 +819,7 @@ gsap.ticker.lagSmoothing(0);
 			gap: 1rem;
 		}
 		&:first-child {
-			grid-area: oman;
+			grid-area: uzbekistan;
 		}
 		&:nth-child(2) {
 			grid-area: family;
@@ -790,10 +834,6 @@ gsap.ticker.lagSmoothing(0);
 			grid-area: music;
 		}
 	}
-}
-.section {
-	height: 100vh;
-	background-color: blue;
 }
 .about {
 	display: grid;
@@ -970,9 +1010,9 @@ gsap.ticker.lagSmoothing(0);
 		aspect-ratio: 3 / 1;
 	}
 	&__title {
-		max-width: 80%;
+		max-width: 95%;
 		z-index: 10;
-		font-size: 16rem;
+		font-size: 15rem;
 		line-height: 1.1;
 		letter-spacing: 1.5px;
 		font-weight: 700;

@@ -2,11 +2,13 @@
 	<div class="container">
 		<Header />
 		<RouterView />
+		<Footer />
 	</div>
 </template>
 
 <script setup>
 import Header from '@/components/Header.vue';
+import Footer from '@/components/Footer.vue';
 import Lenis from 'lenis';
 
 const lenis = new Lenis();
