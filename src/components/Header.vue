@@ -140,6 +140,9 @@ const isMenuOpen = ref(false);
 	top: 0;
 	width: 100%;
 	min-height: 7.2rem;
+	background-color: var(--color-primary);
+	z-index: 100;
+	border-bottom: 1px solid #000;
 	@media only screen and (max-width: 900px) {
 		padding: 0 3rem;
 	}
