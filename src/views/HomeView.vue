@@ -153,8 +153,86 @@
 				</div>
 			</div>
 		</section>
-		<div class="section"></div>
-		<div class="section"></div>
+		<section>
+			<img src="@/assets/big-img.webp" alt="big img" />
+		</section>
+		<section class="explore">
+			<div class="explore__head">
+				<span class="explore__label">Tours</span>
+				<h1 class="explore__head-title">Explore the best Oman has to offer</h1>
+				<p class="explore__text">
+					Our team of experts sources eye-catching special offers; from private island
+					tours to thrilling adventure ones, our collection is simply irresistible.
+				</p>
+			</div>
+			<div class="explore__grids">
+				<div class="explore__grid explore__grid--big">
+					<div class="explore__grid-content">
+						<span class="explore__label">Best selling</span>
+						<h1 class="explore__grid-title--big">Glimpse of Oman</h1>
+						<p class="explore__grid-text">
+							Our most popular package is called Best of Oman; it is a guaranteed both
+							Italian and german seat-in-coach program that takes place every week.
+							The program is carved out to include all the important and most
+							interesting sites in Oman offering the best combination of culture,
+							history and little bit of adventure
+						</p>
+					</div>
+					<img src="@/assets/grid-img-1.webp" alt="grid img" />
+				</div>
+				<div class="explore__grid explore__grid--medium">
+					<img src="@/assets/grid-img-2.webp" alt="grid img" />
+					<div class="explore__grid-content">
+						<span class="explore__label">Family favourite</span>
+						<h1 class="explore__grid-title--small">Wahiba sands</h1>
+						<p class="explore__grid-text">
+							Wahiba Sands occur to be an infinite expanse of uniform dunes. The
+							towering heaps of sand turn from pale gold at noon to a brilliant yellow
+							and then coppery orange at lower angles of the sun. An overnight stay
+							here provides a simple opportunity to feel the raw strength of the
+							desert from the comforts of opulent camps.
+						</p>
+					</div>
+				</div>
+				<div class="explore__grid explore__grid--big">
+					<div class="explore__grid-content">
+						<span class="explore__label">Most authentic experiences</span>
+						<h1 class="explore__grid-title--big">Nizwa Friday Market</h1>
+						<p class="explore__grid-text">
+							Nizwa Friday Market is one of the most attractive event for tourist
+							visiting Oman. It is an electrifying experience for the first time
+							visitor as you would not see such action packed live stock trade
+							anywhere in the world. Here farmers and traders come to this one of the
+							best traditional market places in the Middle East, bringing their
+							animals from as far away as Salalah for barter and trade.
+						</p>
+					</div>
+					<img src="@/assets/grid-img-3.webp" alt="grid img" />
+				</div>
+				<div class="explore__grid explore__grid--small">
+					<div class="explore__grid-content">
+						<img src="@/assets/icons/binocle.svg" alt="binocle" />
+						<h1 class="explore__grid-title--small">Turtle watching</h1>
+						<p class="explore__grid-text">
+							This is one of the few beaches in the world where you can see the green
+							backed turtle coming to lay eggs. Tours and observation of turtles rank
+							among the most well-liked ecotourism activities in Oman.
+						</p>
+					</div>
+				</div>
+				<div class="explore__grid explore__grid--small">
+					<div class="explore__grid-content">
+						<img src="@/assets/icons/music.svg" alt="music" />
+						<h1 class="explore__grid-title--small">Royal opera house</h1>
+						<p class="explore__grid-text">
+							The Royal Opera House Muscat is the Sultanate of Oman's leading arts and
+							culture organization. The Opera House, located in Muscat, Oman, aspires
+							to be a centre of excellence in worldwide cultural engagement.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
 	</main>
 </template>
 
@@ -265,6 +343,157 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
+.explore {
+	display: flex;
+	flex-direction: column;
+	gap: 10rem;
+
+	@media only screen and (max-width: 768px) {
+		gap: 5rem;
+	}
+	&__label {
+		font-weight: 600;
+		letter-spacing: 0.4px;
+	}
+	&__text {
+		text-align: left;
+		letter-spacing: 0.2px;
+		font-size: 1.8rem;
+		line-height: 1.5;
+	}
+	&__head {
+		margin: auto;
+		text-align: center;
+		max-width: 60rem;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		@media only screen and (max-width: 768px) {
+			max-width: initial;
+			text-align: left;
+		}
+		&-title {
+			font-size: 4.8rem;
+			font-weight: 700;
+			line-height: 1.2;
+			@media screen and (max-width: 991px) {
+				font-size: 4.4rem;
+			}
+			@media screen and (max-width: 767px) {
+				font-size: 4rem;
+			}
+			@media screen and (max-width: 479px) {
+				text-align: left;
+			}
+		}
+	}
+	&__grids {
+		display: grid;
+		grid-template-areas:
+			'oman oman family family'
+			'oman oman nizwa nizwa'
+			'turtle music nizwa nizwa';
+		grid-auto-columns: 1fr;
+		// grid-auto-rows: 1fr;
+		gap: 3.2rem;
+		@media only screen and (max-width: 1000px) {
+			grid-template-areas:
+				'oman oman'
+				'turtle music'
+				'family family'
+				'nizwa nizwa';
+		}
+		@media only screen and (max-width: 500px) {
+			grid-template-areas:
+				'oman oman'
+				'turtle turtle'
+				'music music'
+				'family family'
+				'nizwa nizwa';
+		}
+	}
+	&__grid {
+		border: 1px solid #000;
+		border-radius: 12px;
+		overflow: hidden;
+		&-title {
+			&--small {
+				line-height: 1.4;
+				font-size: 2rem;
+				letter-spacing: 1px;
+				font-weight: 700;
+			}
+			&--big {
+				font-size: 4rem;
+				letter-spacing: 0.8px;
+				line-height: 1.1;
+				font-weight: 700;
+				@media screen and (max-width: 991px) {
+					font-size: 3.6rem;
+				}
+				@media screen and (max-width: 767px) {
+					font-size: 2.8rem;
+					line-height: 1.4;
+				}
+			}
+		}
+		&--big {
+			display: flex;
+			flex-direction: column;
+			div {
+				padding: 4.8rem;
+				@media only screen and (max-width: 768px) {
+					padding: 7%;
+				}
+			}
+			img {
+				height: 100%;
+			}
+		}
+		&--medium {
+			display: flex;
+			@media only screen and (max-width: 1000px) {
+				align-items: center;
+			}
+			@media only screen and (max-width: 500px) {
+				flex-direction: column;
+			}
+			img {
+				width: 50%;
+				@media only screen and (max-width: 500px) {
+					width: 100%;
+				}
+			}
+		}
+		&--small {
+			img {
+				width: 4.8rem;
+				height: 4.8rem;
+			}
+		}
+		&-content {
+			padding: 5%;
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+		}
+		&:first-child {
+			grid-area: oman;
+		}
+		&:nth-child(2) {
+			grid-area: family;
+		}
+		&:nth-child(3) {
+			grid-area: nizwa;
+		}
+		&:nth-child(4) {
+			grid-area: turtle;
+		}
+		&:last-child {
+			grid-area: music;
+		}
+	}
+}
 .section {
 	height: 100vh;
 	background-color: blue;
@@ -273,7 +502,6 @@ onMounted(() => {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	column-gap: 8rem;
-	padding: 7rem 5%;
 	@media only screen and (max-width: 1200px) {
 		display: flex;
 		flex-direction: column;
@@ -281,9 +509,7 @@ onMounted(() => {
 	}
 	&__image {
 		opacity: 0;
-		width: 100%;
 		height: 60rem;
-		object-fit: cover;
 		position: absolute;
 		&:first-child {
 			opacity: 1;
@@ -319,9 +545,6 @@ onMounted(() => {
 		}
 
 		&-img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
 			max-height: 66.5rem;
 		}
 	}
@@ -393,7 +616,6 @@ onMounted(() => {
 }
 .offer {
 	margin: auto;
-	padding: 7rem 5%;
 	display: flex;
 	gap: 3.5rem;
 	color: #000;
@@ -454,9 +676,6 @@ onMounted(() => {
 	}
 	&__image {
 		aspect-ratio: 3 / 1;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
 	}
 	&__title {
 		max-width: 80%;
@@ -478,5 +697,21 @@ onMounted(() => {
 			font-size: 7rem;
 		}
 	}
+}
+section {
+	&:not(.hero) {
+		padding: 7rem 10%;
+		@media only screen and (min-width: 1920px) {
+			padding: 7rem 15%;
+		}
+		@media only screen and (max-width: 768px) {
+			padding: 7rem 5%;
+		}
+	}
+}
+img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 </style>
