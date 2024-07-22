@@ -489,18 +489,57 @@ onMounted(() => {
 			scrollTrigger: {
 				trigger: window.innerWidth < 1200 ? `.about__row-${index}` : `.about__box-${index}`,
 				toggleActions: 'play reverse play reverse',
-				start: 'top center',
-				end: 'bottom center'
+				start: 'top bottom-=100',
+				end: 'bottom bottom'
 			}
 		});
 	});
+
+	// Effect on every section
+	Array.from(document.querySelectorAll('section'))
+		.slice(1)
+		.forEach(section => {
+			gsap.fromTo(
+				section,
+				{
+					opacity: 0,
+					y: 50
+				},
+				{
+					y: 0,
+					opacity: 1,
+					duration: 0.5,
+					scrollTrigger: {
+						trigger: section,
+						start: 'top+=100 center',
+						markers: true
+					}
+				}
+			);
+		});
+
+	// Effect on image grid
+	gsap.fromTo(
+		Array.from(document.querySelector('.images').children),
+		{
+			opacity: 0,
+			y: 15
+		},
+		{
+			opacity: 1,
+			y: 0,
+			stagger: 0.2,
+			scrollTrigger: {
+				trigger: '.images',
+				toggleActions: 'play reverse play reverse'
+			}
+		}
+	);
 });
 
 const lenis = new Lenis();
 
-lenis.on('scroll', e => {
-	console.log(e);
-});
+lenis.on('scroll', e => {});
 
 lenis.on('scroll', ScrollTrigger.update);
 
