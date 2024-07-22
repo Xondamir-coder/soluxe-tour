@@ -280,7 +280,7 @@
 			</div>
 			<div class="experts__buttons">
 				<button class="button-primary">Make a MICE enquiry</button>
-				<button class="expert__button">
+				<button class="experts__button">
 					<span>Learn more</span>
 					<svg
 						width="16"
@@ -470,6 +470,19 @@ gsap.ticker.lagSmoothing(0);
 	@media only screen and (max-width: 768px) {
 		gap: 6rem;
 	}
+	&__button {
+		border-color: transparent;
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		svg {
+			transition: transform 300ms;
+		}
+		&:hover svg {
+			transform: translateX(5px);
+		}
+	}
+
 	&__buttons {
 		display: flex;
 		gap: 2rem;
@@ -479,23 +492,12 @@ gsap.ticker.lagSmoothing(0);
 		}
 		button {
 			color: #fff;
-			border-color: #fff;
-			&:last-child {
-				border-color: transparent;
-				display: flex;
-				align-items: center;
-				gap: 1rem;
-				svg {
-					transition: transform 300ms;
-				}
-			}
+
 			&:first-child {
+				border-color: #fff;
 				&:hover {
 					background-color: #fff;
 					color: var(--color-secondary);
-					& svg {
-						transform: translateX(5px);
-					}
 				}
 			}
 		}
