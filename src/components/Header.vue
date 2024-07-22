@@ -85,7 +85,7 @@ const isMenuOpen = ref(false);
 	cursor: pointer;
 }
 .menu {
-	z-index: 2;
+	z-index: 101;
 	display: flex;
 	flex-direction: column;
 	position: fixed;

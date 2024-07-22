@@ -9,6 +9,11 @@ html {
 	/* 1rem = 10px */
 	font-size: 62.5%;
 }
+@media only screen and (min-width: 1920px) {
+	html {
+		font-size: 65%;
+	}
+}
 @media only screen and (max-width: 1440px) {
 	html {
 		font-size: 57%;
@@ -28,6 +33,7 @@ body {
 	font-family: var(--font-base);
 	font-size: 1.6rem;
 	background-color: var(--color-primary);
+	transition: background-color 500ms;
 }
 
 * {
