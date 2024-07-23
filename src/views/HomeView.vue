@@ -3,15 +3,15 @@
 		<section class="hero">
 			<div class="hero__wrapper">
 				<div class="hero__images">
-					<img class="hero__image" src="@/assets/hero-image-1.webp" alt="hero img" />
-					<img class="hero__image" src="@/assets/hero-image-2.webp" alt="hero img" />
-					<img class="hero__image" src="@/assets/hero-image-3.webp" alt="hero img" />
-					<img class="hero__image" src="@/assets/hero-image-4.webp" alt="hero img" />
-					<img class="hero__image" src="@/assets/hero-image-5.webp" alt="hero img" />
-					<img class="hero__image" src="@/assets/hero-image-6.webp" alt="hero img" />
-					<img class="hero__image" src="@/assets/hero-image-7.webp" alt="hero img" />
-					<img class="hero__image" src="@/assets/hero-image-8.webp" alt="hero img" />
-					<img class="hero__image" src="@/assets/hero-image-9.webp" alt="hero img" />
+					<img class="hero__image" src="@/assets/hero-image-6.jpeg" alt="hero img" />
+					<img class="hero__image" src="@/assets/hero-image-2.jpeg" alt="hero img" />
+					<img class="hero__image" src="@/assets/hero-image-3.jpeg" alt="hero img" />
+					<img class="hero__image" src="@/assets/hero-image-4.jpeg" alt="hero img" />
+					<img class="hero__image" src="@/assets/hero-image-1.jpeg" alt="hero img" />
+					<img class="hero__image" src="@/assets/hero-image-5.jpeg" alt="hero img" />
+					<img class="hero__image" src="@/assets/hero-image-7.jpeg" alt="hero img" />
+					<img class="hero__image" src="@/assets/hero-image-8.jpeg" alt="hero img" />
+					<img class="hero__image" src="@/assets/hero-image-9.jpeg" alt="hero img" />
 				</div>
 				<div class="hero__overlay"></div>
 				<h1 class="hero__title">
@@ -257,15 +257,15 @@
 			</div>
 		</section>
 		<section class="images">
-			<img src="@/assets/img-1.webp" alt="banner" />
-			<img src="@/assets/img-2.webp" alt="banner" />
-			<img src="@/assets/img-3.webp" alt="banner" />
-			<img src="@/assets/img-4.webp" alt="banner" />
-			<img src="@/assets/img-5.webp" alt="banner" />
-			<img src="@/assets/img-6.webp" alt="banner" />
-			<img src="@/assets/img-7.webp" alt="banner" />
-			<img src="@/assets/img-8.webp" alt="banner" />
-			<img src="@/assets/img-9.webp" alt="banner" />
+			<img src="@/assets/img-1.avif" alt="banner" />
+			<img src="@/assets/img-2.jpeg" alt="banner" />
+			<img src="@/assets/img-3.jpeg" alt="banner" />
+			<img src="@/assets/img-4.jpeg" alt="banner" />
+			<img src="@/assets/img-5.jpeg" alt="banner" />
+			<img src="@/assets/img-6.jpeg" alt="banner" />
+			<img src="@/assets/img-7.jpeg" alt="banner" />
+			<img src="@/assets/img-8.jpeg" alt="banner" />
+			<img src="@/assets/img-9.jpeg" alt="banner" />
 		</section>
 		<section class="experts">
 			<div class="experts__head">
