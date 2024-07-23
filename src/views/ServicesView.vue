@@ -21,7 +21,7 @@
 				</p>
 			</div>
 		</section>
-		<section class="offer">
+		<section class="offer" data-animate>
 			<div class="offer__head">
 				<p class="text-weight-semibold">What we offer</p>
 				<h1 class="heading-big">Ordinary people, creating extraordinary experiences</h1>
@@ -54,17 +54,59 @@
 				</div>
 			</div>
 		</section>
+		<section class="better" data-animate>
+			<div class="better__head">
+				<p class="text-weight-semibold">How we do it better</p>
+				<h1 class="heading-big">Ordinary people, creating extraordinary experiences</h1>
+			</div>
+			<div class="better__container">
+				<div class="better__box" v-for="content in betterContent" :key="content.title">
+					<img :src="content.img" alt="banner" />
+					<h1 class="heading">{{ content.title }}</h1>
+					<p>{{ content.text }}</p>
+				</div>
+			</div>
+		</section>
+		<section class="message" data-animate>
+			<div class="message__content">
+				<h1 class="heading-big">
+					We believe in intentionally diverting from the beaten path in pursuit of
+					authentic experiences.
+				</h1>
+				<p class="message__text text-size-medium">
+					We value the importance of authentic, connected travel, and work tirelessly to
+					create once-in-a-lifetime experiences that benefit you, mankind, and the diverse
+					locations you visit.
+				</p>
+			</div>
+		</section>
+		<section class="travel" data-animate>
+			<img src="@/assets/travel.webp" alt="travel" />
+			<div class="travel__content">
+				<h1 class="travel__title">More than just a travel partner</h1>
+				<p class="text-size-medium">
+					We believe in the power of relationships and community, with us conversations go
+					deep, friendships are forged, and connections last a lifetime. We're more than
+					just a travel partner.
+				</p>
+				<button class="button-primary">Get in touch</button>
+			</div>
+		</section>
 	</main>
 </template>
 
 <script setup>
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { onMounted, ref } from 'vue';
 import globalIcon from '@/assets/icons/global.svg';
 import ringsIcon from '@/assets/icons/rings.svg';
 import workIcon from '@/assets/icons/work-white.svg';
 import friendshipIcon from '@/assets/icons/friendship.svg';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { onMounted, ref } from 'vue';
+import betterImg1 from '@/assets/img-6.jpeg';
+import betterImg2 from '@/assets/hero-image-9.jpeg';
+import betterImg3 from '@/assets/img-5.jpeg';
+
 gsap.registerPlugin(ScrollTrigger);
 
 const heroContent = [
@@ -103,6 +145,23 @@ const offerContent = [
 		text: 'We make business travel easy, stress free and cost efficient while personalising every aspect to meet your needs. We can help you plan and execute truly memorable events for your business. We are committed to providing your team a safe and delightful experience.'
 	}
 ];
+const betterContent = [
+	{
+		img: betterImg1,
+		title: 'Your safety is our first priority',
+		text: 'Your safety is our utmost priority. We implement stringent measures and work closely with trusted partners to ensure worry-free journeys through Uzbekistan.'
+	},
+	{
+		img: betterImg2,
+		title: 'Personalised for every unique need',
+		text: 'Embrace the joy of travel tailored exclusively for you. Our dedicated team designs personalized experiences, embracing your passions and preferences, making memories to cherish.'
+	},
+	{
+		img: betterImg3,
+		title: 'Real humans, real connections',
+		text: 'Experience genuine warmth and care from our team. We believe in building meaningful connections, offering personalized support at every step of your adventure in Uzbekistan.'
+	}
+];
 
 const chosenServiceIndex = ref(0);
 
@@ -118,18 +177,181 @@ onMounted(() => {
 		}
 	});
 
-	// Offer
-	gsap.to('.offer', {
-		scrollTrigger: {
-			trigger: '.offer',
-			start: 'top center',
-			toggleClass: 'active'
-		}
+	// Animate each section
+	document.querySelectorAll('[data-animate]').forEach(el => {
+		gsap.to(el, {
+			scrollTrigger: {
+				trigger: el,
+				start: 'top center',
+				toggleClass: 'active'
+			}
+		});
 	});
 });
 </script>
 
 <style lang="scss" scoped>
+.travel {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	gap: 7rem;
+	&.active {
+		img {
+			opacity: 1;
+			transform: translateX(0);
+		}
+		.travel__content > * {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+	&__content {
+		align-self: center;
+		max-width: 78.6rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 2.5rem;
+		& > * {
+			transition: opacity 600ms, transform 600ms;
+			transform: translateY(-7rem);
+			opacity: 0;
+		}
+		p {
+			transition-delay: 200ms;
+		}
+		button {
+			transform: translateY(7rem);
+			transition-delay: 400ms;
+		}
+	}
+	img {
+		opacity: 0;
+		transform: translateX(-50%);
+		transition: opacity 1s, transform 1s;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 12px;
+	}
+	p {
+		text-align: center;
+	}
+	&__title {
+		font-size: 4.8rem;
+		font-weight: 700;
+		letter-spacing: 1.4px;
+		line-height: 1.2;
+		@media only screen and (max-width: 991px) {
+			font-size: 4.4rem;
+		}
+		@media only screen and (max-width: 768px) {
+			font-size: 3.6rem;
+		}
+	}
+}
+.message {
+	padding-left: 4%;
+	padding-right: 4%;
+	&.active &__content {
+		transform: scale(1);
+		opacity: 1;
+	}
+	&__content {
+		transition: transform 1s, opacity 1s;
+		transform: scale(0.5);
+		opacity: 0;
+		display: grid;
+		place-items: center;
+		background-color: var(--color-secondary);
+		border-radius: 18px;
+		color: var(--color-primary);
+		text-align: center;
+		padding: 15rem 0;
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+		@media only screen and (max-width: 768px) {
+			padding: 7rem 0;
+		}
+		& > * {
+			max-width: 70%;
+			text-align: center;
+			@media only screen and (max-width: 768px) {
+				max-width: 95%;
+			}
+		}
+	}
+}
+.better {
+	display: flex;
+	flex-direction: column;
+	gap: 10rem;
+	&.active {
+		.better__head {
+			& > * {
+				transform: translateX(0);
+				opacity: 1;
+			}
+		}
+		.better__box {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+	&__head {
+		max-width: 70rem;
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		& > * {
+			transition: transform 1s, opacity 1s;
+			transform: translateX(-120%);
+			opacity: 0;
+		}
+		h1 {
+			transition-delay: 200ms;
+		}
+		@media only screen and (max-width: 768px) {
+			max-width: 95%;
+		}
+	}
+	&__container {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 4rem;
+		row-gap: 6rem;
+		& > * {
+			flex: 1;
+		}
+	}
+	&__box {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+		min-width: 250px;
+		opacity: 0;
+		transform: scale(0);
+		transition: transform 1s, opacity 1s;
+		&:first-child {
+			transition-delay: 200ms;
+		}
+		&:nth-child(2) {
+			transition-delay: 400ms;
+		}
+		&:nth-child(3) {
+			transition-delay: 600ms;
+		}
+
+		img {
+			width: 100%;
+			height: 30rem;
+			object-fit: cover;
+			border-radius: 12px;
+		}
+	}
+}
 .offer {
 	display: flex;
 	flex-direction: column;
@@ -213,13 +435,16 @@ onMounted(() => {
 		transform: translateX(-100%);
 		opacity: 0;
 		&:first-child {
-			transition-delay: 400ms;
+			transition: border-color 300ms, background-color 300ms, transform 1s 400ms,
+				opacity 1s 400ms;
 		}
 		&:nth-child(2) {
-			transition-delay: 700ms;
+			transition: border-color 300ms, background-color 300ms, transform 1s 700ms,
+				opacity 1s 700ms;
 		}
 		&:last-child {
-			transition-delay: 900ms;
+			transition: border-color 300ms, background-color 300ms, transform 1s 900ms,
+				opacity 1s 900ms;
 		}
 		&:hover {
 			background-color: var(--color-primary-light);
