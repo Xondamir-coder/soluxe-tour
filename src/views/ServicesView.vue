@@ -183,9 +183,13 @@ onMounted(() => {
 			scrollTrigger: {
 				trigger: el,
 				start: 'top center',
+				end: 'bottom top',
 				toggleClass: 'active'
 			}
 		});
+		setTimeout(() => {
+			ScrollTrigger.refresh();
+		}, 1500);
 	});
 });
 </script>

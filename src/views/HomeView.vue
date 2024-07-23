@@ -345,7 +345,7 @@
 import gsap from 'gsap';
 import Lenis from 'lenis';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { onMounted, ref } from 'vue';
+import { onMounted, onUnmounted, ref } from 'vue';
 gsap.registerPlugin(ScrollTrigger);
 import aboutImg1 from '@/assets/about-img-1.jpeg';
 import aboutImg2 from '@/assets/about-img-2.jpeg';
@@ -431,6 +431,7 @@ const expertsContent = [
 	}
 ];
 
+const animations = [];
 onMounted(() => {
 	const heroScrollTrigger = {
 		trigger: '.hero',
@@ -463,19 +464,6 @@ onMounted(() => {
 				trigger: `.about__box-${index + 1}`,
 				toggleActions: index == 0 ? 'play none reverse' : 'play reverse play reverse',
 				start: 'bottom bottom'
-			}
-		});
-	});
-
-	// TODO: BUGGED AS HELL IN MOBILE
-	[2, 4].forEach(e => {
-		gsap.to(document.body, {
-			backgroundColor: 'var(--color-secondary)',
-			scrollTrigger: {
-				trigger: window.innerWidth < 1200 ? `.about__row-${e}` : `.about__box-${e}`,
-				toggleActions: 'play reverse play reverse',
-				start: 'center-=500 top',
-				end: 'bottom-=300 top'
 			}
 		});
 	});
@@ -520,6 +508,22 @@ onMounted(() => {
 			}
 		}
 	);
+
+	[2, 4].forEach(e => {
+		const out = gsap.to(document.body, {
+			backgroundColor: 'var(--color-secondary)',
+			scrollTrigger: {
+				trigger: window.innerWidth < 1200 ? `.about__row-${e}` : `.about__box-${e}`,
+				toggleActions: 'play reverse play reverse',
+				start: 'center-=500 top',
+				end: 'bottom-=300 top'
+			}
+		});
+		animations.push(out);
+	});
+});
+onUnmounted(() => {
+	animations.forEach(a => a.kill());
 });
 
 const lenis = new Lenis();
@@ -924,7 +928,7 @@ gsap.ticker.lagSmoothing(0);
 	}
 	&__image {
 		opacity: 0;
-		height: 60rem;
+		height: 70%;
 		position: absolute;
 		&:first-child {
 			opacity: 1;
@@ -934,7 +938,7 @@ gsap.ticker.lagSmoothing(0);
 	&__images {
 		height: 100vh;
 		position: sticky;
-		top: 0;
+		top: 15rem;
 		display: flex;
 		justify-content: center;
 		@media only screen and (max-width: 1200px) {

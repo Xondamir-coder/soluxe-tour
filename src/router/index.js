@@ -21,7 +21,14 @@ const router = createRouter({
 			name: 'services',
 			component: ServicesView
 		}
-	]
+	],
+	scrollBehavior(to, from, savedPosition) {
+		if (savedPosition) {
+			return savedPosition;
+		} else {
+			return { left: 0, top: 0 };
+		}
+	}
 });
 
 export default router;

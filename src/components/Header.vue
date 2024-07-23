@@ -44,7 +44,7 @@ import Overlay from '@/components/Overlay.vue';
 
 const isMenuOpen = ref(false);
 
-const links = ['About', 'Services', 'Uzbek', 'MICE'];
+const links = ['About', 'Services', 'Uzbekistan', 'MICE'];
 </script>
 
 <style lang="scss" scoped>

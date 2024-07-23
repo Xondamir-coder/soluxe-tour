@@ -19,7 +19,16 @@
 	font-weight: 700;
 	line-height: 1.2;
 }
+.heading-style-h1 {
+	font-size: 7.2rem;
+	font-weight: 700;
+	line-height: 1.2;
+	letter-spacing: 1.5px;
+}
 @media only screen and (max-width: 991px) {
+	.heading-style-h1 {
+		font-size: 5.2rem;
+	}
 	.heading-big {
 		font-size: 4.4rem;
 	}
@@ -31,6 +40,9 @@
 	}
 }
 @media only screen and (max-width: 768px) {
+	.heading-style-h1 {
+		font-size: 4rem;
+	}
 	.heading {
 		font-size: 3rem;
 	}

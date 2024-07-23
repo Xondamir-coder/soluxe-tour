@@ -142,7 +142,10 @@
 		align-items: flex-end;
 		justify-content: space-between;
 		flex-wrap: wrap;
-		gap: 3rem;
+		gap: 1rem;
+		a {
+			text-decoration: underline;
+		}
 	}
 	&__waves {
 		align-self: stretch;
