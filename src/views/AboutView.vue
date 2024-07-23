@@ -55,10 +55,20 @@
 				src="@/assets/icons/flower.svg"
 				alt="flower" />
 		</section>
+		<section class="reason">
+			<h1 class="heading-1"><strong>We're here for a reason</strong></h1>
+		</section>
 	</main>
 </template>
 
-<script setup></script>
+<script setup>
+import { onMounted } from 'vue';
+import gsap from 'gsap';
+
+onMounted(() => {
+	gsap.to('.hero__letter', { opacity: 1, duration: 1, stagger: 0.05 });
+});
+</script>
 
 <style lang="scss" scoped>
 .hero {
@@ -67,19 +77,38 @@
 	place-items: center;
 	position: relative;
 	overflow: hidden;
+	background-color: var(--color-secondary);
+	&__letter {
+		opacity: 0;
+	}
+
 	&__flower {
 		position: absolute;
 		animation: scale-up 1s forwards;
-		scale: 1.6;
+		@media only screen and (max-width: 768px) {
+			animation: scale-up-small 1s forwards;
+		}
 		&--1 {
 			top: -20%;
-			left: -8%;
+			left: -10rem;
 			transform: rotate(190deg);
+			@media only screen and (max-width: 768px) {
+				left: 20rem;
+			}
+			@media only screen and (max-width: 500px) {
+				left: 10rem;
+			}
 		}
 		&--2 {
 			bottom: -22%;
-			right: -3%;
+			right: -10rem;
 			transform: rotate(13deg);
+			@media only screen and (max-width: 768px) {
+				right: 20rem;
+			}
+			@media only screen and (max-width: 500px) {
+				right: 10rem;
+			}
 		}
 	}
 	&__button {
@@ -118,9 +147,7 @@
 		}
 	}
 }
-.main {
-	background-color: var(--color-secondary);
-}
+
 section {
 	&:not(.hero) {
 		padding: 7rem 8%;
@@ -138,6 +165,14 @@ section {
 	}
 	to {
 		scale: 1.6;
+	}
+}
+@keyframes scale-up-small {
+	from {
+		scale: 0;
+	}
+	to {
+		scale: 1;
 	}
 }
 </style>
