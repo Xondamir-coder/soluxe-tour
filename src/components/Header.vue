@@ -4,20 +4,10 @@
 			<img class="header__logo" src="@/assets/logo.svg" alt="logo" />
 		</RouterLink>
 		<ul class="header__list">
-			<li class="header__item">
-				<RouterLink active-class="link--active" to="/about">About</RouterLink>
-				<div class="header__item-underline"></div>
-			</li>
-			<li class="header__item">
-				<RouterLink active-class="link--active" to="/services">Services</RouterLink>
-				<div class="header__item-underline"></div>
-			</li>
-			<li class="header__item">
-				<RouterLink active-class="link--active" to="/uzbekistan">Uzbekistan</RouterLink>
-				<div class="header__item-underline"></div>
-			</li>
-			<li class="header__item">
-				<RouterLink active-class="link--active" to="/mice">MICE</RouterLink>
+			<li class="header__item" v-for="link in links" :key="link">
+				<RouterLink active-class="link--active" :to="`/${link.toLowerCase()}`">{{
+					link
+				}}</RouterLink>
 				<div class="header__item-underline"></div>
 			</li>
 		</ul>
@@ -32,20 +22,14 @@
 		<Overlay :class="{ hidden: !isMenuOpen }" @close="isMenuOpen = false" />
 		<div class="menu" :class="{ 'menu--hidden': !isMenuOpen }">
 			<ul class="menu__list">
-				<li class="menu__item">
-					<RouterLink active-class="link--active" to="/about">About</RouterLink>
-					<div class="menu__item-underline"></div>
-				</li>
-				<li class="menu__item">
-					<RouterLink active-class="link--active" to="/services">Services</RouterLink>
-					<div class="menu__item-underline"></div>
-				</li>
-				<li class="menu__item">
-					<RouterLink active-class="link--active" to="/uzbekistan">Uzbekistan</RouterLink>
-					<div class="menu__item-underline"></div>
-				</li>
-				<li class="menu__item">
-					<RouterLink active-class="link--active" to="/mice">MICE</RouterLink>
+				<li
+					class="menu__item"
+					v-for="link in links"
+					:key="link"
+					@click="isMenuOpen = false">
+					<RouterLink active-class="link--active" :to="`/${link.toLowerCase()}`">{{
+						link
+					}}</RouterLink>
 					<div class="menu__item-underline"></div>
 				</li>
 			</ul>
@@ -59,6 +43,8 @@ import { ref } from 'vue';
 import Overlay from '@/components/Overlay.vue';
 
 const isMenuOpen = ref(false);
+
+const links = ['About', 'Services', 'Uzbek', 'MICE'];
 </script>
 
 <style lang="scss" scoped>
