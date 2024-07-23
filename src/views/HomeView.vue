@@ -15,15 +15,22 @@
 				</div>
 				<div class="hero__overlay"></div>
 				<h1 class="hero__title">
-					<span class="hero__letter">S</span>
+					<span class="hero__letter">W</span>
+					<span class="hero__letter">e</span> <span class="hero__letter">w</span>
+					<span class="hero__letter">i</span>
+					<span class="hero__letter">l</span>
+					<span class="hero__letter">l</span> <span class="hero__letter">s</span>
 					<span class="hero__letter">h</span>
 					<span class="hero__letter">o</span>
-					<span class="hero__letter">w</span>
-					<span class="hero__letter">i</span>
-					<span class="hero__letter">n</span>
-					<span class="hero__letter">g</span> <span class="hero__letter">y</span>
-					<span class="hero__letter">o</span>
-					<span class="hero__letter">u</span> <span class="hero__letter">U</span>
+					<span class="hero__letter">w</span> <span class="hero__letter">a</span>
+					<span class="hero__letter">l</span>
+					<span class="hero__letter">l</span> <span class="hero__letter">b</span>
+					<span class="hero__letter">e</span>
+					<span class="hero__letter">a</span>
+					<span class="hero__letter">u</span>
+					<span class="hero__letter">t</span>
+					<span class="hero__letter">y</span> <span class="hero__letter">o</span>
+					<span class="hero__letter">f</span> <span class="hero__letter">U</span>
 					<span class="hero__letter">z</span>
 					<span class="hero__letter">b</span>
 					<span class="hero__letter">e</span>
@@ -32,20 +39,7 @@
 					<span class="hero__letter">s</span>
 					<span class="hero__letter">t</span>
 					<span class="hero__letter">a</span>
-					<span class="hero__letter">n</span> <span class="hero__letter">t</span>
-					<span class="hero__letter">h</span>
-					<span class="hero__letter">r</span>
-					<span class="hero__letter">o</span>
-					<span class="hero__letter">u</span>
-					<span class="hero__letter">g</span>
-					<span class="hero__letter">h</span> <span class="hero__letter">U</span>
-					<span class="hero__letter">z</span>
-					<span class="hero__letter">b</span>
-					<span class="hero__letter">e</span>
-					<span class="hero__letter">k</span> <span class="hero__letter">e</span>
-					<span class="hero__letter">y</span>
-					<span class="hero__letter">e</span>
-					<span class="hero__letter">s</span>
+					<span class="hero__letter">n</span>
 				</h1>
 			</div>
 		</section>
