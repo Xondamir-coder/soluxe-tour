@@ -70,19 +70,19 @@
 			<div class="about__images">
 				<img
 					class="about__image about__image-1"
-					src="@/assets/about-image-1.webp"
+					src="@/assets/about-img-1.jpeg"
 					alt="about img" />
 				<img
 					class="about__image about__image-2"
-					src="@/assets/about-image-2.webp"
+					src="@/assets/about-img-2.jpeg"
 					alt="about img" />
 				<img
 					class="about__image about__image-3"
-					src="@/assets/about-image-3.webp"
+					src="@/assets/about-img-3.jpeg"
 					alt="about img" />
 				<img
 					class="about__image about__image-4"
-					src="@/assets/about-image-4.webp"
+					src="@/assets/about-img-4.jpeg"
 					alt="about img" />
 			</div>
 			<div class="about__content">
