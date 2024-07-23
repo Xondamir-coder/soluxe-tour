@@ -4,3 +4,7 @@
 .spacing-point-4px {
 	letter-spacing: 0.4px;
 }
+.text-weight-semibold {
+	letter-spacing: 0.4px;
+	font-weight: 600;
+}

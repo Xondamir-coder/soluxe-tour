@@ -1,20 +1,24 @@
 <template>
 	<header class="header">
-		<RouterLink to="/">
+		<RouterLink active-class="link--active" to="/">
 			<img class="header__logo" src="@/assets/logo.svg" alt="logo" />
 		</RouterLink>
 		<ul class="header__list">
 			<li class="header__item">
-				<RouterLink to="/about">About</RouterLink>
+				<RouterLink active-class="link--active" to="/about">About</RouterLink>
+				<div class="header__item-underline"></div>
 			</li>
 			<li class="header__item">
-				<RouterLink to="/services">Services</RouterLink>
+				<RouterLink active-class="link--active" to="/services">Services</RouterLink>
+				<div class="header__item-underline"></div>
 			</li>
 			<li class="header__item">
-				<RouterLink to="/uzbekistan">Uzbekistan</RouterLink>
+				<RouterLink active-class="link--active" to="/uzbekistan">Uzbekistan</RouterLink>
+				<div class="header__item-underline"></div>
 			</li>
 			<li class="header__item">
-				<RouterLink to="/mice">MICE</RouterLink>
+				<RouterLink active-class="link--active" to="/mice">MICE</RouterLink>
+				<div class="header__item-underline"></div>
 			</li>
 		</ul>
 		<button class="header__button button-secondary">Book a travel</button>
@@ -29,16 +33,20 @@
 		<div class="menu" :class="{ 'menu--hidden': !isMenuOpen }">
 			<ul class="menu__list">
 				<li class="menu__item">
-					<RouterLink to="/about">About</RouterLink>
+					<RouterLink active-class="link--active" to="/about">About</RouterLink>
+					<div class="menu__item-underline"></div>
 				</li>
 				<li class="menu__item">
-					<RouterLink to="/services">Services</RouterLink>
+					<RouterLink active-class="link--active" to="/services">Services</RouterLink>
+					<div class="menu__item-underline"></div>
 				</li>
 				<li class="menu__item">
-					<RouterLink to="/uzbekistan">Uzbekistan</RouterLink>
+					<RouterLink active-class="link--active" to="/uzbekistan">Uzbekistan</RouterLink>
+					<div class="menu__item-underline"></div>
 				</li>
 				<li class="menu__item">
-					<RouterLink to="/mice">MICE</RouterLink>
+					<RouterLink active-class="link--active" to="/mice">MICE</RouterLink>
+					<div class="menu__item-underline"></div>
 				</li>
 			</ul>
 			<button class="button-secondary">Get in touch</button>
@@ -66,19 +74,29 @@ const isMenuOpen = ref(false);
 	transition: border-color 300ms;
 	padding: 0.5rem 0;
 	position: relative;
-	&::before {
+	&-underline {
 		content: '';
 		display: block;
 		position: absolute;
 		bottom: 0;
 		width: 0;
 		height: 1.5px;
-		border-radius: 5px;
 		background-color: var(--color-secondary);
 		transition: width 300ms;
 	}
-	&:hover::before {
+	& a {
+		transition: font-weight 300ms;
+	}
+	&:hover &-underline {
 		width: 100%;
+	}
+}
+.link--active {
+	color: var(--color-secondary);
+	font-weight: 500;
+	& + div {
+		width: 100%;
+		height: 4px;
 	}
 }
 .button {

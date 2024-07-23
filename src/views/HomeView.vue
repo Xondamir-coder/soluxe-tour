@@ -475,7 +475,6 @@ onMounted(() => {
 
 	// TODO: BUGGED AS HELL IN MOBILE
 	[2, 4].forEach(e => {
-		console.log(e);
 		gsap.to(document.body, {
 			backgroundColor: 'var(--color-secondary)',
 			scrollTrigger: {
