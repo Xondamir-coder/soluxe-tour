@@ -472,25 +472,17 @@ onMounted(() => {
 			}
 		});
 	});
-	[2, 4].forEach(index => {
+
+	// TODO: BUGGED AS HELL IN MOBILE
+	[2, 4].forEach(e => {
+		console.log(e);
 		gsap.to(document.body, {
 			backgroundColor: 'var(--color-secondary)',
-			onUpdate: () => {
-				if (window.innerWidth < 1200) {
-					document
-						.querySelector(`.about__row-${index}`)
-						.classList.add('about__row--active');
-				} else {
-					document
-						.querySelector(`.about__box-${index}`)
-						.classList.add('about__box--active');
-				}
-			},
 			scrollTrigger: {
-				trigger: window.innerWidth < 1200 ? `.about__row-${index}` : `.about__box-${index}`,
+				trigger: window.innerWidth < 1200 ? `.about__row-${e}` : `.about__box-${e}`,
 				toggleActions: 'play reverse play reverse',
-				start: 'top bottom-=100',
-				end: 'bottom bottom'
+				start: 'center-=500 top',
+				end: 'bottom-=300 top'
 			}
 		});
 	});
@@ -530,7 +522,8 @@ onMounted(() => {
 			stagger: 0.2,
 			scrollTrigger: {
 				trigger: '.images',
-				toggleActions: 'play reverse play reverse'
+				start: 'top top',
+				end: 'bottom+=100 top'
 			}
 		}
 	);
@@ -993,8 +986,8 @@ gsap.ticker.lagSmoothing(0);
 			transition: color 1.3s, border-color 1.3s;
 		}
 	}
-	&__box-2.about__box--active,
-	&__box-4.about__box--active {
+	&__box-2,
+	&__box-4 {
 		color: var(--color-primary);
 		button {
 			color: var(--color-primary);
