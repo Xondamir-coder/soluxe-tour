@@ -178,7 +178,7 @@
 							of culture, history and little bit of adventure
 						</p>
 					</div>
-					<img src="@/assets/grid-img-1.webp" alt="grid img" />
+					<img src="@/assets/grid-img-1.jpeg" alt="grid img" />
 				</div>
 				<div class="explore__grid explore__grid--medium">
 					<img src="@/assets/grid-img-2.webp" alt="grid img" />
@@ -207,7 +207,7 @@
 							animals from as far away as Salalah for barter and trade.
 						</p>
 					</div>
-					<img src="@/assets/grid-img-3.webp" alt="grid img" />
+					<img src="@/assets/hero-image-7.jpeg" alt="grid img" />
 				</div>
 				<div class="explore__grid explore__grid--small">
 					<div class="explore__grid-content">
