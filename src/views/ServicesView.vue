@@ -89,7 +89,9 @@
 					deep, friendships are forged, and connections last a lifetime. We're more than
 					just a travel partner.
 				</p>
-				<button class="button-primary">Get in touch</button>
+				<RouterLink to="/contacts" data-button class="button-primary"
+					>Get in touch</RouterLink
+				>
 			</div>
 		</section>
 	</main>
@@ -225,7 +227,7 @@ onMounted(() => {
 		p {
 			transition-delay: 200ms;
 		}
-		button {
+		a {
 			transform: translateY(7rem);
 			transition-delay: 400ms;
 		}

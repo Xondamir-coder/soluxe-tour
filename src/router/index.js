@@ -4,6 +4,7 @@ import AboutView from '@/views/AboutView.vue';
 import ServicesView from '@/views/ServicesView.vue';
 import UzbekistanView from '@/views/UzbekistanView.vue';
 import MiceView from '@/views/MiceView.vue';
+import ContactsView from '@/views/ContactsView.vue';
 
 const router = createRouter({
 	history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,6 +33,11 @@ const router = createRouter({
 			path: '/mice',
 			name: 'mice',
 			component: MiceView
+		},
+		{
+			path: '/contacts',
+			name: 'contacts',
+			component: ContactsView
 		}
 	],
 	scrollBehavior(to, from, savedPosition) {

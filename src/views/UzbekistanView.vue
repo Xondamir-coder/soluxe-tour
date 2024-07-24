@@ -68,7 +68,7 @@
 					Breathtaking landscapes, fascinating culture, and genuine encounters with the
 					incredibly friendly Uzbeks.
 				</p>
-				<button class="discover__button">
+				<RouterLink data-animate to="/contacts" class="discover__button">
 					<span>Get in touch</span>
 					<svg
 						width="16"
@@ -78,7 +78,7 @@
 						xmlns="http://www.w3.org/2000/svg">
 						<path d="M6 3L11 8L6 13" stroke="CurrentColor" stroke-width="1.5"></path>
 					</svg>
-				</button>
+				</RouterLink>
 			</div>
 			<div class="discover__container">
 				<div class="discover__box" v-for="content in discoverContent" :key="content.title">
@@ -232,6 +232,20 @@ onMounted(() => {
 			opacity: 1;
 		}
 	}
+	&__button {
+		border: none;
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		color: var(--color-secondary);
+		letter-spacing: 1px;
+		svg {
+			transition: transform 0.3s;
+		}
+		&:hover svg {
+			transform: translateX(7px);
+		}
+	}
 	&__cta {
 		flex-basis: 40%;
 		display: flex;
@@ -241,19 +255,6 @@ onMounted(() => {
 		transform: translateX(-100%);
 		opacity: 0;
 		transition: transform 1s, opacity 1s;
-		button {
-			border: none;
-			display: flex;
-			align-items: center;
-			gap: 1rem;
-			color: var(--color-secondary);
-			svg {
-				transition: transform 0.3s;
-			}
-			&:hover svg {
-				transform: translateX(7px);
-			}
-		}
 	}
 	&__box {
 		display: flex;

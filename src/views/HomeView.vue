@@ -89,7 +89,10 @@
 					<h1 class="about__title">{{ content.title }}</h1>
 					<p class="about__text">{{ content.desc }}</p>
 					<div class="about__box-buttons">
-						<button class="button-primary">
+						<RouterLink
+							data-button
+							:to="index >= 3 ? '/contacts' : '/'"
+							class="button-primary">
 							{{
 								index < 3
 									? content.title.includes('M.I.C.E')
@@ -97,7 +100,7 @@
 										: 'Make an enquiry'
 									: 'Get in touch'
 							}}
-						</button>
+						</RouterLink>
 						<button class="about__button" v-if="index < 3">
 							<span>Learn more</span>
 							<svg
@@ -126,7 +129,10 @@
 					<h1 class="about__title">{{ content.title }}</h1>
 					<p class="about__text">{{ content.desc }}</p>
 					<div class="about__box-buttons">
-						<button class="button-primary">
+						<RouterLink
+							data-button
+							:to="index >= 3 ? '/contacts' : '/'"
+							class="button-primary">
 							{{
 								index < 3
 									? content.title.includes('M.I.C.E')
@@ -134,7 +140,7 @@
 										: 'Make an enquiry'
 									: 'Get in touch'
 							}}
-						</button>
+						</RouterLink>
 						<button class="about__button" v-if="index < 3">
 							<span>Learn more</span>
 							<svg
@@ -210,7 +216,9 @@
 		<section data-animate class="partners">
 			<div class="partners__content">
 				<h1 class="partners__title">Let us show you the best of Uzbekistan</h1>
-				<button class="partners__button button-secondary">Get in touch</button>
+				<RouterLink data-button to="/contacts" class="partners__button button-secondary">
+					Get in touch
+				</RouterLink>
 				<ul class="partners__list">
 					<li class="partners__item">
 						<img src="@/assets/partners-1.webp" alt="partner" />
@@ -423,7 +431,10 @@ onMounted(() => {
 	});
 });
 onUnmounted(() => {
-	animations.forEach(a => a.kill());
+	animations.forEach(a => {
+		a.kill();
+	});
+	document.body.style.backgroundColor = 'var(--color-primary)';
 });
 
 const lenis = new Lenis();
@@ -485,6 +496,13 @@ gsap.ticker.lagSmoothing(0);
 		background-color: var(--color-primary);
 		color: var(--color-secondary);
 		border-color: transparent;
+		transition: color 300ms, background-color 300ms, border-color 300ms;
+
+		&:hover {
+			background-color: var(--color-secondary);
+			color: var(--color-primary);
+			border-color: var(--color-primary);
+		}
 	}
 }
 .experts {
@@ -516,7 +534,7 @@ gsap.ticker.lagSmoothing(0);
 			flex-direction: column;
 			align-items: flex-start;
 		}
-		button {
+		a {
 			color: #fff;
 
 			&:first-child {
@@ -666,6 +684,7 @@ gsap.ticker.lagSmoothing(0);
 		&-2,
 		&-4 {
 			color: var(--color-primary);
+			a,
 			button {
 				color: var(--color-primary);
 				border-color: var(--color-primary);
@@ -698,6 +717,7 @@ gsap.ticker.lagSmoothing(0);
 	&__box-2,
 	&__box-4 {
 		color: var(--color-primary);
+		a,
 		button {
 			color: var(--color-primary);
 			border-color: var(--color-primary);

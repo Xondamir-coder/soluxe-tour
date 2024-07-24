@@ -44,7 +44,9 @@
 					<span class="hero__letter">a</span>
 					<span class="hero__letter">n</span>
 				</h1>
-				<button class="hero__button button-primary">Get in touch</button>
+				<RouterLink data-button class="hero__button button-primary" to="/contacts">
+					Get in touch
+				</RouterLink>
 			</div>
 			<img
 				class="hero__flower hero__flower--1"
@@ -224,7 +226,9 @@
 				<h1 class="heading-style-h1">
 					Let us help you show the best of Uzbekistan to your clients
 				</h1>
-				<button class="button-primary">Get in touch</button>
+				<RouterLink data-button class="button-primary" to="/contacts">
+					Get in touch
+				</RouterLink>
 			</div>
 		</section>
 	</main>
@@ -318,7 +322,7 @@ onMounted(() => {
 				bottom: -25rem;
 			}
 		}
-		button {
+		a {
 			color: var(--color-primary);
 			border-color: var(--color-primary);
 			&:hover {
