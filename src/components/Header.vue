@@ -33,7 +33,7 @@
 					<div class="menu__item-underline"></div>
 				</li>
 			</ul>
-			<button class="button-secondary">Get in touch</button>
+			<button class="button-secondary">Book a travel</button>
 		</div>
 	</Teleport>
 </template>
