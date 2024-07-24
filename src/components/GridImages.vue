@@ -25,16 +25,17 @@ onMounted(() => {
 		Array.from(document.querySelector('.images').children),
 		{
 			opacity: 0,
-			y: 15
+			y: 50
 		},
 		{
 			opacity: 1,
 			y: 0,
-			stagger: 0.2,
+			stagger: 0.25,
 			scrollTrigger: {
 				trigger: '.images',
-				start: 'top top',
-				end: 'bottom+=100 top'
+				start: 'top center',
+				end: 'bottom+=100 top',
+				toggleActions: 'play reverse play reverse'
 			}
 		}
 	);

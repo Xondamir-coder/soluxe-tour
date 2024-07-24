@@ -1,6 +1,6 @@
 <template>
 	<main class="home">
-		<section class="hero">
+		<section data-animate class="hero">
 			<div class="hero__wrapper">
 				<div class="hero__images">
 					<img class="hero__image" src="@/assets/hero-image-6.jpeg" alt="hero img" />
@@ -43,7 +43,7 @@
 				</h1>
 			</div>
 		</section>
-		<section class="offer">
+		<section data-animate class="offer">
 			<h1 class="heading">
 				We offer travellers the most authentic experiences at the most affordable prices
 			</h1>
@@ -60,7 +60,7 @@
 				our client’s preferences.
 			</p>
 		</section>
-		<section class="about">
+		<section data-animate class="about">
 			<div class="about__images">
 				<img
 					class="about__image about__image-1"
@@ -153,11 +153,11 @@
 				</div>
 			</div>
 		</section>
-		<section>
+		<section data-animate>
 			<img src="@/assets/big-img.webp" alt="big img" />
 		</section>
 		<Tours />
-		<section class="everyone">
+		<section data-animate class="everyone">
 			<h1 class="heading-big">Uzbekistan has a little something for everyone</h1>
 			<div class="everyone__content">
 				<p class="text-size-medium">
@@ -174,7 +174,7 @@
 			</div>
 		</section>
 		<GridImages />
-		<section class="experts">
+		<section data-animate class="experts">
 			<div class="experts__head">
 				<p class="semi-bold spacing-point-4px">MICE</p>
 				<h1 class="heading-big">Experts in Corporate & M.I.C.E. travel</h1>
@@ -207,7 +207,7 @@
 				</button>
 			</div>
 		</section>
-		<section class="partners">
+		<section data-animate class="partners">
 			<div class="partners__content">
 				<h1 class="partners__title">Let us show you the best of Uzbekistan</h1>
 				<button class="partners__button button-secondary">Get in touch</button>
@@ -384,7 +384,7 @@ onMounted(() => {
 	});
 
 	// Effect on every section
-	Array.from(document.querySelectorAll('section'))
+	Array.from(document.querySelectorAll('[data-animate]'))
 		.slice(1)
 		.forEach(section => {
 			gsap.fromTo(
@@ -396,10 +396,10 @@ onMounted(() => {
 				{
 					y: 0,
 					opacity: 1,
-					duration: 0.5,
+					duration: 0.3,
 					scrollTrigger: {
 						trigger: section,
-						start: 'top+=100 center'
+						start: 'top center'
 					}
 				}
 			);

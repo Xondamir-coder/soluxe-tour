@@ -143,8 +143,7 @@ onMounted(() => {
 			trigger: '.hero',
 			scrub: 1,
 			start: 'center center',
-			end: 'center top',
-			markers: true
+			end: 'center top'
 		}
 	});
 	gsap.to('.hero__content', {
@@ -195,6 +194,7 @@ onMounted(() => {
 			}
 		});
 	});
+	gsap.to('.hero__letter', { opacity: 1, duration: 0.8, stagger: 0.05 });
 });
 </script>
 
@@ -338,6 +338,9 @@ onMounted(() => {
 .hero {
 	background-color: var(--color-secondary);
 	padding: 10rem 0;
+	&__letter {
+		opacity: 0;
+	}
 	&__content {
 		color: var(--color-primary);
 		display: flex;
@@ -352,6 +355,10 @@ onMounted(() => {
 		width: 100%;
 		height: 100vh;
 		border-radius: 12px;
+
+		@media only screen and (max-width: 768px) {
+			height: 50rem;
+		}
 	}
 	h1 {
 		max-width: 15ch;

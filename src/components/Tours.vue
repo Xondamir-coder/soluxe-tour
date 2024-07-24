@@ -78,16 +78,30 @@
 	</section>
 </template>
 
-<script setup></script>
+<script setup>
+import gsap from 'gsap';
+import { onMounted } from 'vue';
+
+onMounted(() => {
+	gsap.to('.tours', {
+		scrollTrigger: {
+			trigger: '.tours',
+			start: 'top center',
+			end: 'bottom center',
+			toggleClass: 'active'
+		}
+	});
+});
+</script>
 
 <style lang="scss" scoped>
 .tours {
 	display: flex;
 	flex-direction: column;
 	gap: 10rem;
-	transform: translateY(200px);
+	transform: translateY(10rem);
 	opacity: 0;
-	transition: transform 0.7s, opacity 0.7s;
+	transition: transform 400ms, opacity 400ms;
 	&.active {
 		transform: translateY(0);
 		opacity: 1;
