@@ -14,7 +14,9 @@
 					of catering to corporate and MICE travel, you can trust us to create a unique
 					travel experience.
 				</p>
-				<button class="hero__button">Make a MICE enquiry</button>
+				<RouterLink to="/contacts" data-button class="hero__button"
+					>Make a MICE enquiry</RouterLink
+				>
 			</div>
 		</section>
 		<section class="business" data-animate>
@@ -364,7 +366,6 @@ onMounted(() => {
 	min-height: 200vh;
 	color: var(--color-primary);
 	text-align: center;
-	z-index: -5;
 	&__button {
 		color: var(--color-secondary);
 		background: var(--color-primary);
@@ -375,7 +376,7 @@ onMounted(() => {
 		}
 	}
 	&__content {
-		z-index: -3;
+		z-index: 2;
 		margin: auto;
 		position: sticky;
 		top: 50%;
@@ -398,11 +399,10 @@ onMounted(() => {
 		width: clamp(120px, 30vw, 35rem);
 		height: clamp(150px, 40vw, 40rem);
 		object-fit: cover;
-		z-index: -4;
 		&--1 {
+			z-index: 1;
 			left: 5%;
 			top: 35%;
-			z-index: -3;
 		}
 		&--2 {
 			right: 5%;

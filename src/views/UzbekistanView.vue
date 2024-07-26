@@ -1,7 +1,7 @@
 <template>
 	<main class="main">
-		<section class="hero">
-			<div class="hero__content">
+		<section class="hero" ref="heroRef">
+			<div ref="heroContentRef" class="hero__content">
 				<h1 class="heading-style-h1">
 					<span class="hero__letter">T</span>
 					<span class="hero__letter">h</span>
@@ -42,14 +42,19 @@
 					vibrant bazaars, historic mosques, and grand palaces in this landlocked gem.
 				</p>
 			</div>
-			<img src="@/assets/mountains.jpg" alt="mountains" class="hero__image" />
+			<img
+				ref="heroImageRef"
+				src="@/assets/mountains.jpg"
+				alt="mountains"
+				class="hero__image" />
 		</section>
+		<HorizontalCards />
 		<section class="take" data-animate>
 			<div class="take__content">
 				<p class="text-weight-semibold">Our take</p>
 				<p class="text-size-medium">
-					Due to the scenic diversity alone, Oman already has an incredible amount to
-					offer. Nature lovers and action lovers will get their money’s worth in the
+					Due to the scenic diversity alone, Uzbekistan already has an incredible amount
+					to offer. Nature lovers and action lovers will get their money’s worth in the
 					fascinating desert landscapes, mystical mountain ranges, and surprisingly green
 					oases. For those seeking relaxation, the more than 1,700km long coastline offers
 					one dream beach after another, and exciting cultural highlights await you in the
@@ -88,7 +93,7 @@
 				</div>
 			</div>
 		</section>
-		<Tours data-animate />
+		<Tours />
 		<section class="titles">
 			<h1 class="titles__top">Beautiful beaches. Glistening waters. Rugged mountains.</h1>
 			<h1 class="titles__bottom">Luxury resorts. Vibrant culture. Thrilling adventures.</h1>
@@ -100,13 +105,14 @@
 <script setup>
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { onMounted } from 'vue';
+import { onMounted, ref } from 'vue';
 import bulbIcon from '@/assets/icons/bulb.svg';
 import heartIcon from '@/assets/icons/heart.svg';
 import idIcon from '@/assets/icons/id.svg';
 import loveIcon from '@/assets/icons/love.svg';
 import Tours from '@/components/Tours.vue';
 import GridImages from '@/components/GridImages.vue';
+import HorizontalCards from '@/components/HorizontalCards.vue';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -114,7 +120,7 @@ const discoverContent = [
 	{
 		icon: bulbIcon,
 		title: 'Deep expertise & knowledge',
-		desc: "We're a team of passionate experts, with years of experience, always aim to immerse visitors in the wonders of Oman to create an unforgettable journey."
+		desc: "We're a team of passionate experts, with years of experience, always aim to immerse visitors in the wonders of Uzbekistan to create an unforgettable journey."
 	},
 	{
 		icon: heartIcon,
@@ -133,24 +139,26 @@ const discoverContent = [
 	}
 ];
 
+const heroRef = ref();
+const heroImageRef = ref();
+const heroContentRef = ref();
+
 onMounted(() => {
-	/**
-	 * TODO: fix animation
-	 */
-	gsap.to('.hero__image', {
-		transform: 'scale(1)',
+	gsap.to(heroImageRef.value, {
+		scale: 1,
 		scrollTrigger: {
-			trigger: '.hero',
+			trigger: heroRef.value,
 			scrub: 1,
 			start: 'center center',
 			end: 'center top'
 		}
 	});
-	gsap.to('.hero__content', {
-		transform: 'scale(.8) translateY(100px)',
+	gsap.to(heroContentRef.value, {
+		scale: 0.8,
+		y: 100,
 		opacity: 0,
 		scrollTrigger: {
-			trigger: '.hero__content',
+			trigger: heroContentRef.value,
 			scrub: 1,
 			start: '5% top',
 			end: 'bottom 10%'
@@ -184,7 +192,7 @@ onMounted(() => {
 			}
 		}
 	);
-	document.querySelectorAll('[data-animate]').forEach(el => {
+	gsap.utils.toArray('[data-animate]').forEach(el => {
 		gsap.to(el, {
 			scrollTrigger: {
 				trigger: el,

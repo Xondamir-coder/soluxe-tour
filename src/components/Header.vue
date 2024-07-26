@@ -11,7 +11,9 @@
 				<div class="header__item-underline"></div>
 			</li>
 		</ul>
-		<button class="header__button button-secondary">Book a travel</button>
+		<RouterLink to="/contacts" data-button class="header__button button-secondary"
+			>Book a travel</RouterLink
+		>
 		<div class="menu__button" @click="isMenuOpen = true">
 			<span></span>
 			<span></span>
@@ -33,7 +35,13 @@
 					<div class="menu__item-underline"></div>
 				</li>
 			</ul>
-			<button class="button-secondary">Book a travel</button>
+			<RouterLink
+				@click="isMenuOpen = false"
+				to="/contacts"
+				data-button
+				class="button-secondary"
+				>Book a travel</RouterLink
+			>
 		</div>
 	</Teleport>
 </template>

@@ -107,7 +107,7 @@
 				All rights reserved.
 			</p>
 			<p>Developed and created by Space Labs</p>
-			<RouterLink to="/terms"><p>Terms and conditions</p></RouterLink>
+			<RouterLink to="/legal"><p>Terms and conditions</p></RouterLink>
 		</div>
 	</footer>
 </template>

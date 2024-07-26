@@ -89,10 +89,7 @@
 					<h1 class="about__title">{{ content.title }}</h1>
 					<p class="about__text">{{ content.desc }}</p>
 					<div class="about__box-buttons">
-						<RouterLink
-							data-button
-							:to="index >= 3 ? '/contacts' : '/'"
-							class="button-primary">
+						<RouterLink data-button to="/contacts" class="button-primary">
 							{{
 								index < 3
 									? content.title.includes('M.I.C.E')
@@ -101,7 +98,11 @@
 									: 'Get in touch'
 							}}
 						</RouterLink>
-						<button class="about__button" v-if="index < 3">
+						<RouterLink
+							:to="content.title.includes('M.I.C.E') ? '/mice' : '/about'"
+							data-button
+							class="about__button"
+							v-if="index < 3">
 							<span>Learn more</span>
 							<svg
 								width="16"
@@ -114,7 +115,7 @@
 									stroke="CurrentColor"
 									stroke-width="1.5"></path>
 							</svg>
-						</button>
+						</RouterLink>
 					</div>
 				</div>
 			</div>
@@ -199,8 +200,10 @@
 				</div>
 			</div>
 			<div class="experts__buttons">
-				<button class="button-primary">Make a MICE enquiry</button>
-				<button class="experts__button">
+				<RouterLink data-button to="/contacts" class="button-primary"
+					>Make a MICE enquiry</RouterLink
+				>
+				<RouterLink data-button to="/mice" class="experts__button">
 					<span>Learn more</span>
 					<svg
 						width="16"
@@ -210,7 +213,7 @@
 						xmlns="http://www.w3.org/2000/svg">
 						<path d="M6 3L11 8L6 13" stroke="CurrentColor" stroke-width="1.5"></path>
 					</svg>
-				</button>
+				</RouterLink>
 			</div>
 		</section>
 		<section data-animate class="partners">

@@ -5,6 +5,7 @@ import ServicesView from '@/views/ServicesView.vue';
 import UzbekistanView from '@/views/UzbekistanView.vue';
 import MiceView from '@/views/MiceView.vue';
 import ContactsView from '@/views/ContactsView.vue';
+import LegalView from '@/views/LegalView.vue';
 
 const router = createRouter({
 	history: createWebHistory(import.meta.env.BASE_URL),
@@ -38,6 +39,11 @@ const router = createRouter({
 			path: '/contacts',
 			name: 'contacts',
 			component: ContactsView
+		},
+		{
+			path: '/legal',
+			name: 'legal',
+			component: LegalView
 		}
 	],
 	scrollBehavior(to, from, savedPosition) {
