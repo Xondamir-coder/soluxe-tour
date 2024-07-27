@@ -8,3 +8,6 @@
 	letter-spacing: 0.4px;
 	font-weight: 600;
 }
+.overflow-hidden {
+	overflow: hidden;
+}

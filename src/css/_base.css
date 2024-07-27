@@ -35,8 +35,21 @@ body {
 	background-color: var(--color-primary);
 	transition: background-color 500ms;
 	line-height: 1.5;
+	overflow-x: hidden;
 }
-
+body::-webkit-scrollbar {
+	width: 12px;
+}
+body::-webkit-scrollbar-thumb {
+	background-color: var(--color-secondary);
+	border: none;
+	border-radius: 10px;
+}
+body::-webkit-scrollbar-track {
+	background-color: var(--color-primary);
+	border-radius: 10px;
+	box-shadow: inset 0px 0px 5px var(--color-secondary);
+}
 * {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;

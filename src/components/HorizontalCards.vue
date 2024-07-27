@@ -320,6 +320,30 @@ onMounted(() => {
 				}
 			});
 		});
+
+		let proxy = { scaleX: 1 },
+			scaleXSetter = gsap.quickSetter('.img', 'scaleX'), // fast
+			clamp = gsap.utils.clamp(0.7, 1.3); // limit scaleX between 0.8 and 1.2 for a realistic effect.
+
+		ScrollTrigger.create({
+			onUpdate: self => {
+				let scaleX = clamp(1 + self.getVelocity() / 1000); // adjust the divisor to control the scaleX effect
+				// only do something if the scaleX is more severe. Remember, we're always tweening back to 1, so if the user slows their scrolling quickly, it's more natural to just let the tween handle that smoothly rather than jumping to the smaller scaleX.
+				if (Math.abs(scaleX - 1) > Math.abs(proxy.scaleX - 1)) {
+					proxy.scaleX = scaleX;
+					gsap.to(proxy, {
+						scaleX: 1,
+						duration: 0.8,
+						ease: 'power3',
+						overwrite: true,
+						onUpdate: () => scaleXSetter(proxy.scaleX)
+					});
+				}
+			}
+		});
+
+		// make the right edge "stick" to the scroll bar. force3D: true improves performance
+		gsap.set('.img', { transformOrigin: 'right center', force3D: true });
 	} else {
 		gsap.to('#small-plane', {
 			scrollTrigger: {
