@@ -1,34 +1,14 @@
 <template>
 	<div class="destination" id="destination">
-		<h1 class="heading">Our destinations</h1>
+		<h1 id="title" class="heading">Our destinations</h1>
 		<div class="destination__svg">
-			<svg viewBox="0 0 1500 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<svg viewBox="0 0 1319 150" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path
 					id="path"
-					d="M29 36.0001C138.695 36.0001 302.129 36 383.53 36C464.93 36 553.827 36.0001 662.466 36.0001C771.106 36.0001 915.325 36 977.51 36C1071.26 36 1301 36.0001 1301 36.0001"
+					d="M26 36C135.695 37.5738 299.129 82.368 380.53 82.368C461.93 82.368 550.827 44.9588 659.466 44.9588C768.106 44.9588 912.325 86 974.51 86C1068.26 86 1298 44.9588 1298 44.9588"
 					stroke="#E7C87F"
 					stroke-width="2" />
-				<circle
-					fill="#fff"
-					cx="461"
-					cy="36"
-					r="10"
-					stroke="var(--color-secondary)"
-					stroke-width="6" />
-				<circle
-					fill="#fff"
-					cx="874"
-					cy="35"
-					r="10"
-					stroke="var(--color-secondary)"
-					stroke-width="6" />
-				<circle
-					fill="#fff"
-					cx="1290"
-					cy="36"
-					r="10"
-					stroke="var(--color-secondary)"
-					stroke-width="6" />
+
 				<g id="plane">
 					<circle cx="36" cy="36" r="36" fill="#E7C87F" />
 					<circle cx="36" cy="36" r="30" fill="#F7F7F7" />
@@ -285,6 +265,34 @@ gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
 
 onMounted(() => {
 	if (window.innerWidth > 768) {
+		const path = document.getElementById('path');
+		const pathLength = path.getTotalLength();
+
+		path.style.strokeDasharray = pathLength;
+		path.style.strokeDashoffset = pathLength;
+
+		gsap.fromTo(
+			'#path',
+			{
+				strokeDashoffset: pathLength
+			},
+			{
+				strokeDashoffset: 0,
+				scrollTrigger: {
+					trigger: '#destination',
+					start: 'top top',
+					end: () => `+=${document.querySelector('#container').scrollWidth}`,
+					scrub: 1
+				}
+			}
+		);
+		gsap.to('#title', {
+			opacity: 0,
+			scrollTrigger: {
+				trigger: '#destination',
+				start: 'top top'
+			}
+		});
 		gsap.set('#plane', { xPercent: -50, yPercent: -50, transformOrigin: '50% 50%' });
 		gsap.to('#plane', {
 			motionPath: {
@@ -392,7 +400,6 @@ onMounted(() => {
 	position: relative;
 	background-image: linear-gradient(to right, var(--color-primary), #fff6c9);
 	overflow: hidden;
-	padding: 3rem;
 	padding-top: 10rem;
 	min-height: 100vh;
 	display: flex;

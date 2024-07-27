@@ -8,11 +8,11 @@
 			<img class="hero__image hero__image--5" src="@/assets/about-img-3.jpeg" alt="img 5" />
 			<img class="hero__image hero__image--6" src="@/assets/hero-image-3.jpeg" alt="img 6" />
 			<div class="hero__content">
-				<h1 class="heading-style-h1">Your business is our personal affair</h1>
+				<h1 class="heading-style-h1">Your business is our personal priority.</h1>
 				<p class="text-size-medium">
-					We make business travel easy, stress–free & cost efficient. With over a decade
-					of catering to corporate and MICE travel, you can trust us to create a unique
-					travel experience.
+					We simplify business travel, making it stress-free and cost-effective. With over
+					ten years of experience in corporate and MICE travel, we are trusted to craft
+					unique travel experiences.
 				</p>
 				<RouterLink to="/contacts" data-button class="hero__button"
 					>Make a MICE enquiry</RouterLink
@@ -20,7 +20,7 @@
 			</div>
 		</section>
 		<section class="business" data-animate>
-			<h1 class="heading-style-h2">We bring the personal in business travel</h1>
+			<h1 class="heading-style-h2">We bring a personal touch to business travel</h1>
 			<div class="business__container">
 				<div class="business__box" v-for="content in businessContent" :key="content.title">
 					<img :src="content.icon" alt="icon" />
@@ -34,13 +34,12 @@
 			<div class="us__content">
 				<p class="text-weight-semibold">Why us</p>
 				<h1 class="heading-style-h2">
-					Extensive experience delivering unforgettable MICE experiences
+					Vast expertise in creating memorable MICE experiences
 				</h1>
 				<p class="text-size-medium">
-					When it comes to M.I.C.E. Travel, our team will help you put together
-					unforgettable events for your company. Be it a conference or an incentive trip,
-					trust Arabica Orients' M.I.C.E. team to be your strategic travel partner from
-					the very start.
+					For M.I.C.E. travel, our team is dedicated to creating unforgettable events for
+					your company. Whether it's a conference or an incentive trip, trust Soluxe
+					Tours' M.I.C.E. team to be your strategic travel partner from the very beginning
 				</p>
 				<div class="us__container">
 					<div class="us__data">
@@ -51,7 +50,7 @@
 					</div>
 					<div class="us__data">
 						<p class="us__data-percent">90%</p>
-						<p>Retention rate–our customers nearly always return.</p>
+						<p>Retention rate – our customers nearly always return.</p>
 					</div>
 				</div>
 			</div>
@@ -95,43 +94,43 @@ const businessContent = [
 	{
 		icon: chatIcon,
 		title: '24x7 support from real people',
-		text: 'Our dedicated team of knowledgeable professionals is available at any hour to address your queries, provide personalised recommendations, and swiftly resolve any issues that may arise. With us, you can have peace of mind knowing that reliable support is just a phone call away, no matter the time or situation.'
+		text: 'Our dedicated team of knowledgeable professionals is available 24/7 to address your queries, provide personalized recommendations, and swiftly resolve any issues that may arise. With us, you can have peace of mind knowing that reliable support is just a phone call away, no matter the time or situation'
 	},
 	{
 		icon: contactIcon,
 		title: 'Dedicated account manager',
-		text: "Our dedicated account manager is your personal point of contact, ensuring a seamless and tailored experience. They will work closely with you, understanding your unique needs and objectives, and providing expert guidance at every step, from initial planning to post-event follow-up, ensuring your event's success."
+		text: "Our dedicated account manager is your personal point of contact, ensuring a seamless and customized experience. They will work closely with you, understanding your unique needs and objectives, and providing expert guidance at every step—from initial planning to post-event follow-up—to ensure your event's success"
 	},
 	{
 		icon: puzzleIcon,
-		title: 'Exclusively designed to your every need',
-		text: 'Our customisable solutions transform your vision into unforgettable events. From venue selection to event design, our experts curate unique experiences that align with your brand and goals. Expect meticulous attention to detail and exceptional results. Let us bring your vision to life and create a lasting impression.'
+		title: 'Designed exclusively for you',
+		text: 'Our customizable solutions turn your vision into unforgettable events. From venue selection to event design, our experts curate unique experiences that align with your brand and goals. With meticulous attention to detail and exceptional results, we bring your vision to life and create a lasting impression'
 	}
 ];
 const cardsContent = [
 	{
 		img: cardsBanner1,
 		label: 'Meetings',
-		title: 'Enabling ideas through meaningful spaces',
-		text: 'The exchange of opinions has always been an important element in business, and this is why a conference is an ideal way to disseminate information. It also creates an opportunity to discuss and exchange views on a given subject or problem. Our team members have extensive experience in planning, preparing and executing meaningful meeting spaces, including all the activities both on and off-site accompanying events.'
+		title: 'Empowering ideas with meaningful spaces',
+		text: 'The exchange of opinions has always been vital in business, making conferences an ideal way to disseminate information. They also provide opportunities to discuss and exchange views on various subjects or problems. Our team has extensive experience in planning, preparing, and executing meaningful meeting spaces, including all accompanying on- and off-site activities'
 	},
 	{
 		img: cardsBanner2,
 		label: 'Incentives',
-		title: 'A truly rewarding incentive travel experience',
-		text: 'Ignite success with our incentive travel services. Reward and motivate your team with unforgettable experiences. From exclusive destinations to curated activities, we plan every detail. Elevate engagement, foster teamwork, and achieve remarkable results.'
+		title: 'A genuinely rewarding incentive travel experience',
+		text: 'Ignite success with our incentive travel services. Reward and motivate your team with unforgettable experiences. From exclusive destinations to curated activities, we handle every detail. Enhance engagement, foster teamwork, and achieve remarkable results'
 	},
 	{
 		img: cardsBanner3,
 		label: 'Conferences',
 		title: 'Elegant conferences, effortlessly delivered',
-		text: 'From customised services, extensive network, and expert event planners–we can elevate your next corporate gathering with seamless logistics, allowing you to focus on creating connections and achieving business objectives.'
+		text: 'With customized services, an extensive network, and expert event planners, we can elevate your next corporate gathering with seamless logistics, allowing you to focus on building connections and achieving business objectives'
 	},
 	{
 		img: cardsBanner4,
 		label: 'Events',
 		title: 'Events designed to inspire and ignite',
-		text: 'Special events must be unique and leave every participant with unforgettable memories. We take care of the ideas and turn them into reality, and we do this in accordance with your wishes and guidelines. Special events are always a key to success, and this is why we pay so much attention to every detail, even the smallest ones.'
+		text: 'Special events should be unique, leaving every participant with unforgettable memories. We handle the ideas and bring them to life, always following your wishes and guidelines. Because special events are key to success, we pay close attention to every detail, even the smallest ones'
 	}
 ];
 
