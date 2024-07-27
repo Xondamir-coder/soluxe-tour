@@ -1,5 +1,5 @@
 <template>
-	<!-- <Preloader /> -->
+	<Preloader />
 	<div class="container">
 		<Header />
 		<RouterView />
@@ -14,10 +14,7 @@ import Preloader from '@/components/Preloader.vue';
 import Lenis from 'lenis';
 
 const lenis = new Lenis();
-lenis.on('scroll', e => {
-	const { lastVelocity } = e;
-	const absVelocity = Math.min(Math.max(Math.abs(lastVelocity), 0.5), 1.5);
-});
+lenis.on('scroll', e => {});
 
 function raf(time) {
 	lenis.raf(time);
