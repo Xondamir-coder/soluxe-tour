@@ -326,7 +326,7 @@ onMounted(() => {
 			gsap.from(box, {
 				scrollTrigger: {
 					trigger: box,
-					start: 'top center',
+					start: 'top center-=200',
 					toggleClass: 'active'
 				}
 			});
@@ -367,7 +367,7 @@ onMounted(() => {
 		display: flex;
 		flex-direction: column;
 		gap: 4rem;
-		opacity: 0.5;
+		opacity: 0.2;
 		transition: opacity 500ms;
 		&.active {
 			opacity: 1;
