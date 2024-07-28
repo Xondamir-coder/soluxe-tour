@@ -31,7 +31,7 @@ onMounted(() => {
 	const tl = gsap.timeline();
 	tl.to(pathRef.value, {
 		strokeDashoffset: 0,
-		duration: 2
+		duration: 3
 	}).to(svgRef.value, {
 		scale: 14,
 		duration: 2,

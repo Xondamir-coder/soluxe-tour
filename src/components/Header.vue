@@ -56,6 +56,34 @@ const links = ['About', 'Services', 'Uzbekistan', 'MICE'];
 </script>
 
 <style lang="scss" scoped>
+body.overflow-hidden {
+	.header {
+		background-color: transparent;
+		border-color: transparent;
+		&__button {
+			opacity: 0;
+			transform: translateY(-100%);
+		}
+		&__logo {
+			transform: scale(0);
+		}
+		&__item {
+			opacity: 0;
+			&:first-child {
+				transform: translateX(385%);
+			}
+			&:nth-child(2) {
+				transform: translateX(152%);
+			}
+			&:nth-child(3) {
+				transform: translateX(-50%);
+			}
+			&:last-child {
+				transform: translateX(-300%);
+			}
+		}
+	}
+}
 @mixin list {
 	list-style: none;
 	display: flex;
@@ -155,15 +183,20 @@ const links = ['About', 'Services', 'Uzbekistan', 'MICE'];
 	background-color: var(--color-primary);
 	z-index: 100;
 	border-bottom: 1px solid #000;
+	transition-delay: 300ms;
+	transition-duration: 500ms;
+	transition-property: background-color, border-color;
 	@media only screen and (max-width: 900px) {
 		padding: 0 3rem;
 	}
 	&__button {
+		transition: transform 0.5s 2.9s, opacity 0.5s 2.9s, color 300ms, background-color 300ms;
 		@media only screen and (max-width: 768px) {
 			display: none;
 		}
 	}
 	&__logo {
+		transition: transform 0.5s 2.4s;
 		width: 16rem;
 		height: 100%;
 	}
@@ -174,7 +207,44 @@ const links = ['About', 'Services', 'Uzbekistan', 'MICE'];
 		}
 	}
 	&__item {
-		@include item;
+		color: #222;
+		font-weight: 400;
+		border-bottom: 2px solid transparent;
+		transition: border-color 300ms;
+		padding: 0.5rem 0;
+		position: relative;
+
+		transition-property: opacity, transform;
+		transition-duration: 700ms;
+		&:first-child {
+			transition-delay: 1.3s;
+		}
+		&:nth-child(2) {
+			transition-delay: 1.7s;
+		}
+		&:nth-child(3) {
+			transition-delay: 2.1s;
+		}
+		&:last-child {
+			transition-delay: 1.9s;
+		}
+
+		&-underline {
+			content: '';
+			display: block;
+			position: absolute;
+			bottom: 0;
+			width: 0;
+			height: 1.5px;
+			background-color: var(--color-secondary);
+			transition: width 300ms;
+		}
+		& a {
+			transition: font-weight 300ms;
+		}
+		&:hover &-underline {
+			width: 100%;
+		}
 	}
 }
 </style>

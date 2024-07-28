@@ -379,7 +379,6 @@ onMounted(() => {
 		backgroundColor: 'transparent',
 		scrollTrigger: heroScrollTrigger
 	});
-	gsap.to('.hero__letter', { opacity: 1, duration: 1, stagger: 0.05 });
 
 	// About scrolling effect
 	const aboutImages = document.querySelectorAll('.about__image');
@@ -802,7 +801,12 @@ gsap.ticker.lagSmoothing(0);
 		}
 	}
 	&__letter {
-		opacity: 0;
+		transition: opacity 300ms;
+		@for $i from 2 through 40 {
+			&:nth-child(#{$i}) {
+				transition-delay: #{$i * 50}ms;
+			}
+		}
 	}
 	&__wrapper {
 		display: grid;
@@ -846,6 +850,9 @@ gsap.ticker.lagSmoothing(0);
 			font-size: 7rem;
 		}
 	}
+}
+body.overflow-hidden .hero__letter {
+	opacity: 0;
 }
 section {
 	&:not(.hero) {
