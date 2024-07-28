@@ -84,6 +84,12 @@ body.overflow-hidden {
 		}
 	}
 }
+body.overflow-hidden {
+	.menu__button {
+		opacity: 0;
+		transform: translateX(400%);
+	}
+}
 @mixin list {
 	list-style: none;
 	display: flex;
@@ -161,6 +167,7 @@ body.overflow-hidden {
 		align-items: center;
 		cursor: pointer;
 		gap: 6px;
+		transition: transform 0.5s 1.3s;
 		@media screen and (min-width: 768px) {
 			display: none;
 		}
@@ -199,6 +206,9 @@ body.overflow-hidden {
 		transition: transform 0.5s 2.4s;
 		width: 16rem;
 		height: 100%;
+		@media only screen {
+			transition-delay: 800ms;
+		}
 	}
 	&__list {
 		@include list;
