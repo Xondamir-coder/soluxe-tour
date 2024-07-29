@@ -86,6 +86,14 @@
 		justify-content: space-between;
 		grid-template-columns: 20rem 1fr;
 		row-gap: 3rem;
+		animation: slide-right 700ms forwards;
+		opacity: 0;
+		&:nth-child(2) {
+			animation-delay: 300ms;
+		}
+		&:last-child {
+			animation-delay: 600ms;
+		}
 
 		@media only screen and (max-width: 900px) {
 			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -131,12 +139,33 @@
 		place-items: center;
 		text-align: center;
 		color: var(--color-primary);
+		animation: slide-left 700ms forwards;
 		@media only screen and (max-width: 768px) {
 			display: none;
 		}
 	}
 	a {
 		text-decoration: underline;
+	}
+}
+@keyframes slide-left {
+	from {
+		opacity: 0;
+		transform: translateX(-100%);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+@keyframes slide-right {
+	from {
+		opacity: 0;
+		transform: translateX(100%);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
 	}
 }
 </style>
