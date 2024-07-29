@@ -122,7 +122,7 @@
 				</div>
 				<img class="img img-10" src="@/assets/destination-khiva-1.jpg" alt="img" />
 				<img class="img img-11" src="@/assets/img-6.jpeg" alt="img" />
-				<img class="img img-12" src="@/assets/img-7.jpeg" alt="img" />
+				<img class="img img-12" src="@/assets/img-7.jpg" alt="img" />
 			</div>
 		</div>
 	</div>
@@ -242,7 +242,7 @@
 				<div class="small__images">
 					<img class="small__img" src="@/assets/destination-khiva-1.jpg" alt="img" />
 					<img class="small__img" src="@/assets/img-6.jpeg" alt="img" />
-					<img class="small__img" src="@/assets/img-7.jpeg" alt="img" />
+					<img class="small__img" src="@/assets/img-7.jpg" alt="img" />
 				</div>
 				<p class="text-size-medium">
 					Khiva, a living museum, offers a glimpse into the past with its impeccably

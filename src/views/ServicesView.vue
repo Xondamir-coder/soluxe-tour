@@ -10,7 +10,7 @@
 					<h6 class="heading-6">{{ content.title }}</h6>
 					<p>{{ content.text }}</p>
 				</div>
-				<img class="hero__banner" src="@/assets/img-7.jpeg" alt="hero" />
+				<img class="hero__banner" src="@/assets/img-7.jpg" alt="hero" />
 			</div>
 			<div class="hero__grid">
 				<img src="@/assets/icons/checklist.svg" alt="icon" />
@@ -45,7 +45,7 @@
 						alt="banner" />
 					<img
 						:class="{ active: chosenServiceIndex == 1 }"
-						src="@/assets/big-img.webp"
+						src="@/assets/big-img.jpeg"
 						alt="banner" />
 					<img
 						:class="{ active: chosenServiceIndex == 2 }"

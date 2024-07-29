@@ -48,16 +48,16 @@
 				We offer travellers the most authentic experiences at the most affordable prices
 			</h1>
 			<p class="offer__text">
-				As our business has been raised on the keynote “Devil is in the detail”, we are
-				specialized in servicing small & medium sized global tour operators in order to give
-				consideration to this statement and to provide premier experiences unparalleled in
-				Uzbekistan.
+				At Soluxe Tour, we embrace the philosophy that "Devil is in the detail." We
+				specialize in providing exceptional services to small and medium-sized global tour
+				operators, ensuring every aspect of our offerings is meticulously crafted to deliver
+				unparalleled experiences in Uzbekistan.
 				<br />
 				<br />
-				Our quest is to provide high-quality services to our clients and to exceed their
-				expectations with an unforgettable and authentic experience. Thus, we always try to
-				determine the perfect mix of ingredients for creating a product that fits best to
-				our client’s preferences.
+				Our mission is to offer high-quality services that exceed our clients' expectations,
+				creating unforgettable and authentic experiences. We strive to find the perfect
+				blend of elements to tailor our products to fit our client's unique preferences
+				perfectly.
 			</p>
 		</section>
 		<section data-animate class="about">
@@ -161,17 +161,16 @@
 			</div>
 		</section>
 		<section data-animate>
-			<img src="@/assets/big-img.webp" alt="big img" />
+			<img src="@/assets/big-img.jpeg" alt="big img" />
 		</section>
 		<Tours />
 		<section data-animate class="everyone">
 			<h1 class="heading-big">Uzbekistan has a little something for everyone</h1>
 			<div class="everyone__content">
 				<p class="text-size-medium">
-					Whether you're a thrill seeker, a family and leisure traveler, a corporate or
-					MICE group, or a culture seeker, Uzbekistan has something to offer you. From the
-					stunning mountains of Jebel Shams to the ancient city of Muscat, there's
-					something for everyone in this diverse country.
+					At Soluxe Tour, we specialize in crafting unforgettable MICE experiences
+					tailored to your needs. Join us and explore why Uzbekistan is the ideal
+					destination for your next MICE tour.
 				</p>
 				<div class="everyone__box" v-for="content in everyoneContent" :key="content.title">
 					<img :src="content.icon" alt="mountain" />
@@ -291,32 +290,32 @@ const aboutContent = [
 		img: aboutImg1,
 		label: 'Experts in',
 		title: 'Destination management',
-		desc: "We are a group of passionate travellers and tourism professionals. Our profound love for and knowledge of our country inspires us to share the beauty of Uzbekistan with those who seek the unique experiences and hidden secrets of this blessed land. With our team's extensive knowledge of the destination, a dedicated account manager, 24x7 support and strong partnerships around the region, we believe working with us is a no-brainer."
+		desc: "We are a group of passionate travelers and tourism professionals. Our profound love for and knowledge of Uzbekistan inspire us to share the beauty of this remarkable country with those seeking unique experiences and hidden secrets. With our team's extensive destination knowledge, a dedicated account manager, 24/7 support, and strong partnerships throughout the region, we believe working with us is an easy choice."
 	},
 	{
 		img: aboutImg2,
 		label: 'Driven to create',
 		title: 'Authentic experiences',
-		desc: 'Over decades, our team of superstars have learnt the secret behind the most memorable time in Uzbekistan. While catering to your every need we make sure the experiences remain authentic and off the beaten track'
+		desc: 'Over decades, our team of superstars has learned the secrets behind creating the most memorable experiences in Uzbekistan. While catering to your every need, we ensure that each adventure remains authentic and off the beaten path.'
 	},
 	{
 		img: aboutImg3,
 		label: 'Focused on elevating',
 		title: 'Corporate travel & M.I.C.E.',
-		desc: "When it comes to M.I.C.E. Travel, our team will help you put together unforgettable events for your company. Be it a conference or an incentive trip, trust Arabica Orient's M.I.C.E. team to be your strategic travel partner from the very start."
+		desc: "When it comes to MICE travel, our team will help you put together unforgettable events for your company. Whether it's a conference or an incentive trip, trust Soluxe Tour's MICE team to be your strategic travel partner from the very start."
 	},
 	{
 		img: aboutImg4,
 		label: 'Your partner for',
 		title: 'A-Z travel solutions',
-		desc: "No request is too small or big for us. If it's important to you, it's important to us. We've catered to 1000s of requests from reservations and transfers to exquisitely tailor made tour packages for large groups. We go above and beyond for every client and any request."
+		desc: "No request is too small or too big for us. If it's important to you, it's important to us. We've catered to thousands of requests, from reservations and transfers to exquisitely tailored tour packages for large groups. We go above and beyond for every client and any request."
 	}
 ];
 const everyoneContent = [
 	{
 		icon: mountain,
 		title: 'Thrill seekers',
-		text: 'Uzbekistan offers a variety of activities for thrill seekers, including sandboarding in the Wahiba Sands, hiking in the Jebel Akhdar mountains, and diving in the Daymaniyat Islands.'
+		text: 'Uzbekistan offers a variety of activities for thrill seekers, including sandboarding in the Kyzylkum Desert, hiking in the Chimgan Mountains, and exploring the ancient Silk Road cities.'
 	},
 	{
 		icon: baby,

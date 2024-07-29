@@ -1,76 +1,80 @@
 <template>
 	<section class="tours">
 		<div class="tours__head">
-			<span class="tours__label">Tours</span>
+			<span class="tours__label">Discover</span>
 			<h1 class="tours__head-title">Explore the best Uzbekistan has to offer</h1>
 			<p class="tours__text">
-				Our team of experts sources eye-catching special offers; from private island tours
-				to thrilling adventure ones, our collection is simply irresistible.
+				Uzbekistan, a gem in the heart of Central Asia, beckons with its rich tapestry of
+				history, culture, and natural beauty.
 			</p>
 		</div>
 		<div class="tours__grids">
 			<div class="tours__grid tours__grid--big">
 				<div class="tours__grid-content">
-					<span class="tours__label">Best selling</span>
 					<h1 class="tours__grid-title--big">Glimpse of Uzbekistan</h1>
 					<p class="tours__grid-text">
-						Our most popular package is called Best of Uzbekistan; it is a guaranteed
-						both Italian and german seat-in-coach program that takes place every week.
-						The program is carved out to include all the important and most interesting
-						sites in Uzbekistan offering the best combination of culture, history and
-						little bit of adventure
+						As a premier destination for MICE (Meetings, Incentives, Conferences,
+						Exhibitions) tours, Uzbekistan offers an extraordinary blend of ancient
+						traditions and modern amenities, making it the perfect location for your
+						next business event.
 					</p>
 				</div>
 				<img src="@/assets/grid-img-1.jpeg" alt="grid img" />
 			</div>
 			<div class="tours__grid tours__grid--medium">
-				<img src="@/assets/grid-img-2.webp" alt="grid img" />
 				<div class="tours__grid-content">
-					<span class="tours__label">Family favourite</span>
-					<h1 class="tours__grid-title--small">Wahiba sands</h1>
+					<h1 class="tours__grid-title--small">Historical Treasures</h1>
 					<p class="tours__grid-text">
-						Wahiba Sands occur to be an infinite expanse of uniform dunes. The towering
-						heaps of sand turn from pale gold at noon to a brilliant yellow and then
-						coppery orange at lower angles of the sun. An overnight stay here provides a
-						simple opportunity to feel the raw strength of the desert from the comforts
-						of opulent camps.
+						Wander through the legendary cities of Samarkand, Bukhara, and Khiva, where
+						the ancient Silk Road comes alive with stunning architecture and vibrant
+						markets. Marvel at the grand Registan Square, the intricate Shah-i-Zinda
+						necropolis, and the timeless Ark Fortress.
 					</p>
 				</div>
+				<img src="@/assets/grid-img-treasure.jpg" alt="grid img" />
 			</div>
-			<div class="tours__grid tours__grid--big">
+			<div class="tours__grid tours__grid--medium">
 				<div class="tours__grid-content">
-					<span class="tours__label">Most authentic experiences</span>
-					<h1 class="tours__grid-title--big">Nizwa Friday Market</h1>
+					<h1 class="tours__grid-title--medium">Modern Facilities</h1>
 					<p class="tours__grid-text">
-						Nizwa Friday Market is one of the most attractive event for tourist visiting
-						Uzbekistan. It is an electrifying experience for the first time visitor as
-						you would not see such action packed live stock trade anywhere in the world.
-						Here farmers and traders come to this one of the best traditional market
-						places in the Middle East, bringing their animals from as far away as
-						Salalah for barter and trade.
+						Benefit from state-of-the-art conference venues, luxury hotels, and
+						top-notch event management services. Uzbekistan's infrastructure ensures a
+						seamless and comfortable experience for all your business needs.
 					</p>
 				</div>
-				<img src="@/assets/hero-image-7.jpeg" alt="grid img" />
+				<img src="@/assets/grid-img-modern.jpg" alt="grid img" />
 			</div>
 			<div class="tours__grid tours__grid--small">
 				<div class="tours__grid-content">
-					<img src="@/assets/icons/binocle.svg" alt="binocle" />
-					<h1 class="tours__grid-title--small">Turtle watching</h1>
+					<img src="@/assets/icons/uzb.svg" alt="uzb" />
+					<h1 class="tours__grid-title--small">Cultural Richness</h1>
 					<p class="tours__grid-text">
-						This is one of the few beaches in the world where you can see the green
-						backed turtle coming to lay eggs. Tours and observation of turtles rank
-						among the most well-liked ecotourism activities in Uzbekistan.
+						Immerse yourself in Uzbekistan's diverse cultural heritage, from traditional
+						music and dance to exquisite cuisine. Experience the vibrant local
+						traditions that make each visit uniquely memorable.
 					</p>
 				</div>
 			</div>
 			<div class="tours__grid tours__grid--small">
 				<div class="tours__grid-content">
-					<img src="@/assets/icons/music.svg" alt="music" />
-					<h1 class="tours__grid-title--small">Royal opera house</h1>
+					<img src="@/assets/icons/warm.svg" alt="warm" />
+					<h1 class="tours__grid-title--small">Warm Hospitality</h1>
 					<p class="tours__grid-text">
-						The Royal Opera House Muscat is the Sultanate of Uzbekistan's leading arts
-						and culture organization. The Opera House, located in Muscat, Uzbekistan,
-						aspires to be a centre of excellence in worldwide cultural engagement.
+						Experience the renowned Uzbek hospitality, where every visitor is welcomed
+						as a cherished guest. The warmth and friendliness of the people will make
+						you feel at home, ensuring a pleasant and memorable stay.
+					</p>
+				</div>
+			</div>
+			<div class="tours__grid tours__grid--medium">
+				<img src="@/assets/grid-img-handmade.jpeg" alt="handmade img" />
+				<div class="tours__grid-content">
+					<h1 class="tours__grid-title--medium">Handmade Works from Ancient Times</h1>
+					<p class="tours__grid-text">
+						Explore the exquisite handmade crafts that have been passed down through
+						generations. From intricate silk weaving and detailed ceramics to stunning
+						embroidery and wood carvings, Uzbekistan's artisans continue to create
+						masterpieces that reflect the country's rich cultural heritage.
 					</p>
 				</div>
 			</div>
@@ -127,6 +131,9 @@ onMounted(() => {
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
+		p {
+			text-align: center;
+		}
 		@media only screen and (max-width: 768px) {
 			max-width: initial;
 		}
@@ -140,36 +147,35 @@ onMounted(() => {
 			@media screen and (max-width: 767px) {
 				font-size: 4rem;
 			}
-			@media screen and (max-width: 479px) {
-				text-align: left;
-			}
 		}
 	}
 	&__grids {
 		display: grid;
 		grid-template-areas:
-			'uzbekistan uzbekistan family family'
-			'uzbekistan uzbekistan nizwa nizwa'
-			'turtle music nizwa nizwa';
+			'uzbekistan uzbekistan treasure treasure'
+			'uzbekistan uzbekistan handmade handmade'
+			'richness warm modern modern';
 		grid-auto-columns: 1fr;
 		grid-auto-rows: 32rem;
 		gap: 3.2rem;
 		@media only screen and (max-width: 1000px) {
-			grid-auto-rows: 60rem max-content max-content 70rem 70rem;
+			grid-auto-rows: 60rem max-content max-content 1fr max-content max-content;
 			grid-template-areas:
 				'uzbekistan uzbekistan'
-				'turtle music'
-				'family family'
-				'nizwa nizwa';
+				'richness warm'
+				'treasure treasure'
+				'handmade handmade'
+				'modern modern';
 		}
 		@media only screen and (max-width: 500px) {
-			grid-auto-rows: 80rem max-content max-content max-content 80rem;
+			grid-auto-rows: 60rem max-content max-content 1fr max-content max-content;
 			grid-template-areas:
 				'uzbekistan uzbekistan'
-				'turtle turtle'
-				'music music'
-				'family family'
-				'nizwa nizwa';
+				'richness richness'
+				'warm warm'
+				'handmade handmade'
+				'treasure treasure'
+				'modern modern';
 		}
 	}
 	&__grid {
@@ -219,8 +225,9 @@ onMounted(() => {
 			@media only screen and (max-width: 500px) {
 				flex-direction: column;
 			}
+
 			img {
-				width: 50%;
+				width: 40%;
 				@media only screen and (max-width: 500px) {
 					width: 100%;
 				}
@@ -242,16 +249,19 @@ onMounted(() => {
 			grid-area: uzbekistan;
 		}
 		&:nth-child(2) {
-			grid-area: family;
+			grid-area: treasure;
 		}
 		&:nth-child(3) {
-			grid-area: nizwa;
+			grid-area: modern;
 		}
 		&:nth-child(4) {
-			grid-area: turtle;
+			grid-area: richness;
+		}
+		&:nth-child(5) {
+			grid-area: warm;
 		}
 		&:last-child {
-			grid-area: music;
+			grid-area: handmade;
 		}
 	}
 }
