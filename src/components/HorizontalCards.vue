@@ -2,7 +2,7 @@
 	<div class="destination" id="destination">
 		<h1 id="title" class="heading">Our destinations</h1>
 		<div class="destination__svg">
-			<svg viewBox="0 0 1319 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<svg viewBox="0 0 1350 150" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path
 					id="path"
 					d="M26 36C135.695 37.5738 299.129 82.368 380.53 82.368C461.93 82.368 550.827 44.9588 659.466 44.9588C768.106 44.9588 912.325 86 974.51 86C1068.26 86 1298 44.9588 1298 44.9588"
@@ -323,7 +323,7 @@ onMounted(() => {
 
 		let proxy = { scaleX: 1 },
 			scaleXSetter = gsap.quickSetter('.img', 'scaleX'), // fast
-			clamp = gsap.utils.clamp(0.7, 1.3); // limit scaleX between 0.8 and 1.2 for a realistic effect.
+			clamp = gsap.utils.clamp(0.9, 1.1); // limit scaleX between 0.8 and 1.2 for a realistic effect.
 
 		ScrollTrigger.create({
 			onUpdate: self => {
@@ -343,7 +343,7 @@ onMounted(() => {
 		});
 
 		// make the right edge "stick" to the scroll bar. force3D: true improves performance
-		gsap.set('.img', { transformOrigin: 'right center', force3D: true });
+		gsap.set('.img', { transformOrigin: 'right', force3D: true });
 	} else {
 		gsap.to('#small-plane', {
 			scrollTrigger: {
@@ -428,6 +428,7 @@ onMounted(() => {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
+	padding-right: 5rem;
 	@media only screen and (max-width: 768px) {
 		display: none;
 	}
