@@ -135,11 +135,11 @@ const cardsContent = [
 ];
 
 onMounted(() => {
-	[-1500, -900, -700, -1000, -1100, -1100].forEach((y, index) => {
+	[-1000, -800, -500, -900, -1000, -1000].forEach((y, index) => {
 		const i = index + 1;
 		gsap.to(`.hero__image--${i}`, {
 			y,
-			opacity: 0,
+			// opacity: 0,
 			scrollTrigger: {
 				trigger: '.hero',
 				start: 'top top',
@@ -394,9 +394,9 @@ onMounted(() => {
 	}
 	&__image {
 		border-radius: 16px;
-		position: fixed;
-		width: clamp(120px, 30vw, 35rem);
-		height: clamp(150px, 40vw, 40rem);
+		position: absolute;
+		width: clamp(120px, 30vw, 300px);
+		height: clamp(150px, 40vw, 350px);
 		object-fit: cover;
 		&--1 {
 			z-index: 1;
@@ -412,7 +412,7 @@ onMounted(() => {
 			top: 55%;
 		}
 		&--4 {
-			right: 15%;
+			right: 30%;
 			top: 45%;
 		}
 		&--5 {

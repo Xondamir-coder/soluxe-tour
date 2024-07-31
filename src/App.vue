@@ -1,5 +1,5 @@
 <template>
-	<Preloader />
+	<!-- <Preloader /> -->
 	<div class="container">
 		<Header />
 		<RouterView />
