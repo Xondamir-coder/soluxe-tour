@@ -173,10 +173,7 @@ onMounted(() => {
 		opacity: 1,
 		transform: 'scale(1)',
 		duration: 1,
-		stagger: 0.2,
-		scrollTrigger: {
-			start: 'top+=100 top'
-		}
+		stagger: 0.2
 	});
 
 	// Animate each section

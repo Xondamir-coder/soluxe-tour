@@ -388,6 +388,7 @@ onMounted(() => {
 	gap: 4rem;
 	overflow-x: hidden;
 	&__item {
+		filter: invert(1);
 		animation: slide-left infinite 20s alternate linear;
 		max-height: 5.6rem;
 		width: 14rem;
@@ -397,13 +398,13 @@ onMounted(() => {
 		}
 	}
 	&__list {
-		background-color: var(--color-secondary);
 		padding: 4rem;
 		list-style: none;
 		display: flex;
 		gap: 5rem;
 		align-items: center;
 		overflow-x: hidden;
+
 		img {
 			height: 100%;
 			width: 100%;

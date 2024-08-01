@@ -432,9 +432,6 @@ onMounted(() => {
 	});
 });
 onUnmounted(() => {
-	animations.forEach(a => {
-		a.kill();
-	});
 	document.body.style.backgroundColor = 'var(--color-primary)';
 });
 

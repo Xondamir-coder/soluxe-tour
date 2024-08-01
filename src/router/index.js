@@ -1,4 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 import HomeView from '@/views/HomeView.vue';
 import AboutView from '@/views/AboutView.vue';
 import ServicesView from '@/views/ServicesView.vue';
@@ -6,6 +8,7 @@ import UzbekistanView from '@/views/UzbekistanView.vue';
 import MiceView from '@/views/MiceView.vue';
 import ContactsView from '@/views/ContactsView.vue';
 import LegalView from '@/views/LegalView.vue';
+import lenis from '@/js/lenis';
 
 const router = createRouter({
 	history: createWebHistory(import.meta.env.BASE_URL),
@@ -45,14 +48,12 @@ const router = createRouter({
 			name: 'legal',
 			component: LegalView
 		}
-	],
-	scrollBehavior(to, from, savedPosition) {
-		if (savedPosition) {
-			return savedPosition;
-		} else {
-			return { left: 0, top: 0 };
-		}
-	}
+	]
+});
+
+router.beforeEach(() => {
+	ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+	lenis.scrollTo(0, { immediate: true });
 });
 
 export default router;

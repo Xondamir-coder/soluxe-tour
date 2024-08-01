@@ -139,7 +139,6 @@ onMounted(() => {
 		const i = index + 1;
 		gsap.to(`.hero__image--${i}`, {
 			y,
-			// opacity: 0,
 			scrollTrigger: {
 				trigger: '.hero',
 				start: 'top top',

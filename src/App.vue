@@ -11,10 +11,7 @@
 import Header from '@/components/Header.vue';
 import Footer from '@/components/Footer.vue';
 import Preloader from '@/components/Preloader.vue';
-import Lenis from 'lenis';
-
-const lenis = new Lenis();
-lenis.on('scroll', e => {});
+import lenis from './js/lenis';
 
 function raf(time) {
 	lenis.raf(time);
@@ -22,10 +19,6 @@ function raf(time) {
 }
 
 requestAnimationFrame(raf);
-
-window.addEventListener('load', () => {
-	window.scrollTo(0, 0);
-});
 </script>
 
 <style lang="scss" scoped></style>

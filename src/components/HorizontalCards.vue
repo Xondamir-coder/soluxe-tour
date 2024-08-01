@@ -219,7 +219,9 @@ onMounted(() => {
 			opacity: 0,
 			scrollTrigger: {
 				trigger: '#destination',
-				start: 'top top'
+				start: 'top top',
+				end: () => `+=${document.querySelector('#container').scrollWidth}`,
+				toggleActions: 'play reverse play reverse'
 			}
 		});
 		gsap.set('#plane', { xPercent: -50, yPercent: -50, transformOrigin: '50% 50%' });
@@ -258,24 +260,30 @@ onMounted(() => {
 				}
 			});
 		});
-
 		let proxy = { scaleX: 1 },
 			scaleXSetter = gsap.quickSetter('.img', 'scaleX'), // fast
-			clamp = gsap.utils.clamp(0.9, 1.1); // limit scaleX between 0.8 and 1.2 for a realistic effect.
+			clamp = gsap.utils.clamp(0.9, 1.1); // limit scaleX between 0.95 and 1.05 for a realistic effect.
 
 		ScrollTrigger.create({
 			onUpdate: self => {
-				let scaleX = clamp(1 + self.getVelocity() / 1000); // adjust the divisor to control the scaleX effect
-				// only do something if the scaleX is more severe. Remember, we're always tweening back to 1, so if the user slows their scrolling quickly, it's more natural to just let the tween handle that smoothly rather than jumping to the smaller scaleX.
-				if (Math.abs(scaleX - 1) > Math.abs(proxy.scaleX - 1)) {
-					proxy.scaleX = scaleX;
-					gsap.to(proxy, {
-						scaleX: 1,
-						duration: 0.8,
-						ease: 'power3',
-						overwrite: true,
-						onUpdate: () => scaleXSetter(proxy.scaleX)
-					});
+				let velocity = self.getVelocity(),
+					threshold = 100, // increase threshold for smoother scaling
+					scaleX;
+
+				// Apply scale only if velocity exceeds the threshold
+				if (Math.abs(velocity) > threshold) {
+					scaleX = clamp(1 + velocity / 5000); // adjust the divisor for smoother scaling
+					// only do something if the scaleX is more severe. Remember, we're always tweening back to 1, so if the user slows their scrolling quickly, it's more natural to just let the tween handle that smoothly rather than jumping to the smaller scaleX.
+					if (Math.abs(scaleX - 1) > Math.abs(proxy.scaleX - 1)) {
+						proxy.scaleX = scaleX;
+						gsap.to(proxy, {
+							scaleX: 1,
+							duration: 1, // adjust duration for smoothness
+							ease: 'power3.out', // adjust ease for a smoother effect
+							overwrite: true,
+							onUpdate: () => scaleXSetter(proxy.scaleX)
+						});
+					}
 				}
 			}
 		});
@@ -436,15 +444,15 @@ onMounted(() => {
 
 	&-1 {
 		top: 15%;
-		left: 30%;
+		left: 18%;
 	}
 	&-2 {
 		top: 20%;
-		left: 9.6rem;
+		left: 2%;
 	}
 	&-3 {
 		bottom: 5%;
-		left: 20%;
+		left: 10%;
 	}
 	&-4 {
 		top: 30%;
