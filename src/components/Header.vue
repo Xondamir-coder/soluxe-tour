@@ -90,6 +90,9 @@ body.overflow-hidden {
 		transform: translateX(400%);
 	}
 }
+body.bg-white .header {
+	background-color: #fff;
+}
 @mixin list {
 	list-style: none;
 	display: flex;

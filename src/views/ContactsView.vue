@@ -13,17 +13,28 @@
 					<div>
 						<span>Tashkent, Uzbekistan</span>
 						<p>
-							38 S 2nd St <br />
-							P.O. Box 68 <br />
-							Columbia, PA 17512
+							6/1, Afrosiyob str, <br />
+							 Mirabad district,<br />
+							Tashkent city,<br />
+							Republic of Uzbekistan
 						</p>
 					</div>
 					<div>
 						<span>Beijing, China</span>
 						<p>
-							38 S 2nd St <br />
-							P.O. Box 68 <br />
-							Columbia, PA 17512
+							Office 604, Tower B, <br />
+
+							Haiger international, <br />
+							No. 20, Xuanwumen street, <br />
+							Xicheng district, <br />
+							Beijing, China 
+						</p>
+					</div>
+					<div>
+						<span>Almaty, Kazakhstan</span>
+						<p>
+							Kazybekbi 22b, <br />
+							Almaty, Kazakhstan,
 						</p>
 					</div>
 				</div>
@@ -33,14 +44,20 @@
 				<div class="contacts__box-content">
 					<div>
 						<span>Tashkent, Uzbekistan</span>
-						<a href="tel:+998 90 123 45 67">
-							<p>+998 90 123 45 67</p>
+						<a href="tel:+998 909919020">
+							<p>+998 909919020</p>
 						</a>
 					</div>
 					<div>
 						<span>Beijing, China</span>
-						<a href="tel:+8 123 456 78 90">
-							<p>+8 123 456 78 90</p>
+						<a href="tel:+86 15801494957">
+							<p>+86 15801494957</p>
+						</a>
+					</div>
+					<div>
+						<span>Almaty, Kazakhstan</span>
+						<a href="tel:+7 7076162797">
+							<p>+7 7076162797</p>
 						</a>
 					</div>
 				</div>
@@ -49,15 +66,13 @@
 				<p class="contacts__box-label">Email</p>
 				<div class="contacts__box-content">
 					<div>
-						<span>Tashkent, Uzbekistan</span>
 						<a href="mailto:info@soluxetour.uz">
 							<p>info@soluxetour.uz</p>
 						</a>
 					</div>
 					<div>
-						<span>Beijing, China</span>
-						<a href="mailto:info@soluxetour.cn">
-							<p>info@soluxetour.cn</p>
+						<a href="mailto:hello@soluxetour.uz">
+							<p>hello@soluxetour.uz</p>
 						</a>
 					</div>
 				</div>
@@ -66,7 +81,12 @@
 	</main>
 </template>
 
-<script setup></script>
+<script setup>
+import { onMounted, onUnmounted } from 'vue';
+
+onMounted(() => document.body.classList.add('bg-white'));
+onUnmounted(() => document.body.classList.remove('bg-white'));
+</script>
 
 <style lang="scss" scoped>
 .contacts {
@@ -103,18 +123,24 @@
 			font-size: 1.8rem;
 		}
 		&-content {
-			display: flex;
-			flex-wrap: wrap;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 			gap: 4rem;
 
+			div {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+			}
 			span {
 				font-size: 1.8rem;
 				color: #1e1e1e;
 			}
 			p {
-				font-size: 3rem;
-				font-style: italic;
 				font-weight: 500;
+				font-size: 2rem;
+				font-style: italic;
+				color: rgba(30, 30, 30, 1);
 			}
 		}
 	}
@@ -122,7 +148,7 @@
 		padding: 3rem 0;
 		display: flex;
 		flex-direction: column;
-		gap: 8rem;
+		gap: 3rem;
 		@media only screen and (max-width: 900px) {
 			padding: 3rem;
 		}
@@ -143,9 +169,6 @@
 		@media only screen and (max-width: 768px) {
 			display: none;
 		}
-	}
-	a {
-		text-decoration: underline;
 	}
 }
 @keyframes slide-left {

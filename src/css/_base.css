@@ -37,6 +37,9 @@ body {
 	line-height: 1.5;
 	overflow-x: hidden;
 }
+body.bg-white {
+	background-color: #fff;
+}
 * {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
