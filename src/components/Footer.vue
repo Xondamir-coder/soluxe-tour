@@ -1,15 +1,29 @@
 <template>
 	<footer class="footer">
-		<img class="footer__logo" src="@/assets/logo-yellow.svg" alt="logo" />
-		<p>
-			Address:
-			<br />
-			18 November st, Azaiba, Muscat, OM 101
-		</p>
-		<div class="footer__contact">
-			<p>Contact:</p>
-			<a href="tel:+968 244 500 900">+968 244 500 900</a>
-			<a href="mailto:info@arabicaorient.com">info@arabicaorient.com</a>
+		<div class="footer__container">
+			<div class="footer__left">
+				<img class="footer__logo" src="@/assets/logo-yellow.svg" alt="logo" />
+				<p>
+					Address:
+					<br />
+					6/1, Afrosiyob str., Mirabad district,
+					<br />
+					Tashkent city, Republic of Uzbekistan
+				</p>
+				<div class="footer__contact">
+					<p>Contact:</p>
+					<a href="tel:+998909919020">+998909919020</a>
+					<a href="mailto:info@soluxetour.uz">info@soluxetour.uz</a>
+				</div>
+			</div>
+			<nav class="footer__right">
+				<RouterLink
+					:to="`/${link.toLowerCase()}`"
+					v-for="link in ['About', 'Services', 'MICE', 'Uzbekistan']"
+					:key="link"
+					>{{ link }}</RouterLink
+				>
+			</nav>
 		</div>
 		<svg
 			class="footer__waves"
@@ -123,8 +137,8 @@
 	padding-right: 8%;
 	color: var(--color-primary-light);
 	display: flex;
-	flex-direction: column;
 	gap: 3.5rem;
+	flex-direction: column;
 	align-items: flex-start;
 	overflow-x: hidden;
 
@@ -135,6 +149,36 @@
 	@media only screen and (max-width: 768px) {
 		padding-left: 5%;
 		padding-right: 5%;
+	}
+	&__logo {
+		width: 16.8rem;
+		height: 5.4rem;
+	}
+	&__container {
+		align-self: stretch;
+		display: flex;
+		justify-content: space-between;
+		gap: 3rem;
+		@media only screen and (max-width: 500px) {
+			flex-direction: column;
+		}
+	}
+	&__left {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+	&__right {
+		text-align: right;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		font-weight: 500;
+		@media only screen and (max-width: 500px) {
+			justify-content: center;
+			flex-direction: row;
+			gap: 2rem;
+		}
 	}
 	&__copyright {
 		align-self: stretch;
