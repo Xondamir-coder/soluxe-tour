@@ -48,14 +48,8 @@
 					Get in touch
 				</RouterLink>
 			</div>
-			<img
-				class="hero__flower hero__flower--1"
-				src="@/assets/icons/flower.svg"
-				alt="flower" />
-			<img
-				class="hero__flower hero__flower--2"
-				src="@/assets/icons/flower.svg"
-				alt="flower" />
+			<Ornament class="hero__ornament hero__ornament--1" />
+			<Ornament class="hero__ornament hero__ornament--2" />
 		</section>
 		<section data-animate class="reason">
 			<h1 class="heading-style-h1"><strong>We're here for a reason</strong></h1>
@@ -199,7 +193,7 @@
 		</section>
 		<section data-animate class="words">
 			<div class="words__content">
-				<img src="@/assets/icons/flower.svg" alt="flower" />
+				<Ornament class="words__ornament" />
 				<p class="text-weight-semibold">Words from the founder</p>
 				<p class="text-size-medium">
 					We have resolved to providing our clients extraordinary levels of customer
@@ -222,7 +216,7 @@
 		</section>
 		<section data-animate class="message">
 			<div class="message__content">
-				<img src="@/assets/icons/flower.svg" alt="flower" />
+				<Ornament class="message__ornament" />
 				<h1 class="heading-style-h1">
 					Let us help you show the best of Uzbekistan to your clients
 				</h1>
@@ -241,6 +235,7 @@ import heartIcon from '@/assets/icons/heart.svg';
 import checkIcon from '@/assets/icons/check.svg';
 import idIcon from '@/assets/icons/id.svg';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Ornament from '@/components/Ornament.vue';
 gsap.registerPlugin(ScrollTrigger);
 
 const valuesContent = [
@@ -282,6 +277,21 @@ onMounted(() => {
 		transform: scale(1);
 		opacity: 1;
 	}
+	&__ornament {
+		position: absolute;
+		left: -22rem;
+		bottom: -22rem;
+		@media only screen and (max-width: 768px) {
+			transform: scale(0.6);
+			left: -30rem;
+			bottom: -30rem;
+		}
+		@media only screen and (max-width: 500px) {
+			transform: scale(0.5);
+			left: -30rem;
+			bottom: -30rem;
+		}
+	}
 	&__content {
 		transform: scale(0.3);
 		opacity: 0;
@@ -306,22 +316,6 @@ onMounted(() => {
 			z-index: 1;
 		}
 
-		img {
-			position: absolute;
-			left: -15rem;
-			bottom: -15rem;
-			transform: scale(1.5) rotate(124deg);
-			@media only screen and (max-width: 768px) {
-				transform: scale(1) rotate(124deg);
-				left: -22rem;
-				bottom: -22rem;
-			}
-			@media only screen and (max-width: 500px) {
-				transform: scale(0.7) rotate(124deg);
-				left: -25rem;
-				bottom: -25rem;
-			}
-		}
 		a {
 			color: var(--color-primary);
 			border-color: var(--color-primary);
@@ -337,20 +331,18 @@ onMounted(() => {
 		transform: scale(1);
 		opacity: 1;
 	}
-	img {
+	&__ornament {
 		position: absolute;
-		right: -15rem;
-		top: -15rem;
-		transform: scale(1.3) rotate(303deg);
+		right: -22rem;
+		top: -22rem;
 		@media only screen and (max-width: 768px) {
-			transform: scale(1) rotate(303deg);
-			right: -22rem;
-			top: -22rem;
+			right: -30rem;
+			top: -30rem;
+			transform: scale(0.6);
 		}
 		@media only screen and (max-width: 500px) {
-			transform: scale(0.7) rotate(303deg);
-			right: -25rem;
-			top: -25rem;
+			right: -30rem;
+			top: -30rem;
 		}
 	}
 
@@ -543,7 +535,7 @@ onMounted(() => {
 		opacity: 0;
 	}
 
-	&__flower {
+	&__ornament {
 		position: absolute;
 		animation: scale-up 1s forwards;
 		@media only screen and (max-width: 768px) {
@@ -625,7 +617,7 @@ section {
 		scale: 0;
 	}
 	to {
-		scale: 1.6;
+		scale: 1;
 	}
 }
 @keyframes scale-up-small {
@@ -633,7 +625,7 @@ section {
 		scale: 0;
 	}
 	to {
-		scale: 1;
+		scale: 0.7;
 	}
 }
 @keyframes slide-left {

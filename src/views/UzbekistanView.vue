@@ -60,7 +60,7 @@
 					one dream beach after another, and exciting cultural highlights await you in the
 					cities and villages.
 				</p>
-				<img src="@/assets/icons/flower.svg" alt="flower" class="take__image" />
+				<Ornament class="take__image" />
 			</div>
 		</section>
 		<section class="discover" data-animate>
@@ -113,6 +113,7 @@ import loveIcon from '@/assets/icons/love.svg';
 import Tours from '@/components/Tours.vue';
 import GridImages from '@/components/GridImages.vue';
 import HorizontalCards from '@/components/HorizontalCards.vue';
+import Ornament from '@/components/Ornament.vue';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -303,18 +304,18 @@ onMounted(() => {
 	}
 	&__image {
 		position: absolute;
-		bottom: 5rem;
-		left: -19rem;
-		transform: scale(1.6) rotate(149deg);
+		bottom: 6rem;
+		left: -26rem;
 		object-fit: cover;
 		@media only screen and (max-width: 768px) {
-			transform: scale(1) rotate(149deg);
-			bottom: -10rem;
-			left: -25rem;
+			transform: scale(0.7);
+			bottom: 5rem;
+			left: -30rem;
 		}
 		@media only screen and (max-width: 500px) {
-			transform: scale(0.7) rotate(149deg);
-			bottom: -20rem;
+			transform: scale(0.5);
+			bottom: 5rem;
+			left: -30rem;
 		}
 	}
 	&__content {
@@ -339,7 +340,7 @@ onMounted(() => {
 		@media only screen and (max-width: 500px) {
 			padding: 7rem 2rem;
 		}
-		& > *:not(img) {
+		& > *:not(.take__image) {
 			z-index: 1;
 		}
 	}

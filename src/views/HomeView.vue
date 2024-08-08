@@ -161,7 +161,7 @@
 			</div>
 		</section>
 		<section data-animate>
-			<img src="@/assets/big-img.jpeg" alt="big img" />
+			<img class="big-img" src="@/assets/big-img.jpeg" alt="big img" />
 		</section>
 		<Tours />
 		<section data-animate class="everyone">
@@ -658,6 +658,7 @@ gsap.ticker.lagSmoothing(0);
 		opacity: 0;
 		height: 70%;
 		position: absolute;
+		border-radius: 10px;
 		&:first-child {
 			opacity: 1;
 		}
@@ -860,6 +861,9 @@ section {
 			padding: 7rem 5%;
 		}
 	}
+}
+.big-img {
+	border-radius: 25px;
 }
 img {
 	width: 100%;
