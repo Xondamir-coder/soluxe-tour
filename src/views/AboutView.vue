@@ -194,23 +194,26 @@
 		<section data-animate class="words">
 			<div class="words__content">
 				<Ornament class="words__ornament" />
-				<p class="text-weight-semibold">Words from the founder</p>
+				<p class="text-weight-semibold">Tips for Tourists Visiting Uzbekistan</p>
 				<p class="text-size-medium">
-					We have resolved to providing our clients extraordinary levels of customer
-					service. In short, for nearly a decade we’ve given all our partners the reason
-					to consider AOT as their only choice in travel. Customer satisfaction is the
-					hallmark by which we measure our performance, and we hold ourselves, as do our
-					clients, to the highest standards of quality. At AOT, we are laser focused on
-					two aspects of travel, quality and customer satisfaction.
+					When visiting Uzbekistan, it's essential to be mindful of the local customs and
+					traditions. The people of Uzbekistan are known for their warm hospitality, and a
+					respectful attitude towards local culture will enhance your experience. Dress
+					modestly, especially when visiting religious sites, and always ask for
+					permission before taking photos of people, particularly in rural areas. It’s
+					also a good idea to learn a few basic phrases in Uzbek or Russian, as this will
+					be greatly appreciated by locals and can help you navigate your way around more
+					easily.
 				</p>
 				<p class="text-size-medium">
-					As Arabica continues to grow, each new day offers a chance for us to work
-					together, pursue new opportunities and improve upon the past. In-depth client
-					relationships are been built on a daily basis. Our business revolves around the
-					needs of our clients, in doing so we are always at the forefront of change and
-					where value is always been given. We invite you to take advantage of our insider
-					tourism expertise and to embark on a journey full of endless possibilities with
-					us.
+					Another important tip is to plan your finances accordingly, as Uzbekistan is
+					largely a cash-based society. While major cities like Tashkent may have ATMs and
+					accept credit cards at hotels and upscale restaurants, it's advisable to carry
+					sufficient cash for smaller towns, markets, and local vendors. The local
+					currency is the Uzbekistani Som, and exchanging money at official exchange
+					points or banks is recommended for getting the best rates. Additionally, while
+					tap water is generally safe in larger cities, it's advisable to drink bottled
+					water during your travels to avoid any stomach upsets.
 				</p>
 			</div>
 		</section>

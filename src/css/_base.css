@@ -38,7 +38,7 @@ body {
 	overflow-x: hidden;
 }
 body.bg-white {
-	background-color: #fff;
+	background-color: #fff !important;
 }
 * {
 	-webkit-font-smoothing: antialiased;

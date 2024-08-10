@@ -11,9 +11,6 @@
 				<div class="header__item-underline"></div>
 			</li>
 		</ul>
-		<RouterLink to="/contacts" data-button class="header__button button-secondary"
-			>Book a travel</RouterLink
-		>
 		<div class="menu__button" @click="isMenuOpen = true">
 			<span></span>
 			<span></span>
@@ -52,7 +49,7 @@ import Overlay from '@/components/Overlay.vue';
 
 const isMenuOpen = ref(false);
 
-const links = ['About', 'Services', 'Uzbekistan', 'MICE'];
+const links = ['About', 'Services', 'Uzbekistan', 'MICE', 'Contacts'];
 </script>
 
 <style lang="scss" scoped>
@@ -78,8 +75,11 @@ body.overflow-hidden {
 			&:nth-child(3) {
 				transform: translateX(-50%);
 			}
-			&:last-child {
+			&:nth-child(4) {
 				transform: translateX(-300%);
+			}
+			&:nth-child(5) {
+				transform: translateX(-400%);
 			}
 		}
 	}
@@ -185,7 +185,6 @@ body.bg-white .header {
 	padding: 0 7.6rem;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -196,6 +195,9 @@ body.bg-white .header {
 	transition-delay: 300ms;
 	transition-duration: 500ms;
 	transition-property: background-color, border-color;
+	@media only screen and (max-width: 768px) {
+		justify-content: space-between;
+	}
 	@media only screen and (max-width: 900px) {
 		padding: 0 3rem;
 	}
@@ -214,6 +216,7 @@ body.bg-white .header {
 		}
 	}
 	&__list {
+		margin: 0 calc(50% - 37rem);
 		@include list;
 		@media only screen and (max-width: 768px) {
 			display: none;
@@ -238,8 +241,11 @@ body.bg-white .header {
 		&:nth-child(3) {
 			transition-delay: 2.1s;
 		}
-		&:last-child {
+		&:nth-child(4) {
 			transition-delay: 1.9s;
+		}
+		&:nth-child(5) {
+			transition-delay: 2.3s;
 		}
 
 		&-underline {

@@ -120,7 +120,12 @@
 				<br />
 				All rights reserved.
 			</p>
-			<p>Developed and created by Space Labs</p>
+			<p>
+				Developed and created by
+				<a href="http://www.spacelabs.uz" target="_blank" rel="noopener noreferrer">
+					Space Labs
+				</a>
+			</p>
 			<RouterLink to="/legal"><p>Terms and conditions</p></RouterLink>
 		</div>
 	</footer>
