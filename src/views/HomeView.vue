@@ -223,40 +223,43 @@
 				</RouterLink>
 				<ul class="partners__list">
 					<li class="partners__item">
-						<img src="@/assets/partners-1.webp" alt="partner" />
+						<img src="@/assets/partners/hilton.png" alt="partner" />
 					</li>
 					<li class="partners__item">
-						<img src="@/assets/partners-2.webp" alt="partner" />
+						<img src="@/assets/partners/hyatt.png" alt="partner" />
 					</li>
 					<li class="partners__item">
-						<img src="@/assets/partners-3.png" alt="partner" />
+						<img src="@/assets/partners/Intercontinental.png" alt="partner" />
 					</li>
 					<li class="partners__item">
-						<img src="@/assets/partners-4.png" alt="partner" />
+						<img src="@/assets/partners/international.png" alt="partner" />
 					</li>
 					<li class="partners__item">
-						<img src="@/assets/partners-5.png" alt="partner" />
+						<img src="@/assets/partners/lia.svg" alt="partner" />
 					</li>
 					<li class="partners__item">
-						<img src="@/assets/partners-6.webp" alt="partner" />
+						<img src="@/assets/partners/lotte.png" alt="partner" />
 					</li>
 					<li class="partners__item">
-						<img src="@/assets/partners-7.webp" alt="partner" />
+						<img src="@/assets/partners/minyoun.svg" alt="partner" />
 					</li>
 					<li class="partners__item">
-						<img src="@/assets/partners-8.png" alt="partner" />
+						<img src="@/assets/partners/movenpick.png" alt="partner" />
 					</li>
 					<li class="partners__item">
-						<img src="@/assets/partners-9.webp" alt="partner" />
+						<img src="@/assets/partners/radisson.png" alt="partner" />
 					</li>
 					<li class="partners__item">
-						<img src="@/assets/partners-10.png" alt="partner" />
+						<img src="@/assets/partners/ramada-tashkent.png" alt="partner" />
 					</li>
 					<li class="partners__item">
-						<img src="@/assets/partners-11.png" alt="partner" />
+						<img src="@/assets/partners/ramada.png" alt="partner" />
 					</li>
 					<li class="partners__item">
-						<img src="@/assets/partners-12.png" alt="partner" />
+						<img src="@/assets/partners/travel cars.png" alt="partner" />
+					</li>
+					<li class="partners__item">
+						<img src="@/assets/partners/Wyndham.png" alt="partner" />
 					</li>
 				</ul>
 			</div>
@@ -455,13 +458,15 @@ gsap.ticker.lagSmoothing(0);
 		padding-top: 8px;
 		padding-bottom: 8px;
 		display: flex;
-		justify-content: space-evenly;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
 		flex-wrap: wrap;
 		list-style: none;
 	}
 	&__item {
-		width: 8rem;
-		height: 8rem;
+		width: 12rem;
+		height: 12rem;
 		img {
 			object-fit: contain;
 		}

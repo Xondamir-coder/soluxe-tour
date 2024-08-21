@@ -118,76 +118,43 @@
 			<p class="partners__title text-size-medium">We're honoured to work with the best</p>
 			<ul class="partners__list">
 				<li class="partners__item">
-					<img src="@/assets/partners-1.webp" alt="partners 1" />
+					<img src="@/assets/partners/hilton.png" alt="partner" />
 				</li>
 				<li class="partners__item">
-					<img src="@/assets/partners-2.webp" alt="partners 2" />
+					<img src="@/assets/partners/hyatt.png" alt="partner" />
 				</li>
 				<li class="partners__item">
-					<img src="@/assets/partners-3.png" alt="partners 3" />
+					<img src="@/assets/partners/Intercontinental.png" alt="partner" />
 				</li>
 				<li class="partners__item">
-					<img src="@/assets/partners-4.png" alt="partners 4" />
+					<img src="@/assets/partners/international.png" alt="partner" />
 				</li>
 				<li class="partners__item">
-					<img src="@/assets/partners-5.png" alt="partners 5" />
+					<img src="@/assets/partners/lia.svg" alt="partner" />
 				</li>
 				<li class="partners__item">
-					<img src="@/assets/partners-6.webp" alt="partners 6" />
+					<img src="@/assets/partners/lotte.png" alt="partner" />
 				</li>
 				<li class="partners__item">
-					<img src="@/assets/partners-7.webp" alt="partners 7" />
+					<img src="@/assets/partners/minyoun.svg" alt="partner" />
 				</li>
 				<li class="partners__item">
-					<img src="@/assets/partners-8.png" alt="partners 8" />
+					<img src="@/assets/partners/movenpick.png" alt="partner" />
 				</li>
 				<li class="partners__item">
-					<img src="@/assets/partners-9.webp" alt="partners 9" />
+					<img src="@/assets/partners/radisson.png" alt="partner" />
 				</li>
 				<li class="partners__item">
-					<img src="@/assets/partners-10.png" alt="partners 10" />
+					<img src="@/assets/partners/ramada-tashkent.png" alt="partner" />
 				</li>
 				<li class="partners__item">
-					<img src="@/assets/partners-11.png" alt="partners 10" />
+					<img src="@/assets/partners/ramada.png" alt="partner" />
 				</li>
 				<li class="partners__item">
-					<img src="@/assets/partners-12.png" alt="partners 10" />
+					<img src="@/assets/partners/travel cars.png" alt="partner" />
 				</li>
 				<li class="partners__item">
-					<img src="@/assets/partners-1.webp" alt="partners 1" />
-				</li>
-				<li class="partners__item">
-					<img src="@/assets/partners-2.webp" alt="partners 2" />
-				</li>
-				<li class="partners__item">
-					<img src="@/assets/partners-3.png" alt="partners 3" />
-				</li>
-				<li class="partners__item">
-					<img src="@/assets/partners-4.png" alt="partners 4" />
-				</li>
-				<li class="partners__item">
-					<img src="@/assets/partners-5.png" alt="partners 5" />
-				</li>
-				<li class="partners__item">
-					<img src="@/assets/partners-6.webp" alt="partners 6" />
-				</li>
-				<li class="partners__item">
-					<img src="@/assets/partners-7.webp" alt="partners 7" />
-				</li>
-				<li class="partners__item">
-					<img src="@/assets/partners-8.png" alt="partners 8" />
-				</li>
-				<li class="partners__item">
-					<img src="@/assets/partners-9.webp" alt="partners 9" />
-				</li>
-				<li class="partners__item">
-					<img src="@/assets/partners-10.png" alt="partners 10" />
-				</li>
-				<li class="partners__item">
-					<img src="@/assets/partners-11.png" alt="partners 10" />
-				</li>
-				<li class="partners__item">
-					<img src="@/assets/partners-12.png" alt="partners 10" />
+					<img src="@/assets/partners/Wyndham.png" alt="partner" />
 				</li>
 			</ul>
 		</section>
@@ -383,17 +350,20 @@ onMounted(() => {
 	gap: 4rem;
 	overflow-x: hidden;
 	&__item {
-		filter: invert(1);
 		animation: slide-left infinite 20s alternate linear;
-		max-height: 5.6rem;
 		width: 14rem;
+		cursor: pointer;
+		filter: contrast(0);
+		transition: filter 300ms;
+		&:hover {
+			filter: contrast(1);
+		}
 		@media only screen and (max-width: 500px) {
 			max-height: 4.8rem;
 			width: 10rem;
 		}
 	}
 	&__list {
-		padding: 4rem;
 		list-style: none;
 		display: flex;
 		gap: 5rem;
