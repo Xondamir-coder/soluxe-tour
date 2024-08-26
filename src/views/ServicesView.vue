@@ -10,7 +10,7 @@
 					<h6 class="heading-6">{{ content.title }}</h6>
 					<p>{{ content.text }}</p>
 				</div>
-				<img class="hero__banner" src="@/assets/img-7.jpg" alt="hero" />
+				<img class="hero__banner" src="@/assets/services-hero.jpeg" alt="hero" />
 			</div>
 			<div class="hero__grid">
 				<img src="@/assets/icons/checklist.svg" alt="icon" />
@@ -41,11 +41,11 @@
 				<div class="offer__images">
 					<img
 						:class="{ active: chosenServiceIndex == 0 }"
-						src="@/assets/about-img-3.jpeg"
+						src="@/assets/img-2.jpeg"
 						alt="banner" />
 					<img
 						:class="{ active: chosenServiceIndex == 1 }"
-						src="@/assets/big-img.jpeg"
+						src="@/assets/services-2.jpeg"
 						alt="banner" />
 					<img
 						:class="{ active: chosenServiceIndex == 2 }"
@@ -81,7 +81,7 @@
 			</div>
 		</section>
 		<section class="travel" data-animate>
-			<img src="@/assets/travel.webp" alt="travel" />
+			<img src="@/assets/services-big.jpg" alt="travel" />
 			<div class="travel__content">
 				<h1 class="travel__title">More than just a travel partner</h1>
 				<p class="text-size-medium">
@@ -105,9 +105,9 @@ import globalIcon from '@/assets/icons/global.svg';
 import ringsIcon from '@/assets/icons/rings.svg';
 import workIcon from '@/assets/icons/work-white.svg';
 import friendshipIcon from '@/assets/icons/friendship.svg';
-import betterImg1 from '@/assets/img-6.jpeg';
-import betterImg2 from '@/assets/hero-image-9.jpeg';
-import betterImg3 from '@/assets/img-5.jpeg';
+import betterImg1 from '@/assets/services-safety.jpg';
+import betterImg2 from '@/assets/grid-img-3.jpeg';
+import betterImg3 from '@/assets/services-humans.jpg';
 
 gsap.registerPlugin(ScrollTrigger);
 

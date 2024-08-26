@@ -3,15 +3,15 @@
 		<section data-animate class="hero">
 			<div class="hero__wrapper">
 				<div class="hero__images">
-					<img class="hero__image" src="@/assets/hero-image-6.jpeg" alt="hero img" />
+					<img class="hero__image" src="@/assets/hero-3.jpeg" alt="hero img" />
 					<img class="hero__image" src="@/assets/hero-image-2.jpeg" alt="hero img" />
 					<img class="hero__image" src="@/assets/hero-image-3.jpeg" alt="hero img" />
 					<img class="hero__image" src="@/assets/hero-image-4.jpeg" alt="hero img" />
-					<img class="hero__image" src="@/assets/hero-image-1.jpeg" alt="hero img" />
+					<img class="hero__image" src="@/assets/hero-main.jpeg" alt="hero img" />
 					<img class="hero__image" src="@/assets/hero-image-5.jpeg" alt="hero img" />
-					<img class="hero__image" src="@/assets/hero-image-7.jpeg" alt="hero img" />
+					<img class="hero__image" src="@/assets/hero-4.jpeg" alt="hero img" />
 					<img class="hero__image" src="@/assets/hero-image-8.jpeg" alt="hero img" />
-					<img class="hero__image" src="@/assets/hero-image-9.jpeg" alt="hero img" />
+					<img class="hero__image" src="@/assets/hero-2.avif" alt="hero img" />
 				</div>
 				<div class="hero__overlay"></div>
 				<h1 class="hero__title">
@@ -72,7 +72,7 @@
 					alt="about img" />
 				<img
 					class="about__image about__image-3"
-					src="@/assets/about-img-3.jpeg"
+					src="@/assets/about-img-3.jpg"
 					alt="about img" />
 				<img
 					class="about__image about__image-4"
@@ -275,16 +275,16 @@ import { onMounted, onUnmounted } from 'vue';
 gsap.registerPlugin(ScrollTrigger);
 import aboutImg1 from '@/assets/about-img-1.jpeg';
 import aboutImg2 from '@/assets/about-img-2.jpeg';
-import aboutImg3 from '@/assets/about-img-3.jpeg';
+import aboutImg3 from '@/assets/about-img-3.jpg';
 import aboutImg4 from '@/assets/about-img-4.jpeg';
 import baby from '@/assets/icons/baby.svg';
 import love from '@/assets/icons/love.svg';
 import mountain from '@/assets/icons/mountain.svg';
 import work from '@/assets/icons/work.svg';
-import expertsImg1 from '@/assets/experts-1.webp';
-import expertsImg2 from '@/assets/experts-2.webp';
-import expertsImg3 from '@/assets/experts-3.webp';
-import expertsImg4 from '@/assets/experts-4.webp';
+import expertsImg1 from '@/assets/experts-1.jpeg';
+import expertsImg2 from '@/assets/experts-2.jpg';
+import expertsImg3 from '@/assets/experts-3.jpg';
+import expertsImg4 from '@/assets/experts-4.jpeg';
 import Tours from '@/components/Tours.vue';
 import GridImages from '@/components/GridImages.vue';
 
@@ -568,7 +568,6 @@ gsap.ticker.lagSmoothing(0);
 		flex-direction: column;
 		gap: 16px;
 		img {
-			height: auto;
 			border-radius: 6px;
 		}
 	}

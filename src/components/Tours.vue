@@ -31,7 +31,7 @@
 						necropolis, and the timeless Ark Fortress.
 					</p>
 				</div>
-				<img src="@/assets/grid-img-treasure.jpg" alt="grid img" />
+				<img src="@/assets/grid-img-2.jpeg" alt="grid img" />
 			</div>
 			<div class="tours__grid tours__grid--medium">
 				<div class="tours__grid-content">
@@ -42,7 +42,7 @@
 						seamless and comfortable experience for all your business needs.
 					</p>
 				</div>
-				<img src="@/assets/grid-img-modern.jpg" alt="grid img" />
+				<img src="@/assets/grid-img-4.jpeg" alt="grid img" />
 			</div>
 			<div class="tours__grid tours__grid--small">
 				<div class="tours__grid-content">
@@ -67,7 +67,7 @@
 				</div>
 			</div>
 			<div class="tours__grid tours__grid--medium">
-				<img src="@/assets/grid-img-handmade.jpeg" alt="handmade img" />
+				<img src="@/assets/grid-img-3.jpeg" alt="handmade img" />
 				<div class="tours__grid-content">
 					<h1 class="tours__grid-title--medium">Handmade Works from Ancient Times</h1>
 					<p class="tours__grid-text">

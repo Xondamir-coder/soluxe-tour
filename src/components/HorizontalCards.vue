@@ -56,9 +56,9 @@
 						destination.
 					</p>
 				</div>
-				<img class="img img-4" src="@/assets/about-img-1.jpeg" alt="img" />
-				<img class="img img-5" src="@/assets/about-img-2.jpeg" alt="img" />
-				<img class="img img-6" src="@/assets/about-img-3.jpeg" alt="img" />
+				<img class="img img-4" src="@/assets/uzb-samarkand-1.jpeg" alt="img" />
+				<img class="img img-5" src="@/assets/uzb-samarkand-2.jpeg" alt="img" />
+				<img class="img img-6" src="@/assets/card-1.jpeg" alt="img" />
 			</div>
 			<div class="place place-3">
 				<div class="place__content">
@@ -70,9 +70,9 @@
 						Bukhara's timeless charm captivates every visitor.
 					</p>
 				</div>
-				<img class="img img-7" src="@/assets/hero-image-1.jpeg" alt="img" />
-				<img class="img img-8" src="@/assets/hero-image-2.jpeg" alt="img" />
-				<img class="img img-9" src="@/assets/hero-image-3.jpeg" alt="img" />
+				<img class="img img-7" src="@/assets/grid-img-2.jpeg" alt="img" />
+				<img class="img img-8" src="@/assets/about-img-3.jpg" alt="img" />
+				<img class="img img-9" src="@/assets/uzb-bukhara-1.jpeg" alt="img" />
 			</div>
 			<div class="place place-4">
 				<div class="place__content">
@@ -84,9 +84,9 @@
 						Minor Minaret. Khiva's enchanting atmosphere is a step back in time.
 					</p>
 				</div>
-				<img class="img img-10" src="@/assets/destination-khiva-1.jpg" alt="img" />
-				<img class="img img-11" src="@/assets/img-6.jpeg" alt="img" />
-				<img class="img img-12" src="@/assets/img-7.jpg" alt="img" />
+				<img class="img img-10" src="@/assets/uzb-khiva-1.jpeg" alt="img" />
+				<img class="img img-11" src="@/assets/hero-image-3.jpeg" alt="img" />
+				<img class="img img-12" src="@/assets/uzb-khiva-2.jpeg" alt="img" />
 			</div>
 		</div>
 	</div>
@@ -141,9 +141,9 @@
 			<div class="small__box">
 				<h3 class="heading-3">Samarkand</h3>
 				<div class="small__images">
-					<img class="small__img" src="@/assets/about-img-1.jpeg" alt="img" />
-					<img class="small__img" src="@/assets/about-img-2.jpeg" alt="img" />
-					<img class="small__img" src="@/assets/about-img-3.jpeg" alt="img" />
+					<img class="small__img" src="@/assets/uzb-samarkand-1.jpeg" alt="img" />
+					<img class="small__img" src="@/assets/uzb-samarkand-2.jpeg" alt="img" />
+					<img class="small__img" src="@/assets/card-1.jpeg" alt="img" />
 				</div>
 				<p class="text-size-medium">
 					Samarkand, a jewel of the ancient Silk Road, is renowned for its breathtaking
@@ -155,9 +155,9 @@
 			<div class="small__box">
 				<h3 class="heading-3">Bukhara</h3>
 				<div class="small__images">
-					<img class="small__img" src="@/assets/hero-image-1.jpeg" alt="img" />
-					<img class="small__img" src="@/assets/hero-image-2.jpeg" alt="img" />
-					<img class="small__img" src="@/assets/hero-image-3.jpeg" alt="img" />
+					<img class="small__img" src="@/assets/grid-img-2.jpeg" alt="img" />
+					<img class="small__img" src="@/assets/about-img-3.jpg" alt="img" />
+					<img class="small__img" src="@/assets/uzb-bukhara-1.jpeg" alt="img" />
 				</div>
 				<p class="text-size-medium">
 					Bukhara, a UNESCO World Heritage Site, boasts over a thousand years of
@@ -169,9 +169,9 @@
 			<div class="small__box">
 				<h3 class="heading-3">Khiva</h3>
 				<div class="small__images">
-					<img class="small__img" src="@/assets/destination-khiva-1.jpg" alt="img" />
-					<img class="small__img" src="@/assets/img-6.jpeg" alt="img" />
-					<img class="small__img" src="@/assets/img-7.jpg" alt="img" />
+					<img class="small__img" src="@/assets/uzb-khiva-1.jpeg" alt="img" />
+					<img class="small__img" src="@/assets/hero-image-3.jpeg" alt="img" />
+					<img class="small__img" src="@/assets/uzb-khiva-2.jpeg" alt="img" />
 				</div>
 				<p class="text-size-medium">
 					Khiva, a living museum, offers a glimpse into the past with its impeccably

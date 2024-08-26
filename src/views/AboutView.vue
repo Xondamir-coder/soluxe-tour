@@ -76,7 +76,7 @@
 							environment.
 						</p>
 					</div>
-					<img class="cards__image" src="@/assets/img-6.jpeg" alt="banner" />
+					<img class="cards__image" src="@/assets/card-1.jpeg" alt="banner" />
 				</div>
 			</div>
 			<div class="cards__item">
@@ -94,7 +94,7 @@
 							destination
 						</p>
 					</div>
-					<img class="cards__image" src="@/assets/about-img-3.jpeg" alt="banner" />
+					<img class="cards__image" src="@/assets/card-2.jpeg" alt="banner" />
 				</div>
 			</div>
 			<div class="cards__item cards__item--last">
@@ -441,6 +441,7 @@ onMounted(() => {
 	}
 	&__image {
 		width: 95%;
+		max-height: 372px;
 		height: 100%;
 		object-fit: cover;
 		border-radius: 12px;

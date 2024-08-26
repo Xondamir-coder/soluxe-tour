@@ -1,12 +1,12 @@
 <template>
 	<section class="images">
-		<img src="@/assets/img-2.jpg" alt="banner" />
+		<img src="@/assets/img-2.jpeg" alt="banner" />
 		<img src="@/assets/img-1.jpeg" alt="banner" />
 		<img src="@/assets/img-3.jpeg" alt="banner" />
 		<img src="@/assets/img-4.jpeg" alt="banner" />
 		<img src="@/assets/img-5.jpeg" alt="banner" />
 		<img src="@/assets/img-6.jpeg" alt="banner" />
-		<img src="@/assets/img-7.jpg" alt="banner" />
+		<img src="@/assets/img-7.jpeg" alt="banner" />
 		<img src="@/assets/img-8.jpeg" alt="banner" />
 		<img src="@/assets/img-9.jpeg" alt="banner" />
 	</section>

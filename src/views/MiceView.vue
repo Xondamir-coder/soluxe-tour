@@ -1,11 +1,11 @@
 <template>
 	<main class="main">
 		<section class="hero">
-			<img class="hero__image hero__image--1" src="@/assets/hero-image-1.jpeg" alt="img 1" />
+			<img class="hero__image hero__image--1" src="@/assets/img-5.jpeg" alt="img 1" />
 			<img class="hero__image hero__image--2" src="@/assets/hero-image-5.jpeg" alt="img 2" />
-			<img class="hero__image hero__image--3" src="@/assets/hero-image-8.jpeg" alt="img 3" />
+			<img class="hero__image hero__image--3" src="@/assets/experts-4.jpeg" alt="img 3" />
 			<img class="hero__image hero__image--4" src="@/assets/img-9.jpeg" alt="img 4" />
-			<img class="hero__image hero__image--5" src="@/assets/about-img-3.jpeg" alt="img 5" />
+			<img class="hero__image hero__image--5" src="@/assets/about-img-3.jpg" alt="img 5" />
 			<img class="hero__image hero__image--6" src="@/assets/hero-image-3.jpeg" alt="img 6" />
 			<div class="hero__content">
 				<h1 class="heading-style-h1">Your business is our personal priority.</h1>
@@ -83,10 +83,10 @@ import chatIcon from '@/assets/icons/chat.svg';
 import contactIcon from '@/assets/icons/contact.svg';
 import puzzleIcon from '@/assets/icons/puzzle.svg';
 import Tours from '@/components/Tours.vue';
-import cardsBanner1 from '@/assets/mice-1.webp';
-import cardsBanner2 from '@/assets/mice-2.webp';
-import cardsBanner3 from '@/assets/experts-3.webp';
-import cardsBanner4 from '@/assets/experts-4.webp';
+import cardsBanner1 from '@/assets/mice-1.jpg';
+import cardsBanner2 from '@/assets/mice-2.jpg';
+import cardsBanner3 from '@/assets/mice-3.jpg';
+import cardsBanner4 from '@/assets/mice-4.jpg';
 
 gsap.registerPlugin(ScrollTrigger);
 
