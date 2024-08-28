@@ -3,43 +3,12 @@
 		<section class="hero" ref="heroRef">
 			<div ref="heroContentRef" class="hero__content">
 				<h1 class="heading-style-h1">
-					<span class="hero__letter">T</span>
-					<span class="hero__letter">h</span>
-					<span class="hero__letter">e</span> <span class="hero__letter">p</span>
-					<span class="hero__letter">e</span>
-					<span class="hero__letter">r</span>
-					<span class="hero__letter">f</span>
-					<span class="hero__letter">e</span>
-					<span class="hero__letter">c</span>
-					<span class="hero__letter">t</span> <span class="hero__letter">d</span>
-					<span class="hero__letter">e</span>
-					<span class="hero__letter">s</span>
-					<span class="hero__letter">t</span>
-					<span class="hero__letter">i</span>
-					<span class="hero__letter">n</span>
-					<span class="hero__letter">a</span>
-					<span class="hero__letter">t</span>
-					<span class="hero__letter">i</span>
-					<span class="hero__letter">o</span>
-					<span class="hero__letter">n</span> <span class="hero__letter">f</span>
-					<span class="hero__letter">o</span>
-					<span class="hero__letter">r</span> <span class="hero__letter">a</span>
-					<span class="hero__letter">n</span>
-					<span class="hero__letter">y</span> <span class="hero__letter">o</span>
-					<span class="hero__letter">c</span>
-					<span class="hero__letter">c</span>
-					<span class="hero__letter">a</span>
-					<span class="hero__letter">s</span>
-					<span class="hero__letter">i</span>
-					<span class="hero__letter">o</span>
-					<span class="hero__letter">n</span>
+					<span class="hero__letter" v-for="(letter, i) in letters" :key="i">
+						{{ letter }}
+					</span>
 				</h1>
 				<p class="text-size-medium">
-					Uzbekistan, at the crossroads of Central Asia, is a blend of ancient and modern
-					wonders. Bordering Kazakhstan, Kyrgyzstan, Tajikistan, Afghanistan, and
-					Turkmenistan, it offers a rich tapestry of history and culture. Discover Silk
-					Road cities, stunning deserts, and magnificent Islamic architecture. Experience
-					vibrant bazaars, historic mosques, and grand palaces in this landlocked gem.
+					{{ $t('uzb-hero-text') }}
 				</p>
 			</div>
 			<img
@@ -51,30 +20,21 @@
 		<HorizontalCards />
 		<section class="take" data-animate>
 			<div class="take__content">
-				<p class="text-weight-semibold">Our take</p>
+				<p class="text-weight-semibold">{{ $t('take-title') }}</p>
 				<p class="text-size-medium">
-					Due to the scenic diversity alone, Uzbekistan already has an incredible amount
-					to offer. Nature lovers and action lovers will get their money’s worth in the
-					fascinating desert landscapes, mystical mountain ranges, and surprisingly green
-					oases. For those seeking relaxation, the more than 1,700km long coastline offers
-					one dream beach after another, and exciting cultural highlights await you in the
-					cities and villages.
+					{{ $t('take-text') }}
 				</p>
 				<Ornament class="take__image" />
 			</div>
 		</section>
 		<section class="discover" data-animate>
 			<div class="discover__cta">
-				<h1 class="heading-style-h2">Discover the best of Uzbekistan with Soluxe Tour</h1>
+				<h1 class="heading-style-h2">{{ $t('discover-title') }}</h1>
 				<p class="text-size-medium">
-					Uzbekistan is still an insider tip among travelers, where mass tourism or
-					overcrowded sights are nowhere to be found. Instead, an authentic oriental
-					experience awaits you in the safest travel destination of the Central Asia:
-					Breathtaking landscapes, fascinating culture, and genuine encounters with the
-					incredibly friendly Uzbeks.
+					{{ $t('discover-subtitle') }}
 				</p>
 				<RouterLink data-animate to="/contacts" class="discover__button">
-					<span>Get in touch</span>
+					<span>{{ $t('get-in-touch') }}</span>
 					<svg
 						width="16"
 						height="16"
@@ -95,8 +55,8 @@
 		</section>
 		<Tours />
 		<section class="titles">
-			<h1 class="titles__top">Beautiful beaches. Glistening waters. Rugged mountains.</h1>
-			<h1 class="titles__bottom">Luxury resorts. Vibrant culture. Thrilling adventures.</h1>
+			<h1 class="titles__top">{{ $t('titles-1') }}</h1>
+			<h1 class="titles__bottom">{{ $t('titles-2') }}</h1>
 		</section>
 		<GridImages />
 	</main>
@@ -105,7 +65,7 @@
 <script setup>
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { onMounted, ref } from 'vue';
+import { computed, onMounted, ref } from 'vue';
 import bulbIcon from '@/assets/icons/bulb.svg';
 import heartIcon from '@/assets/icons/heart.svg';
 import idIcon from '@/assets/icons/id.svg';
@@ -114,31 +74,33 @@ import Tours from '@/components/Tours.vue';
 import GridImages from '@/components/GridImages.vue';
 import HorizontalCards from '@/components/HorizontalCards.vue';
 import Ornament from '@/components/Ornament.vue';
+import { i18n } from '@/locale';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const discoverContent = [
+const letters = computed(() => i18n.global.t('uzb-hero-title').split(''));
+const discoverContent = computed(() => [
 	{
 		icon: bulbIcon,
-		title: 'Deep expertise & knowledge',
-		desc: "We're a team of passionate experts, with years of experience, always aim to immerse visitors in the wonders of Uzbekistan to create an unforgettable journey."
+		title: i18n.global.t('discover-title-1'),
+		desc: i18n.global.t('discover-text-1')
 	},
 	{
 		icon: heartIcon,
-		title: 'Thoughtfully bespoke',
-		desc: "We'll craft a personalized itinerary tailored to your needs and requirements, creating cherished memories for a unique adventure."
+		title: i18n.global.t('discover-title-2'),
+		desc: i18n.global.t('discover-text-2')
 	},
 	{
 		icon: idIcon,
-		title: 'Customer first approach',
-		desc: "Keeping visitors happy is our priority. We'll be by your side, offering warm support and exceptional service, ensuring a delightful experience."
+		title: i18n.global.t('discover-title-3'),
+		desc: i18n.global.t('discover-text-3')
 	},
 	{
 		icon: loveIcon,
-		title: 'Support you can depend upon',
-		desc: 'Count on us anytime, day or night. With our dedicated 24/7 assistance, travellers can feel confident and cared for throughout their journey in Uzbekistan.'
+		title: i18n.global.t('discover-title-4'),
+		desc: i18n.global.t('discover-text-4')
 	}
-];
+]);
 
 const heroRef = ref();
 const heroImageRef = ref();
@@ -203,7 +165,7 @@ onMounted(() => {
 			}
 		});
 	});
-	gsap.to('.hero__letter', { opacity: 1, duration: 0.8, stagger: 0.05 });
+	gsap.from('.hero__letter', { opacity: 0, duration: 0.8, stagger: 0.05 });
 });
 </script>
 
@@ -348,9 +310,6 @@ onMounted(() => {
 .hero {
 	background-color: var(--color-secondary);
 	padding: 10rem 0;
-	&__letter {
-		opacity: 0;
-	}
 	&__content {
 		color: var(--color-primary);
 		display: flex;

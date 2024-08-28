@@ -4,25 +4,22 @@
 			<div class="footer__left">
 				<img class="footer__logo" src="@/assets/logo-yellow.svg" alt="logo" />
 				<p>
-					Address:
+					{{ $t('address') }}:
 					<br />
-					6/1, Afrosiyob str., Mirabad district,
+					{{ $t('footer-address-1') }}
 					<br />
-					Tashkent city, Republic of Uzbekistan
+					{{ $t('footer-address-2') }}
 				</p>
 				<div class="footer__contact">
-					<p>Contact:</p>
+					<p>{{ $t('footer-contact') }}:</p>
 					<a href="tel:+998909919020">+998909919020</a>
 					<a href="mailto:info@soluxetour.uz">info@soluxetour.uz</a>
 				</div>
 			</div>
 			<nav class="footer__right">
-				<RouterLink
-					:to="`/${link.toLowerCase()}`"
-					v-for="link in ['About', 'Services', 'MICE', 'Uzbekistan']"
-					:key="link"
-					>{{ link }}</RouterLink
-				>
+				<RouterLink v-for="link in links" :to="link.to" :key="link">
+					{{ link.text }}
+				</RouterLink>
 			</nav>
 		</div>
 		<svg
@@ -116,20 +113,35 @@
 
 		<div class="footer__copyright">
 			<p>
-				&copy; {{ new Date().getFullYear() }} Soluxe Tour
+				&copy; {{ new Date().getFullYear() }} {{ $t('soluxetour') }}
 				<br />
-				All rights reserved.
+				{{ $t('footer-reserved') }}
 			</p>
 			<p>
-				Developed and created by
+				{{ $t('footer-dev') }}
 				<a href="http://www.spacelabs.uz" target="_blank" rel="noopener noreferrer">
 					Space Labs
 				</a>
 			</p>
-			<RouterLink to="/legal"><p>Terms and conditions</p></RouterLink>
+			<RouterLink to="/legal"
+				><p>{{ $t('link-terms') }}</p></RouterLink
+			>
 		</div>
 	</footer>
 </template>
+
+<script setup>
+import { i18n } from '@/locale';
+import { computed } from 'vue';
+
+const links = computed(() => [
+	{ text: i18n.global.t('link-about'), to: '/about' },
+	{ text: i18n.global.t('link-services'), to: '/services' },
+	{ text: i18n.global.t('link-mice'), to: '/mice' },
+	{ text: i18n.global.t('link-uzbekistan'), to: '/uzbekistan' },
+	{ text: i18n.global.t('link-contacts'), to: '/contacts' }
+]);
+</script>
 
 <style lang="scss" scoped>
 .footer {

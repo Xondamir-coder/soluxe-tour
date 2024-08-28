@@ -2,105 +2,66 @@
 	<main class="main">
 		<section class="hero">
 			<div class="hero__content">
-				<p class="text-weight-semibold">We are Soluxe Tour</p>
+				<p class="text-weight-semibold">{{ $t('about-hero-label') }}</p>
 				<h1 class="hero__title">
-					<span class="hero__letter">A</span> <span class="hero__letter">g</span>
-					<span class="hero__letter">r</span>
-					<span class="hero__letter">o</span>
-					<span class="hero__letter">u</span>
-					<span class="hero__letter">p</span> <span class="hero__letter">o</span>
-					<span class="hero__letter">f</span> <span class="hero__letter">e</span>
-					<span class="hero__letter">x</span>
-					<span class="hero__letter">p</span>
-					<span class="hero__letter">e</span>
-					<span class="hero__letter">r</span>
-					<span class="hero__letter">t</span>
-					<span class="hero__letter">s</span> <span class="hero__letter">f</span>
-					<span class="hero__letter">o</span>
-					<span class="hero__letter">c</span>
-					<span class="hero__letter">u</span>
-					<span class="hero__letter">s</span>
-					<span class="hero__letter">e</span>
-					<span class="hero__letter">d</span> <span class="hero__letter">o</span>
-					<span class="hero__letter">n</span> <span class="hero__letter">g</span>
-					<span class="hero__letter">i</span>
-					<span class="hero__letter">v</span>
-					<span class="hero__letter">i</span>
-					<span class="hero__letter">n</span>
-					<span class="hero__letter">g</span> <span class="hero__letter">t</span>
-					<span class="hero__letter">h</span>
-					<span class="hero__letter">e</span> <span class="hero__letter">b</span>
-					<span class="hero__letter">e</span>
-					<span class="hero__letter">s</span>
-					<span class="hero__letter">t</span> <span class="hero__letter">o</span>
-					<span class="hero__letter">f</span> <span class="hero__letter">U</span>
-					<span class="hero__letter">z</span>
-					<span class="hero__letter">b</span>
-					<span class="hero__letter">e</span>
-					<span class="hero__letter">k</span>
-					<span class="hero__letter">i</span>
-					<span class="hero__letter">s</span>
-					<span class="hero__letter">t</span>
-					<span class="hero__letter">a</span>
-					<span class="hero__letter">n</span>
+					<span class="hero__letter" v-for="(letter, i) in letters" :key="i">
+						{{ letter }}
+					</span>
 				</h1>
 				<RouterLink data-button class="hero__button button-primary" to="/contacts">
-					Get in touch
+					{{ $t('get-in-touch') }}
 				</RouterLink>
 			</div>
 			<Ornament class="hero__ornament hero__ornament--1" />
 			<Ornament class="hero__ornament hero__ornament--2" />
 		</section>
 		<section data-animate class="reason">
-			<h1 class="heading-style-h1"><strong>We're here for a reason</strong></h1>
+			<h1 class="heading-style-h1">
+				<strong>{{ $t('reason-title') }}</strong>
+			</h1>
 			<p class="text-size-medium">
-				We've been creating unforgettable memories for tourists for over a decade and we're
-				able to do what we do, as well as we've been doing it because we are anchored to our
-				values and aligned on our mission
+				{{ $t('reason-subtitle') }}
 			</p>
 		</section>
 		<section data-animate class="cards">
 			<div class="cards__item">
-				<p class="text-size-medium text-weight-semibold"><span>01</span> Our philosophy</p>
+				<p class="text-size-medium text-weight-semibold">
+					<span>01</span> {{ $t('card-label-1') }}
+				</p>
 				<div class="cards__content">
 					<div class="cards__paragraphs">
 						<h1 class="heading-big">
-							Share our deep rooted appreciation for the land and its wonders
+							{{ $t('card-title-1') }}
 						</h1>
 						<p class="text-size-medium">
-							We believe that travel should be more than just sightseeing; it should
-							be an immersive experience that connects travelers with the soul of
-							Uzbekistan. Our commitment is to uphold the authenticity of this
-							remarkable land by curating journeys that foster genuine connections
-							with local communities, respect for traditions, and preservation of the
-							environment.
+							{{ $t('card-text-1') }}
 						</p>
 					</div>
 					<img class="cards__image" src="@/assets/card-1.jpeg" alt="banner" />
 				</div>
 			</div>
 			<div class="cards__item">
-				<p class="text-size-medium text-weight-semibold"><span>02</span> Our mission</p>
+				<p class="text-size-medium text-weight-semibold">
+					<span>02</span> {{ $t('card-label-1') }}
+				</p>
 				<div class="cards__content">
 					<div class="cards__paragraphs">
 						<h1 class="heading-big">
-							Uzbekistan through Uzbek eyes–authentic experiences above all
+							{{ $t('card-title-1') }}
 						</h1>
 						<p class="text-size-medium">
-							Our mission is to offer travelers the opportunity to discover the
-							country's rich heritage, awe-inspiring landscapes, and warm hospitality.
-							With meticulous attention to detail, we create unforgettable adventures
-							that celebrate the authenticity and uniqueness of this enchanting
-							destination
+							{{ $t('card-text-1') }}
 						</p>
 					</div>
 					<img class="cards__image" src="@/assets/card-2.jpeg" alt="banner" />
 				</div>
 			</div>
 			<div class="cards__item cards__item--last">
-				<p class="text-size-medium text-weight-semibold"><span>03</span> Our values</p>
+				<p class="text-size-medium text-weight-semibold">
+					<span>03</span> {{ $t('card-label-3') }}
+				</p>
 				<div class="values">
-					<h1 class="heading">Our values drive our every decision</h1>
+					<h1 class="heading">{{ $t('card-title-3') }}</h1>
 					<div class="values__container">
 						<div
 							class="values__box"
@@ -115,7 +76,7 @@
 			</div>
 		</section>
 		<section data-animate class="partners">
-			<p class="partners__title text-size-medium">We're honoured to work with the best</p>
+			<p class="partners__title text-size-medium">{{ $t('best-title') }}</p>
 			<ul class="partners__list">
 				<li class="partners__item">
 					<img src="@/assets/partners/hilton.png" alt="partner" />
@@ -161,26 +122,12 @@
 		<section data-animate class="words">
 			<div class="words__content">
 				<Ornament class="words__ornament" />
-				<p class="text-weight-semibold">Tips for Tourists Visiting Uzbekistan</p>
+				<p class="text-weight-semibold">{{ $t('tips-title') }}</p>
 				<p class="text-size-medium">
-					When visiting Uzbekistan, it's essential to be mindful of the local customs and
-					traditions. The people of Uzbekistan are known for their warm hospitality, and a
-					respectful attitude towards local culture will enhance your experience. Dress
-					modestly, especially when visiting religious sites, and always ask for
-					permission before taking photos of people, particularly in rural areas. It’s
-					also a good idea to learn a few basic phrases in Uzbek or Russian, as this will
-					be greatly appreciated by locals and can help you navigate your way around more
-					easily.
+					{{ $t('tips-text-1') }}
 				</p>
 				<p class="text-size-medium">
-					Another important tip is to plan your finances accordingly, as Uzbekistan is
-					largely a cash-based society. While major cities like Tashkent may have ATMs and
-					accept credit cards at hotels and upscale restaurants, it's advisable to carry
-					sufficient cash for smaller towns, markets, and local vendors. The local
-					currency is the Uzbekistani Som, and exchanging money at official exchange
-					points or banks is recommended for getting the best rates. Additionally, while
-					tap water is generally safe in larger cities, it's advisable to drink bottled
-					water during your travels to avoid any stomach upsets.
+					{{ $t('tips-text-2') }}
 				</p>
 			</div>
 		</section>
@@ -188,10 +135,10 @@
 			<div class="message__content">
 				<Ornament class="message__ornament" />
 				<h1 class="heading-style-h1">
-					Let us help you show the best of Uzbekistan to your clients
+					{{ $t('message-title') }}
 				</h1>
 				<RouterLink data-button class="button-primary" to="/contacts">
-					Get in touch
+					{{ $t('get-in-touch') }}
 				</RouterLink>
 			</div>
 		</section>
@@ -199,35 +146,37 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue';
+import { computed, onMounted } from 'vue';
 import gsap from 'gsap';
 import heartIcon from '@/assets/icons/heart.svg';
 import checkIcon from '@/assets/icons/check.svg';
 import idIcon from '@/assets/icons/id.svg';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Ornament from '@/components/Ornament.vue';
+import { i18n } from '@/locale';
 gsap.registerPlugin(ScrollTrigger);
 
-const valuesContent = [
+const letters = computed(() => i18n.global.t('about-hero-title').split(''));
+const valuesContent = computed(() => [
 	{
 		icon: heartIcon,
-		title: 'Authentic',
-		text: "At Soluxe Tour, authenticity is at the heart of our decision-making process. Be it in how we create itineraries or how we show ourselves every day. Your journey with us will always be a meaningful exploration of the country's authentic treasures."
+		title: i18n.global.t('value-title-1'),
+		text: i18n.global.t('value-text-1')
 	},
 	{
 		icon: checkIcon,
-		title: 'Dependable',
-		text: 'Our commitment to reliability and professionalism ensures seamless planning and execution of your trip. Rest assured, with Soluxe Tour, your travel arrangements are in safe hands.'
+		title: i18n.global.t('value-title-2'),
+		text: i18n.global.t('value-text-2')
 	},
 	{
 		icon: idIcon,
-		title: 'Customer first',
-		text: 'Our customers are at the forefront of everything we do. Your satisfaction and comfort are paramount, and we tailor our services to meet your unique preferences and requirements. Your happiness is our priority, and we are dedicated to creating memorable experiences that exceed your expectations.'
+		title: i18n.global.t('value-title-3'),
+		text: i18n.global.t('value-text-3')
 	}
-];
+]);
 
 onMounted(() => {
-	gsap.to('.hero__letter', { opacity: 1, duration: 1, stagger: 0.05 });
+	gsap.from('.hero__letter', { opacity: 0, duration: 1, stagger: 0.05 });
 	document.querySelectorAll('[data-animate]').forEach(el => {
 		gsap.to(el, {
 			scrollTrigger: {
@@ -505,10 +454,6 @@ onMounted(() => {
 	position: relative;
 	overflow: hidden;
 	background-color: var(--color-secondary);
-	&__letter {
-		opacity: 0;
-	}
-
 	&__ornament {
 		position: absolute;
 		animation: scale-up 1s forwards;

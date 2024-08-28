@@ -2,7 +2,7 @@
 	<main class="main">
 		<section class="hero">
 			<h1 class="hero__title heading-big">
-				No request is too small or too big. If it's important to you, it's important to us
+				{{ $t('services-hero-title') }}
 			</h1>
 			<div class="hero__grids">
 				<div class="hero__grid" v-for="content in heroContent" :key="content.title">
@@ -14,17 +14,16 @@
 			</div>
 			<div class="hero__grid">
 				<img src="@/assets/icons/checklist.svg" alt="icon" />
-				<h6 class="heading-5">A-Z travel services</h6>
+				<h6 class="heading-5">{{ $t('services-hero-title-5') }}</h6>
 				<p>
-					Comprehensive support and solutions, from planning to execution, ensuring a
-					stress-free journey
+					{{ $t('services-hero-text-5') }}
 				</p>
 			</div>
 		</section>
 		<section class="offer" data-animate>
 			<div class="offer__head">
-				<p class="text-weight-semibold">What we offer</p>
-				<h1 class="heading-big">Ordinary people, creating extraordinary experiences</h1>
+				<p class="text-weight-semibold">{{ $t('services-offer-label') }}</p>
+				<h1 class="heading-big">{{ $t('services-offer-title') }}</h1>
 			</div>
 			<div class="offer__content">
 				<div class="offer__grids">
@@ -56,8 +55,8 @@
 		</section>
 		<section class="better" data-animate>
 			<div class="better__head">
-				<p class="text-weight-semibold">How we do it better</p>
-				<h1 class="heading-big">Ordinary people, creating extraordinary experiences</h1>
+				<p class="text-weight-semibold">{{ $t('better-label') }}</p>
+				<h1 class="heading-big">{{ $t('better-title') }}</h1>
 			</div>
 			<div class="better__container">
 				<div class="better__box" v-for="content in betterContent" :key="content.title">
@@ -70,28 +69,23 @@
 		<section class="message" data-animate>
 			<div class="message__content">
 				<h1 class="heading-big">
-					We believe in intentionally diverting from the beaten path in pursuit of
-					authentic experiences.
+					{{ $t('services-message-title') }}
 				</h1>
 				<p class="message__text text-size-medium">
-					We value the importance of authentic, connected travel, and work tirelessly to
-					create once-in-a-lifetime experiences that benefit you, mankind, and the diverse
-					locations you visit.
+					{{ $t('services-message-text') }}
 				</p>
 			</div>
 		</section>
 		<section class="travel" data-animate>
 			<img src="@/assets/services-big.jpg" alt="travel" />
 			<div class="travel__content">
-				<h1 class="travel__title">More than just a travel partner</h1>
+				<h1 class="travel__title">{{ $t('travel-title') }}</h1>
 				<p class="text-size-medium">
-					We believe in the power of relationships and community, with us conversations go
-					deep, friendships are forged, and connections last a lifetime. We're more than
-					just a travel partner.
+					{{ $t('travel-text') }}
 				</p>
-				<RouterLink to="/contacts" data-button class="button-primary"
-					>Get in touch</RouterLink
-				>
+				<RouterLink to="/contacts" data-button class="button-primary">{{
+					$t('get-in-touch')
+				}}</RouterLink>
 			</div>
 		</section>
 	</main>
@@ -100,7 +94,7 @@
 <script setup>
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { onMounted, ref } from 'vue';
+import { computed, onMounted, ref } from 'vue';
 import globalIcon from '@/assets/icons/global.svg';
 import ringsIcon from '@/assets/icons/rings.svg';
 import workIcon from '@/assets/icons/work-white.svg';
@@ -108,62 +102,63 @@ import friendshipIcon from '@/assets/icons/friendship.svg';
 import betterImg1 from '@/assets/services-safety.jpg';
 import betterImg2 from '@/assets/grid-img-3.jpeg';
 import betterImg3 from '@/assets/services-humans.jpg';
+import { i18n } from '@/locale';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const heroContent = [
+const heroContent = computed(() => [
 	{
 		icon: globalIcon,
-		title: 'Destination management',
-		text: 'Expertly curated Uzbek experiences with local insights and seamless logistics'
+		title: i18n.global.t('services-hero-title-1'),
+		text: i18n.global.t('services-hero-text-1')
 	},
 	{
 		icon: ringsIcon,
-		title: 'Tours designed to your needs',
-		text: 'Tailor-made itineraries crafted to match individual preferences and interests'
+		title: i18n.global.t('services-hero-title-2'),
+		text: i18n.global.t('services-hero-text-2')
 	},
 	{
 		icon: workIcon,
-		title: 'M.I.C.E',
-		text: 'Professional and efficient Meetings, Incentives, Conferences, and Exhibitions services'
+		title: i18n.global.t('services-hero-title-3'),
+		text: i18n.global.t('services-hero-text-3')
 	},
 	{
 		icon: friendshipIcon,
-		title: 'Strong local partnerships',
-		text: 'Extensive network and collaborations for exclusive access and authentic experiences at unbeatable prices'
+		title: i18n.global.t('services-hero-title-4'),
+		text: i18n.global.t('services-hero-text-4')
 	}
-];
-const offerContent = [
+]);
+const offerContent = computed(() => [
 	{
-		title: 'Destination management',
-		text: "Our comprehensive destination management services offer an in-depth understanding of Oman, ensuring seamless travel arrangements, professional guidance, and access to the country's hidden gems. From logistics to cultural experiences, we curate an enriching journey for your clients."
+		title: i18n.global.t('services-offer-title-1'),
+		text: i18n.global.t('services-offer-text-1')
 	},
 	{
-		title: 'Full concierge',
-		text: 'With our full concierge service, we take care of every detail, including accommodation, transportation, and activities, offering a hassle-free experience for your clients. Our dedicated team ensures a smooth and personalized journey tailored to their preferences.'
+		title: i18n.global.t('services-offer-title-2'),
+		text: i18n.global.t('services-offer-text-2')
 	},
 	{
-		title: 'Corporate & MICE travel',
-		text: 'We make business travel easy, stress free and cost efficient while personalising every aspect to meet your needs. We can help you plan and execute truly memorable events for your business. We are committed to providing your team a safe and delightful experience.'
+		title: i18n.global.t('services-offer-title-3'),
+		text: i18n.global.t('services-offer-text-3')
 	}
-];
-const betterContent = [
+]);
+const betterContent = computed(() => [
 	{
 		img: betterImg1,
-		title: 'Your safety is our first priority',
-		text: 'Your safety is our utmost priority. We implement stringent measures and work closely with trusted partners to ensure worry-free journeys through Uzbekistan.'
+		title: i18n.global.t('better-title-1'),
+		text: i18n.global.t('better-text-1')
 	},
 	{
 		img: betterImg2,
-		title: 'Personalised for every unique need',
-		text: 'Embrace the joy of travel tailored exclusively for you. Our dedicated team designs personalized experiences, embracing your passions and preferences, making memories to cherish.'
+		title: i18n.global.t('better-title-2'),
+		text: i18n.global.t('better-text-2')
 	},
 	{
 		img: betterImg3,
-		title: 'Real humans, real connections',
-		text: 'Experience genuine warmth and care from our team. We believe in building meaningful connections, offering personalized support at every step of your adventure in Uzbekistan.'
+		title: i18n.global.t('better-title-3'),
+		text: i18n.global.t('better-text-3')
 	}
-];
+]);
 
 const chosenServiceIndex = ref(0);
 

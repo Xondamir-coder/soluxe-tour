@@ -15,49 +15,21 @@
 				</div>
 				<div class="hero__overlay"></div>
 				<h1 class="hero__title">
-					<span class="hero__letter">W</span>
-					<span class="hero__letter">e</span> <span class="hero__letter">w</span>
-					<span class="hero__letter">i</span>
-					<span class="hero__letter">l</span>
-					<span class="hero__letter">l</span> <span class="hero__letter">s</span>
-					<span class="hero__letter">h</span>
-					<span class="hero__letter">o</span>
-					<span class="hero__letter">w</span> <span class="hero__letter">a</span>
-					<span class="hero__letter">l</span>
-					<span class="hero__letter">l</span> <span class="hero__letter">b</span>
-					<span class="hero__letter">e</span>
-					<span class="hero__letter">a</span>
-					<span class="hero__letter">u</span>
-					<span class="hero__letter">t</span>
-					<span class="hero__letter">y</span> <span class="hero__letter">o</span>
-					<span class="hero__letter">f</span> <span class="hero__letter">U</span>
-					<span class="hero__letter">z</span>
-					<span class="hero__letter">b</span>
-					<span class="hero__letter">e</span>
-					<span class="hero__letter">k</span>
-					<span class="hero__letter">i</span>
-					<span class="hero__letter">s</span>
-					<span class="hero__letter">t</span>
-					<span class="hero__letter">a</span>
-					<span class="hero__letter">n</span>
+					<span class="hero__letter" v-for="(letter, i) in letters" :key="i">
+						{{ letter }}
+					</span>
 				</h1>
 			</div>
 		</section>
 		<section data-animate class="offer">
 			<h1 class="heading">
-				We offer travellers the most authentic experiences at the most affordable prices
+				{{ $t('offer-title') }}
 			</h1>
 			<p class="offer__text">
-				At Soluxe Tour, we embrace the philosophy that "Devil is in the detail." We
-				specialize in providing exceptional services to small and medium-sized global tour
-				operators, ensuring every aspect of our offerings is meticulously crafted to deliver
-				unparalleled experiences in Uzbekistan.
+				{{ $t('offer-text-1') }}
 				<br />
 				<br />
-				Our mission is to offer high-quality services that exceed our clients' expectations,
-				creating unforgettable and authentic experiences. We strive to find the perfect
-				blend of elements to tailor our products to fit our client's unique preferences
-				perfectly.
+				{{ $t('offer-text-2') }}
 			</p>
 		</section>
 		<section data-animate class="about">
@@ -93,9 +65,9 @@
 							{{
 								index < 3
 									? content.title.includes('M.I.C.E')
-										? 'Make a MICE enquiry'
-										: 'Make an enquiry'
-									: 'Get in touch'
+										? $t('make-mice-enquiry')
+										: $t('make-enquiry')
+									: $t('get-in-touch')
 							}}
 						</RouterLink>
 						<RouterLink
@@ -137,13 +109,13 @@
 							{{
 								index < 3
 									? content.title.includes('M.I.C.E')
-										? 'Make a MICE enquiry'
-										: 'Make an enquiry'
-									: 'Get in touch'
+										? $t('make-mice-enquiry')
+										: $t('make-enquiry')
+									: $t('get-in-touch')
 							}}
 						</RouterLink>
 						<button class="about__button" v-if="index < 3">
-							<span>Learn more</span>
+							<span>{{ $t('learn-more') }}</span>
 							<svg
 								width="16"
 								height="16"
@@ -182,13 +154,10 @@
 		<GridImages />
 		<section data-animate class="experts">
 			<div class="experts__head">
-				<p class="semi-bold spacing-point-4px">MICE</p>
-				<h1 class="heading-big">Experts in Corporate & M.I.C.E. travel</h1>
+				<p class="semi-bold spacing-point-4px">{{ $t('experts-label') }}</p>
+				<h1 class="heading-big">{{ $t('experts-title') }}</h1>
 				<p class="text-size-medium">
-					We make business travel easy, stress free and cost efficient while personalising
-					every aspect to meet your needs. We can help you plan and execute truly
-					memorable events for your business. We are committed to providing your team a
-					safe and delightful experience.
+					{{ $t('experts-subtitle') }}
 				</p>
 			</div>
 			<div class="experts__container">
@@ -199,11 +168,11 @@
 				</div>
 			</div>
 			<div class="experts__buttons">
-				<RouterLink data-button to="/contacts" class="button-primary"
-					>Make a MICE enquiry</RouterLink
-				>
+				<RouterLink data-button to="/contacts" class="button-primary">{{
+					$t('make-mice-enquiry')
+				}}</RouterLink>
 				<RouterLink data-button to="/mice" class="experts__button">
-					<span>Learn more</span>
+					<span>{{ $t('learn-more') }}</span>
 					<svg
 						width="16"
 						height="16"
@@ -217,9 +186,9 @@
 		</section>
 		<section data-animate class="partners">
 			<div class="partners__content">
-				<h1 class="partners__title">Let us show you the best of Uzbekistan</h1>
+				<h1 class="partners__title">{{ $t('partners-title') }}</h1>
 				<RouterLink data-button to="/contacts" class="partners__button button-secondary">
-					Get in touch
+					{{ $t('get-in-touch') }}
 				</RouterLink>
 				<ul class="partners__list">
 					<li class="partners__item">
@@ -271,7 +240,7 @@
 import gsap from 'gsap';
 import Lenis from 'lenis';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { onMounted, onUnmounted } from 'vue';
+import { computed, onMounted, onUnmounted } from 'vue';
 gsap.registerPlugin(ScrollTrigger);
 import aboutImg1 from '@/assets/about-img-1.jpeg';
 import aboutImg2 from '@/assets/about-img-2.jpeg';
@@ -287,79 +256,81 @@ import expertsImg3 from '@/assets/experts-3.jpg';
 import expertsImg4 from '@/assets/experts-4.jpeg';
 import Tours from '@/components/Tours.vue';
 import GridImages from '@/components/GridImages.vue';
+import { i18n } from '@/locale';
 
-const aboutContent = [
+const letters = computed(() => i18n.global.t('hero-title').split(''));
+const aboutContent = computed(() => [
 	{
 		img: aboutImg1,
-		label: 'Experts in',
-		title: 'Destination management',
-		desc: "We are a group of passionate travelers and tourism professionals. Our profound love for and knowledge of Uzbekistan inspire us to share the beauty of this remarkable country with those seeking unique experiences and hidden secrets. With our team's extensive destination knowledge, a dedicated account manager, 24/7 support, and strong partnerships throughout the region, we believe working with us is an easy choice."
+		label: i18n.global.t('about-label-1'),
+		title: i18n.global.t('about-title-1'),
+		desc: i18n.global.t('about-text-1')
 	},
 	{
 		img: aboutImg2,
-		label: 'Driven to create',
-		title: 'Authentic experiences',
-		desc: 'Over decades, our team of superstars has learned the secrets behind creating the most memorable experiences in Uzbekistan. While catering to your every need, we ensure that each adventure remains authentic and off the beaten path.'
+		label: i18n.global.t('about-label-2'),
+		title: i18n.global.t('about-title-2'),
+		desc: i18n.global.t('about-text-2')
 	},
 	{
 		img: aboutImg3,
-		label: 'Focused on elevating',
-		title: 'Corporate travel & M.I.C.E.',
-		desc: "When it comes to MICE travel, our team will help you put together unforgettable events for your company. Whether it's a conference or an incentive trip, trust Soluxe Tour's MICE team to be your strategic travel partner from the very start."
+		label: i18n.global.t('about-label-3'),
+		title: i18n.global.t('about-title-3'),
+		desc: i18n.global.t('about-text-3')
 	},
 	{
 		img: aboutImg4,
-		label: 'Your partner for',
-		title: 'A-Z travel solutions',
-		desc: "No request is too small or too big for us. If it's important to you, it's important to us. We've catered to thousands of requests, from reservations and transfers to exquisitely tailored tour packages for large groups. We go above and beyond for every client and any request."
+		label: i18n.global.t('about-label-4'),
+		title: i18n.global.t('about-title-4'),
+		desc: i18n.global.t('about-text-4')
 	}
-];
-const everyoneContent = [
+]);
+const everyoneContent = computed(() => [
 	{
 		icon: mountain,
-		title: 'Thrill seekers',
-		text: 'Uzbekistan offers a variety of activities for thrill seekers, including sandboarding in the Kyzylkum Desert, hiking in the Chimgan Mountains, and exploring the ancient Silk Road cities.'
+		title: i18n.global.t('everyone-title-1'),
+		text: i18n.global.t('everyone-text-1')
 	},
 	{
 		icon: baby,
-		title: 'Family & leisure',
-		text: 'Uzbekistan is a great place to visit with the family. There are plenty of beaches, resorts, and waterparks to enjoy, as well as historical sites and cultural attractions.'
+		title: i18n.global.t('everyone-title-2'),
+		text: i18n.global.t('everyone-text-2')
 	},
 	{
 		icon: work,
-		title: 'Corporate & MICE',
-		text: 'Uzbekistan is a popular destination for corporate events and MICE groups. The country offers a variety of venues, including hotels, conference centers, and gorgeous resorts.'
+		title: i18n.global.t('everyone-title-3'),
+		text: i18n.global.t('everyone-text-3')
 	},
 	{
 		icon: love,
-		title: 'Culture explorers',
-		text: 'Uzbekistan is a country with a rich history and culture. There are many historical sites to visit, including forts, mosques, and museums. The country also has a vibrant arts and culture scene.'
+		title: i18n.global.t('everyone-title-4'),
+		text: i18n.global.t('everyone-text-4')
 	}
-];
-const expertsContent = [
+]);
+const expertsContent = computed(() => [
 	{
 		img: expertsImg1,
-		title: 'Meetings',
-		text: 'We follow your guidelines and requirements to create the most meaningful meeting spaces enabling you to express the most innovative ideas.'
+		title: i18n.global.t('experts-title-1'),
+		text: i18n.global.t('experts-text-1')
 	},
 	{
 		img: expertsImg2,
-		title: 'Incentives',
-		text: "We'll help you give your employees the incentive travel they deserve by creating the most memorable, engaging and unique experiences in Uzbekistan."
+		title: i18n.global.t('experts-title-2'),
+		text: i18n.global.t('experts-text-2')
 	},
 	{
 		img: expertsImg3,
-		title: 'Conferences',
-		text: "Through our expert planners, strong networks and customised packages, we'll help take your conference events to the next level."
+		title: i18n.global.t('experts-title-3'),
+		text: i18n.global.t('experts-text-3')
 	},
 	{
 		img: expertsImg4,
-		title: 'Events',
-		text: 'From half day to weeks long, we can help create something unique and unforgettable for your next corporate event.'
+		title: i18n.global.t('experts-title-4'),
+		text: i18n.global.t('experts-text-4')
 	}
-];
-
+]);
 const animations = [];
+
 onMounted(() => {
 	const heroScrollTrigger = {
 		trigger: '.hero',

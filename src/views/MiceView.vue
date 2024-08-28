@@ -8,19 +8,17 @@
 			<img class="hero__image hero__image--5" src="@/assets/about-img-3.jpg" alt="img 5" />
 			<img class="hero__image hero__image--6" src="@/assets/hero-image-3.jpeg" alt="img 6" />
 			<div class="hero__content">
-				<h1 class="heading-style-h1">Your business is our personal priority.</h1>
+				<h1 class="heading-style-h1">{{ $t('mice-hero-title') }}</h1>
 				<p class="text-size-medium">
-					We simplify business travel, making it stress-free and cost-effective. With over
-					ten years of experience in corporate and MICE travel, we are trusted to craft
-					unique travel experiences.
+					{{ $t('mice-hero-text') }}
 				</p>
-				<RouterLink to="/contacts" data-button class="hero__button"
-					>Make a MICE enquiry</RouterLink
-				>
+				<RouterLink to="/contacts" data-button class="hero__button">
+					{{ $t('make-mice-enquiry') }}
+				</RouterLink>
 			</div>
 		</section>
 		<section class="business" data-animate>
-			<h1 class="heading-style-h2">We bring a personal touch to business travel</h1>
+			<h1 class="heading-style-h2">{{ $t('business-title') }}</h1>
 			<div class="business__container">
 				<div class="business__box" v-for="content in businessContent" :key="content.title">
 					<img :src="content.icon" alt="icon" />
@@ -32,25 +30,23 @@
 		<Tours />
 		<section class="us" data-animate>
 			<div class="us__content">
-				<p class="text-weight-semibold">Why us</p>
+				<p class="text-weight-semibold">{{ $t('us-label') }}</p>
 				<h1 class="heading-style-h2">
-					Vast expertise in creating memorable MICE experiences
+					{{ $t('us-title') }}
 				</h1>
 				<p class="text-size-medium">
-					For M.I.C.E. travel, our team is dedicated to creating unforgettable events for
-					your company. Whether it's a conference or an incentive trip, trust Soluxe
-					Tours' M.I.C.E. team to be your strategic travel partner from the very beginning
+					{{ $t('us-text') }}
 				</p>
 				<div class="us__container">
 					<div class="us__data">
 						<p class="us__data-percent">125+</p>
 						<p>
-							Corporate customers across Meetings, Incentives, Conferences and Events
+							{{ $t('us-text-1') }}
 						</p>
 					</div>
 					<div class="us__data">
 						<p class="us__data-percent">90%</p>
-						<p>Retention rate – our customers nearly always return.</p>
+						<p>{{ $t('us-text-2') }}</p>
 					</div>
 				</div>
 			</div>
@@ -78,7 +74,7 @@
 <script setup>
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { onMounted } from 'vue';
+import { computed, onMounted } from 'vue';
 import chatIcon from '@/assets/icons/chat.svg';
 import contactIcon from '@/assets/icons/contact.svg';
 import puzzleIcon from '@/assets/icons/puzzle.svg';
@@ -87,52 +83,53 @@ import cardsBanner1 from '@/assets/mice-1.jpg';
 import cardsBanner2 from '@/assets/mice-2.jpg';
 import cardsBanner3 from '@/assets/mice-3.jpg';
 import cardsBanner4 from '@/assets/mice-4.jpg';
+import { i18n } from '@/locale';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const businessContent = [
+const businessContent = computed(() => [
 	{
 		icon: chatIcon,
-		title: '24x7 support from real people',
-		text: 'Our dedicated team of knowledgeable professionals is available 24/7 to address your queries, provide personalized recommendations, and swiftly resolve any issues that may arise. With us, you can have peace of mind knowing that reliable support is just a phone call away, no matter the time or situation'
+		title: i18n.global.t('business-title-1'),
+		text: i18n.global.t('business-text-1')
 	},
 	{
 		icon: contactIcon,
-		title: 'Dedicated account manager',
-		text: "Our dedicated account manager is your personal point of contact, ensuring a seamless and customized experience. They will work closely with you, understanding your unique needs and objectives, and providing expert guidance at every step—from initial planning to post-event follow-up—to ensure your event's success"
+		title: i18n.global.t('business-title-2'),
+		text: i18n.global.t('business-text-2')
 	},
 	{
 		icon: puzzleIcon,
-		title: 'Designed exclusively for you',
-		text: 'Our customizable solutions turn your vision into unforgettable events. From venue selection to event design, our experts curate unique experiences that align with your brand and goals. With meticulous attention to detail and exceptional results, we bring your vision to life and create a lasting impression'
+		title: i18n.global.t('business-title-3'),
+		text: i18n.global.t('business-text-3')
 	}
-];
-const cardsContent = [
+]);
+const cardsContent = computed(() => [
 	{
 		img: cardsBanner1,
-		label: 'Meetings',
-		title: 'Empowering ideas with meaningful spaces',
-		text: 'The exchange of opinions has always been vital in business, making conferences an ideal way to disseminate information. They also provide opportunities to discuss and exchange views on various subjects or problems. Our team has extensive experience in planning, preparing, and executing meaningful meeting spaces, including all accompanying on- and off-site activities'
+		label: i18n.global.t('mice-card-label-1'),
+		title: i18n.global.t('mice-card-title-1'),
+		text: i18n.global.t('mice-card-text-1')
 	},
 	{
 		img: cardsBanner2,
-		label: 'Incentives',
-		title: 'A genuinely rewarding incentive travel experience',
-		text: 'Ignite success with our incentive travel services. Reward and motivate your team with unforgettable experiences. From exclusive destinations to curated activities, we handle every detail. Enhance engagement, foster teamwork, and achieve remarkable results'
+		label: i18n.global.t('mice-card-label-2'),
+		title: i18n.global.t('mice-card-title-2'),
+		text: i18n.global.t('mice-card-text-2')
 	},
 	{
 		img: cardsBanner3,
-		label: 'Conferences',
-		title: 'Elegant conferences, effortlessly delivered',
-		text: 'With customized services, an extensive network, and expert event planners, we can elevate your next corporate gathering with seamless logistics, allowing you to focus on building connections and achieving business objectives'
+		label: i18n.global.t('mice-card-label-3'),
+		title: i18n.global.t('mice-card-title-3'),
+		text: i18n.global.t('mice-card-text-3')
 	},
 	{
 		img: cardsBanner4,
-		label: 'Events',
-		title: 'Events designed to inspire and ignite',
-		text: 'Special events should be unique, leaving every participant with unforgettable memories. We handle the ideas and bring them to life, always following your wishes and guidelines. Because special events are key to success, we pay close attention to every detail, even the smallest ones'
+		label: i18n.global.t('mice-card-label-4'),
+		title: i18n.global.t('mice-card-title-4'),
+		text: i18n.global.t('mice-card-text-4')
 	}
-];
+]);
 
 onMounted(() => {
 	[-1000, -800, -500, -900, -1000, -1000].forEach((y, index) => {

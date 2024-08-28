@@ -4,13 +4,50 @@
 			<img class="header__logo" src="@/assets/logo.svg" alt="logo" />
 		</RouterLink>
 		<ul class="header__list">
-			<li class="header__item" v-for="link in links" :key="link">
-				<RouterLink active-class="link--active" :to="`/${link.toLowerCase()}`">{{
-					link
-				}}</RouterLink>
+			<li class="header__item" v-for="link in links" :key="link.to">
+				<RouterLink active-class="link--active" :to="link.to">{{ link.text }}</RouterLink>
 				<div class="header__item-underline"></div>
 			</li>
 		</ul>
+		<div class="lang" @click="isLangOpen = !isLangOpen">
+			<div class="lang__item">
+				<svg
+					width="22"
+					height="22"
+					viewBox="0 0 22 22"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M4 7L10 13M3 13L9 7L11 4M1 4H13M6 1H7M21 21L16 11L11 21M13 17H19"
+						stroke="white"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round" />
+				</svg>
+				<span class="lang__label">
+					{{ $i18n.locale[0].toUpperCase() + $i18n.locale.slice(1) }}
+				</span>
+				<svg
+					class="lang__arrow"
+					width="14"
+					height="8"
+					viewBox="0 0 14 8"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+					<path d="M1 7L7 1L13 7" stroke="white" />
+				</svg>
+			</div>
+			<ul class="lang__list" :class="{ hidden: !isLangOpen }">
+				<li
+					class="lang__item"
+					v-for="{ lang, label } in langs"
+					:key="lang"
+					:class="{ hidden: lang == $i18n.locale }"
+					@click="selectLang(lang)">
+					{{ label }}
+				</li>
+			</ul>
+		</div>
 		<div class="menu__button" @click="isMenuOpen = true">
 			<span></span>
 			<span></span>
@@ -26,9 +63,9 @@
 					v-for="link in links"
 					:key="link"
 					@click="isMenuOpen = false">
-					<RouterLink active-class="link--active" :to="`/${link.toLowerCase()}`">{{
-						link
-					}}</RouterLink>
+					<RouterLink active-class="link--active" :to="link.to">
+						{{ link.text }}
+					</RouterLink>
 					<div class="menu__item-underline"></div>
 				</li>
 			</ul>
@@ -37,22 +74,103 @@
 				to="/contacts"
 				data-button
 				class="button-secondary"
-				>Book a travel</RouterLink
+				>{{ $t('book-travel') }}</RouterLink
 			>
 		</div>
 	</Teleport>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 import Overlay from '@/components/Overlay.vue';
+import { changeLang, i18n } from '@/locale';
 
 const isMenuOpen = ref(false);
+const isLangOpen = ref(false);
 
-const links = ['About', 'Services', 'Uzbekistan', 'MICE', 'Contacts'];
+const selectLang = newLang => {
+	changeLang(newLang);
+};
+const langs = computed(() => [
+	{
+		lang: 'en',
+		label: 'English'
+	},
+	{
+		lang: 'uz',
+		label: 'Uzbek'
+	},
+	{
+		lang: 'zh',
+		label: 'Chinese'
+	}
+]);
+const links = computed(() => [
+	{ text: i18n.global.t('link-about'), to: '/about' },
+	{ text: i18n.global.t('link-services'), to: '/services' },
+	{ text: i18n.global.t('link-mice'), to: '/mice' },
+	{ text: i18n.global.t('link-uzbekistan'), to: '/uzbekistan' },
+	{ text: i18n.global.t('link-contacts'), to: '/contacts' }
+]);
 </script>
 
 <style lang="scss" scoped>
+.lang {
+	color: #fff;
+	padding: 5px;
+	background-color: #fff;
+	box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+	border-radius: 4px;
+	position: relative;
+	&:has(.lang__list.hidden) {
+		.lang__arrow {
+			transform: rotate(180deg);
+		}
+	}
+	&__arrow {
+		transition: transform 0.5s;
+	}
+	&__list {
+		width: 100%;
+		list-style-type: none;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		position: absolute;
+		top: 95%;
+		left: 0;
+		padding: 5px;
+		background-color: #fff;
+		border-radius: 4px;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+		transition: opacity 0.5s, transform 0.5s, visibility 0.5s;
+		&.hidden {
+			visibility: hidden;
+			opacity: 0;
+			transform: translateY(-3rem);
+		}
+	}
+	&__item {
+		font-size: 1.6rem;
+		font-weight: 500;
+		cursor: pointer;
+		text-align: center;
+		justify-content: center;
+		border-radius: 4px;
+		background: var(--color-secondary);
+		display: flex;
+		align-items: center;
+		gap: 1.2rem;
+		padding: 1.2rem 2.9rem;
+		&:not(:first-child) {
+			background-color: rgba(#e7c87f, 0.7);
+		}
+		&.hidden {
+			display: none;
+		}
+	}
+}
 body.overflow-hidden {
 	.header {
 		background-color: transparent;

@@ -2,60 +2,59 @@
 	<main class="contacts">
 		<div class="contacts__left">
 			<h1 class="contacts__title">
-				Welcome to Uzbekistan – where ancient Silk Road history meets modern MICE
-				excellence!
+				{{ $t('contacts-title') }}
 			</h1>
 		</div>
 		<div class="contacts__right">
 			<div class="contacts__box">
-				<p class="contacts__box-label">Address</p>
+				<p class="contacts__box-label">{{ $t('address') }}</p>
 				<div class="contacts__box-content">
 					<div>
-						<span>Tashkent, Uzbekistan</span>
+						<span>{{ $t('tashkent-uzb') }}</span>
 						<p>
-							6/1, Afrosiyob str, <br />
-							 Mirabad district,<br />
-							Tashkent city,<br />
-							Republic of Uzbekistan
+							{{ $t('contacts-address-tash-1') }} <br />
+							{{ $t('contacts-address-tash-1') }} <br />
+							{{ $t('contacts-address-tash-2') }} <br />
+							{{ $t('contacts-address-tash-3') }} <br />
+							{{ $t('contacts-address-tash-4') }}
 						</p>
 					</div>
 					<div>
-						<span>Beijing, China</span>
+						<span>{{ $t('beijing-china') }}</span>
 						<p>
-							Office 604, Tower B, <br />
-
-							Haiger international, <br />
-							No. 20, Xuanwumen street, <br />
-							Xicheng district, <br />
-							Beijing, China 
+							{{ $t('contacts-address-beijing-1') }} <br />
+							{{ $t('contacts-address-beijing-2') }} <br />
+							{{ $t('contacts-address-beijing-3') }} <br />
+							{{ $t('contacts-address-beijing-4') }} <br />
+							{{ $t('contacts-address-beijing-5') }}
 						</p>
 					</div>
 					<div>
-						<span>Almaty, Kazakhstan</span>
+						<span>{{ $t('almaty-kaz') }}</span>
 						<p>
-							Kazybekbi 22b, <br />
-							Almaty, Kazakhstan,
+							{{ $t('contacts-address-almaty-1') }} <br />
+							{{ $t('contacts-address-almaty-2') }}
 						</p>
 					</div>
 				</div>
 			</div>
 			<div class="contacts__box">
-				<p class="contacts__box-label">Phone</p>
+				<p class="contacts__box-label">{{ $t('phone') }}</p>
 				<div class="contacts__box-content">
 					<div>
-						<span>Tashkent, Uzbekistan</span>
+						<span>{{ $t('tashkent-uzb') }}</span>
 						<a href="tel:+998 909919020">
 							<p>+998 909919020</p>
 						</a>
 					</div>
 					<div>
-						<span>Beijing, China</span>
+						<span>{{ $t('beijing-china') }}</span>
 						<a href="tel:+86 15801494957">
 							<p>+86 15801494957</p>
 						</a>
 					</div>
 					<div>
-						<span>Almaty, Kazakhstan</span>
+						<span>{{ $t('almaty-kaz') }}</span>
 						<a href="tel:+7 7076162797">
 							<p>+7 7076162797</p>
 						</a>
@@ -63,7 +62,7 @@
 				</div>
 			</div>
 			<div class="contacts__box">
-				<p class="contacts__box-label">Email</p>
+				<p class="contacts__box-label">{{ $t('email') }}</p>
 				<div class="contacts__box-content">
 					<div>
 						<a href="mailto:info@soluxetour.uz">
