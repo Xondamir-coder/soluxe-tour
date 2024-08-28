@@ -69,6 +69,45 @@
 					<div class="menu__item-underline"></div>
 				</li>
 			</ul>
+			<div class="lang" @click="isLangOpen = !isLangOpen">
+				<div class="lang__item">
+					<svg
+						width="22"
+						height="22"
+						viewBox="0 0 22 22"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M4 7L10 13M3 13L9 7L11 4M1 4H13M6 1H7M21 21L16 11L11 21M13 17H19"
+							stroke="white"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round" />
+					</svg>
+					<span class="lang__label">
+						{{ $i18n.locale[0].toUpperCase() + $i18n.locale.slice(1) }}
+					</span>
+					<svg
+						class="lang__arrow"
+						width="14"
+						height="8"
+						viewBox="0 0 14 8"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg">
+						<path d="M1 7L7 1L13 7" stroke="white" />
+					</svg>
+				</div>
+				<ul class="lang__list" :class="{ hidden: !isLangOpen }">
+					<li
+						class="lang__item"
+						v-for="{ lang, label } in langs"
+						:key="lang"
+						:class="{ hidden: lang == $i18n.locale }"
+						@click="selectLang(lang)">
+						{{ label }}
+					</li>
+				</ul>
+			</div>
 			<RouterLink
 				@click="isMenuOpen = false"
 				to="/contacts"
@@ -122,6 +161,13 @@ const links = computed(() => [
 	box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
 	border-radius: 4px;
 	position: relative;
+	transition: opacity 0.5s, transform 0.5s;
+	transition-delay: 3s;
+	@media only screen and (max-width: 768px) {
+		&:first-child {
+			display: none;
+		}
+	}
 	&:has(.lang__list.hidden) {
 		.lang__arrow {
 			transform: rotate(180deg);
@@ -172,6 +218,10 @@ const links = computed(() => [
 	}
 }
 body.overflow-hidden {
+	.lang {
+		opacity: 0;
+		transform: translateX(150%);
+	}
 	.header {
 		background-color: transparent;
 		border-color: transparent;
@@ -264,6 +314,9 @@ body.bg-white .header {
 	background-color: var(--color-primary);
 	padding: 4.8rem 2.2rem;
 	gap: 3rem;
+	.lang {
+		align-self: flex-start;
+	}
 	&--hidden {
 		transform: translateX(150%);
 	}
