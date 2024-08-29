@@ -1,6 +1,6 @@
 <template>
 	<div class="destination" id="destination">
-		<h1 id="title" class="heading">Our destinations</h1>
+		<h1 id="title" class="heading">{{ $t('destination-title') }}</h1>
 		<div class="destination__svg">
 			<svg viewBox="0 0 1350 150" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path
@@ -33,12 +33,9 @@
 		<div id="container" class="container">
 			<div class="place place-1">
 				<div class="place__content">
-					<h3 class="heading-3">Tashkent</h3>
+					<h3 class="heading-3">{{ $t('tashkent') }}</h3>
 					<p class="text-size-medium">
-						Tashkent, the vibrant capital of Uzbekistan, seamlessly blends modernity
-						with rich cultural heritage. Explore its bustling markets, exquisite
-						mosques, and Soviet-era architecture. Key attractions include the Khast Imam
-						Complex, Chorsu Bazaar, and the beautiful Amir Timur Square.
+						{{ $t('destination-text-1') }}
 					</p>
 				</div>
 				<img class="img img-1" src="@/assets/destination-1.jpg" alt="img" />
@@ -47,13 +44,9 @@
 			</div>
 			<div class="place place-2">
 				<div class="place__content">
-					<h3 class="heading-3">Samarkand</h3>
+					<h3 class="heading-3">{{ $t('samarkand') }}</h3>
 					<p class="text-size-medium">
-						Samarkand, a jewel of the ancient Silk Road, is renowned for its
-						breathtaking Islamic architecture. Visit the majestic Registan Square, the
-						stunning Shah-i-Zinda necropolis, and the grand Gur-e-Amir mausoleum.
-						Samarkand's rich history and vibrant culture make it an unmissable
-						destination.
+						{{ $t('destination-text-2') }}
 					</p>
 				</div>
 				<img class="img img-4" src="@/assets/uzb-samarkand-1.jpeg" alt="img" />
@@ -62,12 +55,9 @@
 			</div>
 			<div class="place place-3">
 				<div class="place__content">
-					<h3 class="heading-3">Bukhara</h3>
+					<h3 class="heading-3">{{ $t('bukhara') }}</h3>
 					<p class="text-size-medium">
-						Bukhara, a UNESCO World Heritage Site, boasts over a thousand years of
-						architectural and cultural treasures. Wander through its well-preserved old
-						town, marvel at the Kalyan Minaret, and visit the historic Ark Fortress.
-						Bukhara's timeless charm captivates every visitor.
+						{{ $t('destination-text-3') }}
 					</p>
 				</div>
 				<img class="img img-7" src="@/assets/grid-img-2.jpeg" alt="img" />
@@ -76,12 +66,9 @@
 			</div>
 			<div class="place place-4">
 				<div class="place__content">
-					<h3 class="heading-3">Khiva</h3>
+					<h3 class="heading-3">{{ $t('khiva') }}</h3>
 					<p class="text-size-medium">
-						Khiva, a living museum, offers a glimpse into the past with its impeccably
-						restored ancient city, Itchan Kala. Stroll through its narrow streets, visit
-						the impressive Kuhna Ark, and admire the intricate tile work of the Kalta
-						Minor Minaret. Khiva's enchanting atmosphere is a step back in time.
+						{{ $t('destination-text-4') }}
 					</p>
 				</div>
 				<img class="img img-10" src="@/assets/uzb-khiva-1.jpeg" alt="img" />
@@ -125,59 +112,47 @@
 
 		<div class="small__content">
 			<div class="small__box">
-				<h3 class="heading-3">Tashkent</h3>
+				<h3 class="heading-3">{{ $t('tashkent') }}</h3>
 				<div class="small__images">
 					<img class="small__img" src="@/assets/destination-1.jpg" alt="img" />
 					<img class="small__img" src="@/assets/destination-2.jpg" alt="img" />
 					<img class="small__img" src="@/assets/destination-3.jpg" alt="img" />
 				</div>
 				<p class="text-size-medium">
-					Tashkent, the vibrant capital of Uzbekistan, seamlessly blends modernity with
-					rich cultural heritage. Explore its bustling markets, exquisite mosques, and
-					Soviet-era architecture. Key attractions include the Khast Imam Complex, Chorsu
-					Bazaar, and the beautiful Amir Timur Square.
+					{{ $t('destination-text-1') }}
 				</p>
 			</div>
 			<div class="small__box">
-				<h3 class="heading-3">Samarkand</h3>
+				<h3 class="heading-3">{{ $t('samarkand') }}</h3>
 				<div class="small__images">
 					<img class="small__img" src="@/assets/uzb-samarkand-1.jpeg" alt="img" />
 					<img class="small__img" src="@/assets/uzb-samarkand-2.jpeg" alt="img" />
 					<img class="small__img" src="@/assets/card-1.jpeg" alt="img" />
 				</div>
 				<p class="text-size-medium">
-					Samarkand, a jewel of the ancient Silk Road, is renowned for its breathtaking
-					Islamic architecture. Visit the majestic Registan Square, the stunning
-					Shah-i-Zinda necropolis, and the grand Gur-e-Amir mausoleum. Samarkand's rich
-					history and vibrant culture make it an unmissable destination.
+					{{ $t('destination-text-2') }}
 				</p>
 			</div>
 			<div class="small__box">
-				<h3 class="heading-3">Bukhara</h3>
+				<h3 class="heading-3">{{ $t('bukhara') }}</h3>
 				<div class="small__images">
 					<img class="small__img" src="@/assets/grid-img-2.jpeg" alt="img" />
 					<img class="small__img" src="@/assets/about-img-3.jpg" alt="img" />
 					<img class="small__img" src="@/assets/uzb-bukhara-1.jpeg" alt="img" />
 				</div>
 				<p class="text-size-medium">
-					Bukhara, a UNESCO World Heritage Site, boasts over a thousand years of
-					architectural and cultural treasures. Wander through its well-preserved old
-					town, marvel at the Kalyan Minaret, and visit the historic Ark Fortress.
-					Bukhara's timeless charm captivates every visitor.
+					{{ $t('destination-text-3') }}
 				</p>
 			</div>
 			<div class="small__box">
-				<h3 class="heading-3">Khiva</h3>
+				<h3 class="heading-3">{{ $t('khiva') }}</h3>
 				<div class="small__images">
 					<img class="small__img" src="@/assets/uzb-khiva-1.jpeg" alt="img" />
 					<img class="small__img" src="@/assets/hero-image-3.jpeg" alt="img" />
 					<img class="small__img" src="@/assets/uzb-khiva-2.jpeg" alt="img" />
 				</div>
 				<p class="text-size-medium">
-					Khiva, a living museum, offers a glimpse into the past with its impeccably
-					restored ancient city, Itchan Kala. Stroll through its narrow streets, visit the
-					impressive Kuhna Ark, and admire the intricate tile work of the Kalta Minor
-					Minaret. Khiva's enchanting atmosphere is a step back in time.
+					{{ $t('destination-text-4') }}
 				</p>
 			</div>
 		</div>

@@ -199,11 +199,20 @@ const links = computed(() => [
 	}
 	&__copyright {
 		align-self: stretch;
-		display: flex;
-		align-items: flex-end;
-		justify-content: space-between;
-		flex-wrap: wrap;
+		display: grid;
+		align-items: center;
+		grid-template-columns: max-content 1fr max-content;
 		gap: 1rem;
+		@media only screen and (max-width: 768px) {
+			grid-template-columns: auto;
+			gap: 2rem;
+		}
+		p:nth-child(2) {
+			text-align: center;
+			@media only screen and (max-width: 768px) {
+				text-align: left;
+			}
+		}
 		a {
 			text-decoration: underline;
 		}

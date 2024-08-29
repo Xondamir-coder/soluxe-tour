@@ -1,45 +1,36 @@
 <template>
 	<section class="tours">
 		<div class="tours__head">
-			<span class="tours__label">Discover</span>
-			<h1 class="tours__head-title">Explore the best Uzbekistan has to offer</h1>
+			<span class="tours__label">{{ $t('tours-label') }}</span>
+			<h1 class="tours__head-title">{{ $t('tours-title') }}</h1>
 			<p class="tours__text">
-				Uzbekistan, a gem in the heart of Central Asia, beckons with its rich tapestry of
-				history, culture, and natural beauty.
+				{{ $t('tours-subtitle') }}
 			</p>
 		</div>
 		<div class="tours__grids">
 			<div class="tours__grid tours__grid--big">
 				<div class="tours__grid-content">
-					<h1 class="tours__grid-title--big">Glimpse of Uzbekistan</h1>
+					<h1 class="tours__grid-title--big">{{ $t('tours-title-1') }}</h1>
 					<p class="tours__grid-text">
-						As a premier destination for MICE (Meetings, Incentives, Conferences,
-						Exhibitions) tours, Uzbekistan offers an extraordinary blend of ancient
-						traditions and modern amenities, making it the perfect location for your
-						next business event.
+						{{ $t('tours-text-1') }}
 					</p>
 				</div>
 				<img src="@/assets/grid-img-1.jpeg" alt="grid img" />
 			</div>
 			<div class="tours__grid tours__grid--medium">
 				<div class="tours__grid-content">
-					<h1 class="tours__grid-title--small">Historical Treasures</h1>
+					<h1 class="tours__grid-title--small">{{ $t('tours-title-2') }}</h1>
 					<p class="tours__grid-text">
-						Wander through the legendary cities of Samarkand, Bukhara, and Khiva, where
-						the ancient Silk Road comes alive with stunning architecture and vibrant
-						markets. Marvel at the grand Registan Square, the intricate Shah-i-Zinda
-						necropolis, and the timeless Ark Fortress.
+						{{ $t('tours-text-2') }}
 					</p>
 				</div>
 				<img src="@/assets/grid-img-2.jpeg" alt="grid img" />
 			</div>
 			<div class="tours__grid tours__grid--medium">
 				<div class="tours__grid-content">
-					<h1 class="tours__grid-title--medium">Modern Facilities</h1>
+					<h1 class="tours__grid-title--medium">{{ $t('tours-title-4') }}</h1>
 					<p class="tours__grid-text">
-						Benefit from state-of-the-art conference venues, luxury hotels, and
-						top-notch event management services. Uzbekistan's infrastructure ensures a
-						seamless and comfortable experience for all your business needs.
+						{{ $t('tours-text-4') }}
 					</p>
 				</div>
 				<img src="@/assets/grid-img-4.jpeg" alt="grid img" />
@@ -47,34 +38,27 @@
 			<div class="tours__grid tours__grid--small">
 				<div class="tours__grid-content">
 					<img src="@/assets/icons/uzb.svg" alt="uzb" />
-					<h1 class="tours__grid-title--small">Cultural Richness</h1>
+					<h1 class="tours__grid-title--small">{{ $t('tours-title-6') }}</h1>
 					<p class="tours__grid-text">
-						Immerse yourself in Uzbekistan's diverse cultural heritage, from traditional
-						music and dance to exquisite cuisine. Experience the vibrant local
-						traditions that make each visit uniquely memorable.
+						{{ $t('tours-text-6') }}
 					</p>
 				</div>
 			</div>
 			<div class="tours__grid tours__grid--small">
 				<div class="tours__grid-content">
 					<img src="@/assets/icons/warm.svg" alt="warm" />
-					<h1 class="tours__grid-title--small">Warm Hospitality</h1>
+					<h1 class="tours__grid-title--small">{{ $t('tours-title-5') }}</h1>
 					<p class="tours__grid-text">
-						Experience the renowned Uzbek hospitality, where every visitor is welcomed
-						as a cherished guest. The warmth and friendliness of the people will make
-						you feel at home, ensuring a pleasant and memorable stay.
+						{{ $t('tours-title-5') }}
 					</p>
 				</div>
 			</div>
 			<div class="tours__grid tours__grid--medium">
 				<img src="@/assets/grid-img-3.jpeg" alt="handmade img" />
 				<div class="tours__grid-content">
-					<h1 class="tours__grid-title--medium">Handmade Works from Ancient Times</h1>
+					<h1 class="tours__grid-title--medium">{{ $t('tours-title-3') }}</h1>
 					<p class="tours__grid-text">
-						Explore the exquisite handmade crafts that have been passed down through
-						generations. From intricate silk weaving and detailed ceramics to stunning
-						embroidery and wood carvings, Uzbekistan's artisans continue to create
-						masterpieces that reflect the country's rich cultural heritage.
+						{{ $t('tours-text-3') }}
 					</p>
 				</div>
 			</div>
@@ -125,9 +109,9 @@ onMounted(() => {
 		line-height: 1.5;
 	}
 	&__head {
-		margin: auto;
+		align-self: center;
 		text-align: center;
-		max-width: 60rem;
+		max-width: 55ch;
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;

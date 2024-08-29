@@ -164,9 +164,9 @@ const chosenServiceIndex = ref(0);
 
 onMounted(() => {
 	// Hero
-	gsap.to('.hero__grid', {
-		opacity: 1,
-		transform: 'scale(1)',
+	gsap.from('.hero__grid', {
+		opacity: 0,
+		scale: 0.3,
 		duration: 1,
 		stagger: 0.2
 	});
@@ -470,8 +470,6 @@ onMounted(() => {
 		}
 	}
 	&__grid {
-		opacity: 0;
-		transform: scale(0.3);
 		display: flex;
 		flex-direction: column;
 		gap: 10px;

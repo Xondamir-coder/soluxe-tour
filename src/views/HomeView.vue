@@ -137,12 +137,10 @@
 		</section>
 		<Tours />
 		<section data-animate class="everyone">
-			<h1 class="heading-big">Uzbekistan has a little something for everyone</h1>
+			<h1 class="heading-big">{{ $t('everyone-title') }}</h1>
 			<div class="everyone__content">
 				<p class="text-size-medium">
-					At Soluxe Tour, we specialize in crafting unforgettable MICE experiences
-					tailored to your needs. Join us and explore why Uzbekistan is the ideal
-					destination for your next MICE tour.
+					{{ $t('everyone-subtitle') }}
 				</p>
 				<div class="everyone__box" v-for="content in everyoneContent" :key="content.title">
 					<img :src="content.icon" alt="mountain" />
@@ -455,6 +453,7 @@ gsap.ticker.lagSmoothing(0);
 		text-align: center;
 	}
 	&__title {
+		max-width: 90%;
 		letter-spacing: 1.5px;
 		font-size: 7.2rem;
 		font-weight: 700;
@@ -464,6 +463,7 @@ gsap.ticker.lagSmoothing(0);
 		}
 		@media only screen and (max-width: 768px) {
 			font-size: 4rem;
+			max-width: 100%;
 		}
 	}
 	&__button {
@@ -585,6 +585,8 @@ gsap.ticker.lagSmoothing(0);
 	&__box {
 		display: grid;
 		grid-template-columns: max-content 1fr;
+		grid-auto-rows: max-content;
+		row-gap: 10px;
 		grid-template-areas:
 			'icon title'
 			'. text';
@@ -741,7 +743,8 @@ gsap.ticker.lagSmoothing(0);
 }
 .offer {
 	margin: auto;
-	display: flex;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	gap: 3.5rem;
 	color: #000;
 	& > * {

@@ -124,7 +124,8 @@ onUnmounted(() => document.body.classList.remove('bg-white'));
 		&-content {
 			display: grid;
 			grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-			gap: 4rem;
+			column-gap: 4rem;
+			row-gap: 1rem;
 
 			div {
 				display: flex;

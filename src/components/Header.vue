@@ -163,11 +163,6 @@ const links = computed(() => [
 	position: relative;
 	transition: opacity 0.5s, transform 0.5s;
 	transition-delay: 3s;
-	@media only screen and (max-width: 768px) {
-		&:first-child {
-			display: none;
-		}
-	}
 	&:has(.lang__list.hidden) {
 		.lang__arrow {
 			transform: rotate(180deg);
@@ -354,7 +349,8 @@ body.bg-white .header {
 }
 .header {
 	padding: 0 7.6rem;
-	display: flex;
+	display: grid;
+	grid-template-columns: max-content 1fr max-content;
 	align-items: center;
 	position: fixed;
 	top: 0;
@@ -367,10 +363,16 @@ body.bg-white .header {
 	transition-duration: 500ms;
 	transition-property: background-color, border-color;
 	@media only screen and (max-width: 768px) {
+		grid-template-columns: repeat(2, max-content);
 		justify-content: space-between;
 	}
 	@media only screen and (max-width: 900px) {
 		padding: 0 3rem;
+	}
+	.lang {
+		@media only screen and (max-width: 768px) {
+			display: none;
+		}
 	}
 	&__button {
 		transition: transform 0.5s 2.9s, opacity 0.5s 2.9s, color 300ms, background-color 300ms;
@@ -387,7 +389,7 @@ body.bg-white .header {
 		}
 	}
 	&__list {
-		margin: 0 calc(50% - 37rem);
+		justify-content: center;
 		@include list;
 		@media only screen and (max-width: 768px) {
 			display: none;
