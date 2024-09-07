@@ -120,7 +120,7 @@
 </template>
 
 <script setup>
-import { computed, ref } from 'vue';
+import { computed, onMounted, onUnmounted, ref } from 'vue';
 import Overlay from '@/components/Overlay.vue';
 import { changeLang, i18n } from '@/locale';
 
@@ -151,18 +151,32 @@ const links = computed(() => [
 	{ text: i18n.global.t('link-uzbekistan'), to: '/uzbekistan' },
 	{ text: i18n.global.t('link-contacts'), to: '/contacts' }
 ]);
+
+const func = e => {
+	if (e.target.closest('.lang')) return;
+	isLangOpen.value = false;
+};
+onMounted(() => {
+	if (window.innerWidth < 768) return;
+	document.addEventListener('click', func);
+});
+onUnmounted(() => {
+	if (window.innerWidth < 768) return;
+	document.removeEventListener('click', func);
+});
 </script>
 
 <style lang="scss" scoped>
 .lang {
 	color: #fff;
 	padding: 5px;
-	background-color: #fff;
-	box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
 	border-radius: 4px;
 	position: relative;
-	transition: opacity 0.5s, transform 0.5s;
-	transition-delay: 3s;
+	transition: opacity 0.5s 3s, transform 0.5s 3s, background-color 0.5s, box-shadow 0.5s;
+	&:has(.lang__list:not(.hidden)) {
+		background-color: #fff;
+		box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+	}
 	&:has(.lang__list.hidden) {
 		.lang__arrow {
 			transform: rotate(180deg);
