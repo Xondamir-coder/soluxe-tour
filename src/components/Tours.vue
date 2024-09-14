@@ -49,7 +49,7 @@
 					<img src="@/assets/icons/warm.svg" alt="warm" />
 					<h1 class="tours__grid-title--small">{{ $t('tours-title-5') }}</h1>
 					<p class="tours__grid-text">
-						{{ $t('tours-title-5') }}
+						{{ $t('tours-text-5') }}
 					</p>
 				</div>
 			</div>
