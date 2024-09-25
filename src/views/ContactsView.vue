@@ -13,7 +13,6 @@
 						<span>{{ $t('tashkent-uzb') }}</span>
 						<p>
 							{{ $t('contacts-address-tash-1') }} <br />
-							{{ $t('contacts-address-tash-1') }} <br />
 							{{ $t('contacts-address-tash-2') }} <br />
 							{{ $t('contacts-address-tash-3') }} <br />
 							{{ $t('contacts-address-tash-4') }}
