@@ -8,6 +8,7 @@ import UzbekistanView from '@/views/UzbekistanView.vue';
 import MiceView from '@/views/MiceView.vue';
 import ContactsView from '@/views/ContactsView.vue';
 import LegalView from '@/views/LegalView.vue';
+import FormView from '@/views/FormView.vue';
 import lenis from '@/js/lenis';
 
 const router = createRouter({
@@ -42,6 +43,11 @@ const router = createRouter({
 			path: '/contacts',
 			name: 'contacts',
 			component: ContactsView
+		},
+		{
+			path: '/form',
+			name: 'form',
+			component: FormView
 		},
 		{
 			path: '/legal',

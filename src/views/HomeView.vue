@@ -185,7 +185,7 @@
 		<section data-animate class="partners">
 			<div class="partners__content">
 				<h1 class="partners__title">{{ $t('partners-title') }}</h1>
-				<RouterLink data-button to="/contacts" class="partners__button button-secondary">
+				<RouterLink data-button to="/form" class="partners__button button-secondary">
 					{{ $t('get-in-touch') }}
 				</RouterLink>
 				<ul class="partners__list">
