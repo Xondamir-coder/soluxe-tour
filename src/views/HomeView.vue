@@ -3,14 +3,14 @@
 		<section data-animate class="hero">
 			<div class="hero__wrapper">
 				<div class="hero__images">
-					<img class="hero__image" src="@/assets/hero-3.jpeg" alt="hero img" />
-					<img class="hero__image" src="@/assets/hero-image-2.jpeg" alt="hero img" />
-					<img class="hero__image" src="@/assets/hero-image-3.jpeg" alt="hero img" />
-					<img class="hero__image" src="@/assets/hero-image-4.jpeg" alt="hero img" />
-					<img class="hero__image" src="@/assets/hero-main.jpeg" alt="hero img" />
-					<img class="hero__image" src="@/assets/hero-image-5.jpeg" alt="hero img" />
-					<img class="hero__image" src="@/assets/hero-4.jpeg" alt="hero img" />
-					<img class="hero__image" src="@/assets/hero-image-8.jpeg" alt="hero img" />
+					<img class="hero__image" src="@/assets/hero-3.avif" alt="hero img" />
+					<img class="hero__image" src="@/assets/hero-image-2.avif" alt="hero img" />
+					<img class="hero__image" src="@/assets/hero-image-3.avif" alt="hero img" />
+					<img class="hero__image" src="@/assets/hero-image-4.avif" alt="hero img" />
+					<img class="hero__image" src="@/assets/hero-main.avif" alt="hero img" />
+					<img class="hero__image" src="@/assets/hero-image-5.avif" alt="hero img" />
+					<img class="hero__image" src="@/assets/hero-4.avif" alt="hero img" />
+					<img class="hero__image" src="@/assets/hero-image-8.avif" alt="hero img" />
 					<img class="hero__image" src="@/assets/hero-2.avif" alt="hero img" />
 				</div>
 				<div class="hero__overlay"></div>
@@ -36,19 +36,19 @@
 			<div class="about__images">
 				<img
 					class="about__image about__image-1"
-					src="@/assets/about-img-1.jpeg"
+					src="@/assets/about-img-1.avif"
 					alt="about img" />
 				<img
 					class="about__image about__image-2"
-					src="@/assets/about-img-2.jpeg"
+					src="@/assets/about-img-2.avif"
 					alt="about img" />
 				<img
 					class="about__image about__image-3"
-					src="@/assets/about-img-3.jpg"
+					src="@/assets/about-img-3.avif"
 					alt="about img" />
 				<img
 					class="about__image about__image-4"
-					src="@/assets/about-img-4.jpeg"
+					src="@/assets/about-img-4.avif"
 					alt="about img" />
 			</div>
 			<div class="about__content">
@@ -133,7 +133,7 @@
 			</div>
 		</section>
 		<section data-animate>
-			<img class="big-img" src="@/assets/big-img.jpeg" alt="big img" />
+			<img class="big-img" src="@/assets/big-img.avif" alt="big img" />
 		</section>
 		<Tours />
 		<section data-animate class="everyone">
@@ -240,18 +240,18 @@ import Lenis from 'lenis';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { computed, onMounted, onUnmounted } from 'vue';
 gsap.registerPlugin(ScrollTrigger);
-import aboutImg1 from '@/assets/about-img-1.jpeg';
-import aboutImg2 from '@/assets/about-img-2.jpeg';
-import aboutImg3 from '@/assets/about-img-3.jpg';
-import aboutImg4 from '@/assets/about-img-4.jpeg';
+import aboutImg1 from '@/assets/about-img-1.avif';
+import aboutImg2 from '@/assets/about-img-2.avif';
+import aboutImg3 from '@/assets/about-img-3.avif';
+import aboutImg4 from '@/assets/about-img-4.avif';
 import baby from '@/assets/icons/baby.svg';
 import love from '@/assets/icons/love.svg';
 import mountain from '@/assets/icons/mountain.svg';
 import work from '@/assets/icons/work.svg';
-import expertsImg1 from '@/assets/experts-1.jpeg';
-import expertsImg2 from '@/assets/experts-2.jpg';
-import expertsImg3 from '@/assets/experts-3.jpg';
-import expertsImg4 from '@/assets/experts-4.jpeg';
+import expertsImg1 from '@/assets/experts-1.avif';
+import expertsImg2 from '@/assets/experts-2.avif';
+import expertsImg3 from '@/assets/experts-3.avif';
+import expertsImg4 from '@/assets/experts-4.avif';
 import Tours from '@/components/Tours.vue';
 import GridImages from '@/components/GridImages.vue';
 import { i18n } from '@/locale';

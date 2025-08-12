@@ -38,9 +38,9 @@
 						{{ $t('destination-text-1') }}
 					</p>
 				</div>
-				<img class="img img-1" src="@/assets/destination-1.jpg" alt="img" />
-				<img class="img img-2" src="@/assets/destination-2.jpg" alt="img" />
-				<img class="img img-3" src="@/assets/destination-3.jpg" alt="img" />
+				<img class="img img-1" src="@/assets/destination-1.avif" alt="img" />
+				<img class="img img-2" src="@/assets/destination-2.avif" alt="img" />
+				<img class="img img-3" src="@/assets/destination-3.avif" alt="img" />
 			</div>
 			<div class="place place-2">
 				<div class="place__content">
@@ -49,9 +49,9 @@
 						{{ $t('destination-text-2') }}
 					</p>
 				</div>
-				<img class="img img-4" src="@/assets/uzb-samarkand-1.jpeg" alt="img" />
-				<img class="img img-5" src="@/assets/uzb-samarkand-2.jpeg" alt="img" />
-				<img class="img img-6" src="@/assets/card-1.jpeg" alt="img" />
+				<img class="img img-4" src="@/assets/uzb-samarkand-1.avif" alt="img" />
+				<img class="img img-5" src="@/assets/uzb-samarkand-2.avif" alt="img" />
+				<img class="img img-6" src="@/assets/card-1.avif" alt="img" />
 			</div>
 			<div class="place place-3">
 				<div class="place__content">
@@ -60,9 +60,9 @@
 						{{ $t('destination-text-3') }}
 					</p>
 				</div>
-				<img class="img img-7" src="@/assets/grid-img-2.jpeg" alt="img" />
-				<img class="img img-8" src="@/assets/about-img-3.jpg" alt="img" />
-				<img class="img img-9" src="@/assets/uzb-bukhara-1.jpeg" alt="img" />
+				<img class="img img-7" src="@/assets/grid-img-2.avif" alt="img" />
+				<img class="img img-8" src="@/assets/about-img-3.avif" alt="img" />
+				<img class="img img-9" src="@/assets/uzb-bukhara-1.avif" alt="img" />
 			</div>
 			<div class="place place-4">
 				<div class="place__content">
@@ -71,9 +71,9 @@
 						{{ $t('destination-text-4') }}
 					</p>
 				</div>
-				<img class="img img-10" src="@/assets/uzb-khiva-1.jpeg" alt="img" />
-				<img class="img img-11" src="@/assets/hero-image-3.jpeg" alt="img" />
-				<img class="img img-12" src="@/assets/uzb-khiva-2.jpeg" alt="img" />
+				<img class="img img-10" src="@/assets/uzb-khiva-1.avif" alt="img" />
+				<img class="img img-11" src="@/assets/hero-image-3.avif" alt="img" />
+				<img class="img img-12" src="@/assets/uzb-khiva-2.avif" alt="img" />
 			</div>
 		</div>
 	</div>
@@ -114,9 +114,9 @@
 			<div class="small__box">
 				<h3 class="heading-3">{{ $t('tashkent') }}</h3>
 				<div class="small__images">
-					<img class="small__img" src="@/assets/destination-1.jpg" alt="img" />
-					<img class="small__img" src="@/assets/destination-2.jpg" alt="img" />
-					<img class="small__img" src="@/assets/destination-3.jpg" alt="img" />
+					<img class="small__img" src="@/assets/destination-1.avif" alt="img" />
+					<img class="small__img" src="@/assets/destination-2.avif" alt="img" />
+					<img class="small__img" src="@/assets/destination-3.avif" alt="img" />
 				</div>
 				<p class="text-size-medium">
 					{{ $t('destination-text-1') }}
@@ -125,9 +125,9 @@
 			<div class="small__box">
 				<h3 class="heading-3">{{ $t('samarkand') }}</h3>
 				<div class="small__images">
-					<img class="small__img" src="@/assets/uzb-samarkand-1.jpeg" alt="img" />
-					<img class="small__img" src="@/assets/uzb-samarkand-2.jpeg" alt="img" />
-					<img class="small__img" src="@/assets/card-1.jpeg" alt="img" />
+					<img class="small__img" src="@/assets/uzb-samarkand-1.avif" alt="img" />
+					<img class="small__img" src="@/assets/uzb-samarkand-2.avif" alt="img" />
+					<img class="small__img" src="@/assets/card-1.avif" alt="img" />
 				</div>
 				<p class="text-size-medium">
 					{{ $t('destination-text-2') }}
@@ -136,9 +136,9 @@
 			<div class="small__box">
 				<h3 class="heading-3">{{ $t('bukhara') }}</h3>
 				<div class="small__images">
-					<img class="small__img" src="@/assets/grid-img-2.jpeg" alt="img" />
-					<img class="small__img" src="@/assets/about-img-3.jpg" alt="img" />
-					<img class="small__img" src="@/assets/uzb-bukhara-1.jpeg" alt="img" />
+					<img class="small__img" src="@/assets/grid-img-2.avif" alt="img" />
+					<img class="small__img" src="@/assets/about-img-3.avif" alt="img" />
+					<img class="small__img" src="@/assets/uzb-bukhara-1.avif" alt="img" />
 				</div>
 				<p class="text-size-medium">
 					{{ $t('destination-text-3') }}
@@ -147,9 +147,9 @@
 			<div class="small__box">
 				<h3 class="heading-3">{{ $t('khiva') }}</h3>
 				<div class="small__images">
-					<img class="small__img" src="@/assets/uzb-khiva-1.jpeg" alt="img" />
-					<img class="small__img" src="@/assets/hero-image-3.jpeg" alt="img" />
-					<img class="small__img" src="@/assets/uzb-khiva-2.jpeg" alt="img" />
+					<img class="small__img" src="@/assets/uzb-khiva-1.avif" alt="img" />
+					<img class="small__img" src="@/assets/hero-image-3.avif" alt="img" />
+					<img class="small__img" src="@/assets/uzb-khiva-2.avif" alt="img" />
 				</div>
 				<p class="text-size-medium">
 					{{ $t('destination-text-4') }}

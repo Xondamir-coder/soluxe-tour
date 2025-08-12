@@ -10,7 +10,7 @@
 					<h6 class="heading-6">{{ content.title }}</h6>
 					<p>{{ content.text }}</p>
 				</div>
-				<img class="hero__banner" src="@/assets/services-hero.jpeg" alt="hero" />
+				<img class="hero__banner" src="@/assets/services-hero.avif" alt="hero" />
 			</div>
 			<div class="hero__grid">
 				<img src="@/assets/icons/checklist.svg" alt="icon" />
@@ -40,15 +40,15 @@
 				<div class="offer__images">
 					<img
 						:class="{ active: chosenServiceIndex == 0 }"
-						src="@/assets/img-2.jpeg"
+						src="@/assets/img-2.avif"
 						alt="banner" />
 					<img
 						:class="{ active: chosenServiceIndex == 1 }"
-						src="@/assets/services-2.jpeg"
+						src="@/assets/services-2.avif"
 						alt="banner" />
 					<img
 						:class="{ active: chosenServiceIndex == 2 }"
-						src="@/assets/about-img-4.jpeg"
+						src="@/assets/about-img-4.avif"
 						alt="banner" />
 				</div>
 			</div>
@@ -77,7 +77,7 @@
 			</div>
 		</section>
 		<section class="travel" data-animate>
-			<img src="@/assets/services-big.jpg" alt="travel" />
+			<img src="@/assets/services-big.avif" alt="travel" />
 			<div class="travel__content">
 				<h1 class="travel__title">{{ $t('travel-title') }}</h1>
 				<p class="text-size-medium">
@@ -99,9 +99,9 @@ import globalIcon from '@/assets/icons/global.svg';
 import ringsIcon from '@/assets/icons/rings.svg';
 import workIcon from '@/assets/icons/work-white.svg';
 import friendshipIcon from '@/assets/icons/friendship.svg';
-import betterImg1 from '@/assets/services-safety.jpg';
-import betterImg2 from '@/assets/grid-img-3.jpeg';
-import betterImg3 from '@/assets/services-humans.jpg';
+import betterImg1 from '@/assets/services-safety.avif';
+import betterImg2 from '@/assets/grid-img-3.avif';
+import betterImg3 from '@/assets/services-humans.avif';
 import { i18n } from '@/locale';
 
 gsap.registerPlugin(ScrollTrigger);

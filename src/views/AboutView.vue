@@ -37,7 +37,7 @@
 							{{ $t('card-text-1') }}
 						</p>
 					</div>
-					<img class="cards__image" src="@/assets/card-1.jpeg" alt="banner" />
+					<img class="cards__image" src="@/assets/card-1.avif" alt="banner" />
 				</div>
 			</div>
 			<div class="cards__item">
@@ -53,7 +53,7 @@
 							{{ $t('card-text-1') }}
 						</p>
 					</div>
-					<img class="cards__image" src="@/assets/card-2.jpeg" alt="banner" />
+					<img class="cards__image" src="@/assets/card-2.avif" alt="banner" />
 				</div>
 			</div>
 			<div class="cards__item cards__item--last">

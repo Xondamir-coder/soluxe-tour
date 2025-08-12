@@ -15,7 +15,7 @@
 						{{ $t('tours-text-1') }}
 					</p>
 				</div>
-				<img src="@/assets/grid-img-1.jpeg" alt="grid img" />
+				<img src="@/assets/grid-img-1.avif" alt="grid img" />
 			</div>
 			<div class="tours__grid tours__grid--medium">
 				<div class="tours__grid-content">
@@ -24,7 +24,7 @@
 						{{ $t('tours-text-2') }}
 					</p>
 				</div>
-				<img src="@/assets/grid-img-2.jpeg" alt="grid img" />
+				<img src="@/assets/grid-img-2.avif" alt="grid img" />
 			</div>
 			<div class="tours__grid tours__grid--medium">
 				<div class="tours__grid-content">
@@ -33,7 +33,7 @@
 						{{ $t('tours-text-4') }}
 					</p>
 				</div>
-				<img src="@/assets/grid-img-4.jpeg" alt="grid img" />
+				<img src="@/assets/grid-img-4.avif" alt="grid img" />
 			</div>
 			<div class="tours__grid tours__grid--small">
 				<div class="tours__grid-content">
@@ -54,7 +54,7 @@
 				</div>
 			</div>
 			<div class="tours__grid tours__grid--medium">
-				<img src="@/assets/grid-img-3.jpeg" alt="handmade img" />
+				<img src="@/assets/grid-img-3.avif" alt="handmade img" />
 				<div class="tours__grid-content">
 					<h1 class="tours__grid-title--medium">{{ $t('tours-title-3') }}</h1>
 					<p class="tours__grid-text">

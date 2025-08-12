@@ -13,7 +13,7 @@
 			</div>
 			<img
 				ref="heroImageRef"
-				src="@/assets/mountains.jpg"
+				src="@/assets/mountains.avif"
 				alt="mountains"
 				class="hero__image" />
 		</section>

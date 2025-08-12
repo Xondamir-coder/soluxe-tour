@@ -1,12 +1,12 @@
 <template>
 	<main class="main">
 		<section class="hero">
-			<img class="hero__image hero__image--1" src="@/assets/img-5.jpeg" alt="img 1" />
-			<img class="hero__image hero__image--2" src="@/assets/hero-image-5.jpeg" alt="img 2" />
-			<img class="hero__image hero__image--3" src="@/assets/experts-4.jpeg" alt="img 3" />
-			<img class="hero__image hero__image--4" src="@/assets/img-9.jpeg" alt="img 4" />
-			<img class="hero__image hero__image--5" src="@/assets/about-img-3.jpg" alt="img 5" />
-			<img class="hero__image hero__image--6" src="@/assets/hero-image-3.jpeg" alt="img 6" />
+			<img class="hero__image hero__image--1" src="@/assets/img-5.avif" alt="img 1" />
+			<img class="hero__image hero__image--2" src="@/assets/hero-image-5.avif" alt="img 2" />
+			<img class="hero__image hero__image--3" src="@/assets/experts-4.avif" alt="img 3" />
+			<img class="hero__image hero__image--4" src="@/assets/img-9.avif" alt="img 4" />
+			<img class="hero__image hero__image--5" src="@/assets/about-img-3.avif" alt="img 5" />
+			<img class="hero__image hero__image--6" src="@/assets/hero-image-3.avif" alt="img 6" />
 			<div class="hero__content">
 				<h1 class="heading-style-h1">{{ $t('mice-hero-title') }}</h1>
 				<p class="text-size-medium">
@@ -51,7 +51,7 @@
 				</div>
 			</div>
 			<div class="us__image">
-				<img src="@/assets/hero-image-2.jpeg" alt="banner" />
+				<img src="@/assets/hero-image-2.avif" alt="banner" />
 			</div>
 		</section>
 		<section class="cards" data-animate>
@@ -79,10 +79,10 @@ import chatIcon from '@/assets/icons/chat.svg';
 import contactIcon from '@/assets/icons/contact.svg';
 import puzzleIcon from '@/assets/icons/puzzle.svg';
 import Tours from '@/components/Tours.vue';
-import cardsBanner1 from '@/assets/mice-1.jpg';
-import cardsBanner2 from '@/assets/mice-2.jpg';
-import cardsBanner3 from '@/assets/mice-3.jpg';
-import cardsBanner4 from '@/assets/mice-4.jpg';
+import cardsBanner1 from '@/assets/mice-1.avif';
+import cardsBanner2 from '@/assets/mice-2.avif';
+import cardsBanner3 from '@/assets/mice-3.avif';
+import cardsBanner4 from '@/assets/mice-4.avif';
 import { i18n } from '@/locale';
 
 gsap.registerPlugin(ScrollTrigger);
