@@ -34,46 +34,82 @@
 			<div class="place place-1">
 				<div class="place__content">
 					<h3 class="heading-3">{{ $t('tashkent') }}</h3>
-					<p class="text-size-medium">
-						{{ $t('destination-text-1') }}
-					</p>
+					<p class="text-size-medium">{{ $t('destination-text-1') }}</p>
 				</div>
-				<img class="img img-1" src="@/assets/destination-1.avif" alt="img" />
-				<img class="img img-2" src="@/assets/destination-2.avif" alt="img" />
-				<img class="img img-3" src="@/assets/destination-3.avif" alt="img" />
+				<ResponsiveImage
+					name="destination-1"
+					original-tag="jpg"
+					class="img img-1"
+					alt="banner" />
+				<ResponsiveImage
+					name="destination-2"
+					original-tag="jpg"
+					class="img img-2"
+					alt="img" />
+				<ResponsiveImage
+					name="destination-3"
+					original-tag="jpg"
+					class="img img-3"
+					alt="img" />
 			</div>
 			<div class="place place-2">
 				<div class="place__content">
 					<h3 class="heading-3">{{ $t('samarkand') }}</h3>
-					<p class="text-size-medium">
-						{{ $t('destination-text-2') }}
-					</p>
+					<p class="text-size-medium">{{ $t('destination-text-2') }}</p>
 				</div>
-				<img class="img img-4" src="@/assets/uzb-samarkand-1.avif" alt="img" />
-				<img class="img img-5" src="@/assets/uzb-samarkand-2.avif" alt="img" />
-				<img class="img img-6" src="@/assets/card-1.avif" alt="img" />
+				<ResponsiveImage
+					name="uzb-samarkand-1"
+					original-tag="jpeg"
+					class="img img-4"
+					alt="img" />
+				<ResponsiveImage
+					name="uzb-samarkand-2"
+					original-tag="jpeg"
+					class="img img-5"
+					alt="img" />
+				<ResponsiveImage name="card-1" original-tag="jpeg" class="img img-6" alt="img" />
 			</div>
 			<div class="place place-3">
 				<div class="place__content">
 					<h3 class="heading-3">{{ $t('bukhara') }}</h3>
-					<p class="text-size-medium">
-						{{ $t('destination-text-3') }}
-					</p>
+					<p class="text-size-medium">{{ $t('destination-text-3') }}</p>
 				</div>
-				<img class="img img-7" src="@/assets/grid-img-2.avif" alt="img" />
-				<img class="img img-8" src="@/assets/about-img-3.avif" alt="img" />
-				<img class="img img-9" src="@/assets/uzb-bukhara-1.avif" alt="img" />
+				<ResponsiveImage
+					name="grid-img-2"
+					original-tag="jpeg"
+					class="img img-7"
+					alt="img" />
+				<ResponsiveImage
+					name="about-img-3"
+					original-tag="jpg"
+					class="img img-8"
+					alt="img" />
+				<ResponsiveImage
+					name="uzb-bukhara-1"
+					original-tag="jpeg"
+					class="img img-9"
+					alt="img" />
 			</div>
 			<div class="place place-4">
 				<div class="place__content">
 					<h3 class="heading-3">{{ $t('khiva') }}</h3>
-					<p class="text-size-medium">
-						{{ $t('destination-text-4') }}
-					</p>
+					<p class="text-size-medium">{{ $t('destination-text-4') }}</p>
 				</div>
-				<img class="img img-10" src="@/assets/uzb-khiva-1.avif" alt="img" />
-				<img class="img img-11" src="@/assets/hero-image-3.avif" alt="img" />
-				<img class="img img-12" src="@/assets/uzb-khiva-2.avif" alt="img" />
+				<ResponsiveImage
+					name="uzb-khiva-1"
+					original-tag="jpeg"
+					class="img img-10"
+					alt="img" />
+				<ResponsiveImage
+					name="hero-image-3"
+					original-tag="jpeg"
+					class="img img-11"
+					alt="img" />
+				<ResponsiveImage
+					name="uzb-khiva-2"
+					original-tag="jpeg"
+					class="img img-12"
+					alt="img" />
 			</div>
 		</div>
 	</div>
@@ -114,46 +150,86 @@
 			<div class="small__box">
 				<h3 class="heading-3">{{ $t('tashkent') }}</h3>
 				<div class="small__images">
-					<img class="small__img" src="@/assets/destination-1.avif" alt="img" />
-					<img class="small__img" src="@/assets/destination-2.avif" alt="img" />
-					<img class="small__img" src="@/assets/destination-3.avif" alt="img" />
+					<ResponsiveImage
+						original-tag="jpeg"
+						name="destination-1"
+						class="small__img"
+						alt="img" />
+					<ResponsiveImage
+						original-tag="jpeg"
+						name="destination-2"
+						class="small__img"
+						alt="img" />
+					<ResponsiveImage
+						original-tag="jpeg"
+						name="destination-3"
+						class="small__img"
+						alt="img" />
 				</div>
-				<p class="text-size-medium">
-					{{ $t('destination-text-1') }}
-				</p>
+				<p class="text-size-medium">{{ $t('destination-text-1') }}</p>
 			</div>
 			<div class="small__box">
 				<h3 class="heading-3">{{ $t('samarkand') }}</h3>
 				<div class="small__images">
-					<img class="small__img" src="@/assets/uzb-samarkand-1.avif" alt="img" />
-					<img class="small__img" src="@/assets/uzb-samarkand-2.avif" alt="img" />
-					<img class="small__img" src="@/assets/card-1.avif" alt="img" />
+					<ResponsiveImage
+						original-tag="jpeg"
+						name="uzb-samarkand-1"
+						class="small__img"
+						alt="img" />
+					<ResponsiveImage
+						original-tag="jpeg"
+						name="uzb-samarkand-2"
+						class="small__img"
+						alt="img" />
+					<ResponsiveImage
+						original-tag="jpeg"
+						name="card-1"
+						class="small__img"
+						alt="img" />
 				</div>
-				<p class="text-size-medium">
-					{{ $t('destination-text-2') }}
-				</p>
+				<p class="text-size-medium">{{ $t('destination-text-2') }}</p>
 			</div>
 			<div class="small__box">
 				<h3 class="heading-3">{{ $t('bukhara') }}</h3>
 				<div class="small__images">
-					<img class="small__img" src="@/assets/grid-img-2.avif" alt="img" />
-					<img class="small__img" src="@/assets/about-img-3.avif" alt="img" />
-					<img class="small__img" src="@/assets/uzb-bukhara-1.avif" alt="img" />
+					<ResponsiveImage
+						original-tag="jpeg"
+						name="grid-img-2"
+						class="small__img"
+						alt="img" />
+					<ResponsiveImage
+						original-tag="jpg"
+						name="about-img-3"
+						class="small__img"
+						alt="img" />
+					<ResponsiveImage
+						original-tag="jpeg"
+						name="uzb-bukhara-1"
+						class="small__img"
+						alt="img" />
 				</div>
-				<p class="text-size-medium">
-					{{ $t('destination-text-3') }}
-				</p>
+				<p class="text-size-medium">{{ $t('destination-text-3') }}</p>
 			</div>
 			<div class="small__box">
 				<h3 class="heading-3">{{ $t('khiva') }}</h3>
 				<div class="small__images">
-					<img class="small__img" src="@/assets/uzb-khiva-1.avif" alt="img" />
-					<img class="small__img" src="@/assets/hero-image-3.avif" alt="img" />
-					<img class="small__img" src="@/assets/uzb-khiva-2.avif" alt="img" />
+					<ResponsiveImage
+						original-tag="jpeg"
+						name="uzb-khiva-1"
+						class="small__img"
+						alt="img" />
+					<ResponsiveImage
+						original-tag="jpeg"
+						name="hero-image-3"
+						class="small__img"
+						alt="img" />
+					<ResponsiveImage
+						original-tag="jpeg"
+						name="uzb-khiva-2"
+						class="small__img"
+						alt="img" />
 				</div>
-				<p class="text-size-medium">
-					{{ $t('destination-text-4') }}
-				</p>
+				<p class="text-size-medium">{{ $t('destination-text-4') }}</p>
 			</div>
 		</div>
 	</div>
@@ -164,6 +240,7 @@ import gsap from 'gsap';
 import { MotionPathPlugin } from 'gsap/MotionPathPlugin';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { onMounted } from 'vue';
+import ResponsiveImage from './ResponsiveImage.vue';
 
 gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
 

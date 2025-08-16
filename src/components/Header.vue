@@ -1,7 +1,7 @@
 <template>
 	<header class="header">
 		<RouterLink active-class="link--active" to="/">
-			<img class="header__logo" src="@/assets/logo.svg" alt="logo" />
+			<img class="header__logo" src="@/icons/logo.svg" alt="logo" />
 		</RouterLink>
 		<ul class="header__list">
 			<li class="header__item" v-for="link in links" :key="link.to">

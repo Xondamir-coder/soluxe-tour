@@ -132,7 +132,7 @@ const submitForm = () => {
 		font-weight: 400;
 	}
 	&__left {
-		background-image: url(@/assets/contacts.avif);
+		background-image: url(@/images/resized/contacts-1920.avif);
 		background-size: cover;
 		background-repeat: no-repeat;
 		display: grid;

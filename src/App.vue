@@ -11,14 +11,7 @@
 import Header from '@/components/Header.vue';
 import Footer from '@/components/Footer.vue';
 import Preloader from '@/components/Preloader.vue';
-import lenis from './js/lenis';
-
-function raf(time) {
-	lenis.raf(time);
-	requestAnimationFrame(raf);
-}
-
-requestAnimationFrame(raf);
+import '@/js/lenis';
 </script>
 
 <style lang="scss" scoped></style>

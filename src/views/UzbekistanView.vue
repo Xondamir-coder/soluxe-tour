@@ -11,9 +11,9 @@
 					{{ $t('uzb-hero-text') }}
 				</p>
 			</div>
-			<img
-				ref="heroImageRef"
-				src="@/assets/mountains.avif"
+			<ResponsiveImage
+				original-tag="jpg"
+				name="mountains"
 				alt="mountains"
 				class="hero__image" />
 		</section>
@@ -66,15 +66,16 @@
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { computed, onMounted, ref } from 'vue';
-import bulbIcon from '@/assets/icons/bulb.svg';
-import heartIcon from '@/assets/icons/heart.svg';
-import idIcon from '@/assets/icons/id.svg';
-import loveIcon from '@/assets/icons/love.svg';
+import bulbIcon from '@/icons/bulb.svg';
+import heartIcon from '@/icons/heart.svg';
+import idIcon from '@/icons/id.svg';
+import loveIcon from '@/icons/love.svg';
 import Tours from '@/components/Tours.vue';
 import GridImages from '@/components/GridImages.vue';
 import HorizontalCards from '@/components/HorizontalCards.vue';
 import Ornament from '@/components/Ornament.vue';
 import { i18n } from '@/locale';
+import ResponsiveImage from '@/components/ResponsiveImage.vue';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -103,11 +104,10 @@ const discoverContent = computed(() => [
 ]);
 
 const heroRef = ref();
-const heroImageRef = ref();
 const heroContentRef = ref();
 
 onMounted(() => {
-	gsap.to(heroImageRef.value, {
+	gsap.to('.hero__image', {
 		scale: 1,
 		scrollTrigger: {
 			trigger: heroRef.value,

@@ -2,7 +2,7 @@
 	<footer class="footer">
 		<div class="footer__container">
 			<div class="footer__left">
-				<img class="footer__logo" src="@/assets/logo-yellow.svg" alt="logo" />
+				<img class="footer__logo" src="@/icons/logo-yellow.svg" alt="logo" />
 				<p>
 					{{ $t('address') }}:
 					<br />
@@ -120,7 +120,7 @@
 			<p>
 				{{ $t('footer-dev') }}
 				<a href="http://www.spacelabs.uz" target="_blank" rel="noopener noreferrer">
-					Space Labs
+					Spacelabs
 				</a>
 			</p>
 			<RouterLink to="/legal"

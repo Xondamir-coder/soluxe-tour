@@ -11,55 +11,43 @@
 			<div class="tours__grid tours__grid--big">
 				<div class="tours__grid-content">
 					<h1 class="tours__grid-title--big">{{ $t('tours-title-1') }}</h1>
-					<p class="tours__grid-text">
-						{{ $t('tours-text-1') }}
-					</p>
+					<p class="tours__grid-text">{{ $t('tours-text-1') }}</p>
 				</div>
-				<img src="@/assets/grid-img-1.avif" alt="grid img" />
+				<ResponsiveImage original-tag="jpeg" name="grid-img-1" alt="grid img" />
 			</div>
 			<div class="tours__grid tours__grid--medium">
 				<div class="tours__grid-content">
 					<h1 class="tours__grid-title--small">{{ $t('tours-title-2') }}</h1>
-					<p class="tours__grid-text">
-						{{ $t('tours-text-2') }}
-					</p>
+					<p class="tours__grid-text">{{ $t('tours-text-2') }}</p>
 				</div>
-				<img src="@/assets/grid-img-2.avif" alt="grid img" />
+				<ResponsiveImage original-tag="jpeg" name="grid-img-2" alt="grid img" />
 			</div>
 			<div class="tours__grid tours__grid--medium">
 				<div class="tours__grid-content">
 					<h1 class="tours__grid-title--medium">{{ $t('tours-title-4') }}</h1>
-					<p class="tours__grid-text">
-						{{ $t('tours-text-4') }}
-					</p>
+					<p class="tours__grid-text">{{ $t('tours-text-4') }}</p>
 				</div>
-				<img src="@/assets/grid-img-4.avif" alt="grid img" />
+				<ResponsiveImage original-tag="jpeg" name="grid-img-4" alt="grid img" />
 			</div>
 			<div class="tours__grid tours__grid--small">
 				<div class="tours__grid-content">
-					<img src="@/assets/icons/uzb.svg" alt="uzb" />
+					<img src="@/icons/uzb.svg" alt="uzb" />
 					<h1 class="tours__grid-title--small">{{ $t('tours-title-6') }}</h1>
-					<p class="tours__grid-text">
-						{{ $t('tours-text-6') }}
-					</p>
+					<p class="tours__grid-text">{{ $t('tours-text-6') }}</p>
 				</div>
 			</div>
 			<div class="tours__grid tours__grid--small">
 				<div class="tours__grid-content">
-					<img src="@/assets/icons/warm.svg" alt="warm" />
+					<img src="@/icons/warm.svg" alt="warm" />
 					<h1 class="tours__grid-title--small">{{ $t('tours-title-5') }}</h1>
-					<p class="tours__grid-text">
-						{{ $t('tours-text-5') }}
-					</p>
+					<p class="tours__grid-text">{{ $t('tours-text-5') }}</p>
 				</div>
 			</div>
 			<div class="tours__grid tours__grid--medium">
-				<img src="@/assets/grid-img-3.avif" alt="handmade img" />
+				<ResponsiveImage original-tag="jpeg" name="grid-img-3" alt="handmade img" />
 				<div class="tours__grid-content">
 					<h1 class="tours__grid-title--medium">{{ $t('tours-title-3') }}</h1>
-					<p class="tours__grid-text">
-						{{ $t('tours-text-3') }}
-					</p>
+					<p class="tours__grid-text">{{ $t('tours-text-3') }}</p>
 				</div>
 			</div>
 		</div>
@@ -69,6 +57,7 @@
 <script setup>
 import gsap from 'gsap';
 import { onMounted } from 'vue';
+import ResponsiveImage from './ResponsiveImage.vue';
 
 onMounted(() => {
 	gsap.to('.tours', {
@@ -166,7 +155,7 @@ onMounted(() => {
 		border: 1px solid #000;
 		border-radius: 12px;
 		overflow: hidden;
-		img {
+		picture {
 			height: 100%;
 			object-fit: cover;
 		}
@@ -210,10 +199,10 @@ onMounted(() => {
 				flex-direction: column;
 			}
 
-			img {
-				width: 40%;
+			picture {
+				min-width: 40%;
 				@media only screen and (max-width: 500px) {
-					width: 100%;
+					min-width: 100%;
 				}
 			}
 		}

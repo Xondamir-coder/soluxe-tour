@@ -1,14 +1,14 @@
 <template>
 	<section class="images">
-		<img src="@/assets/img-2.avif" alt="banner" />
-		<img src="@/assets/img-1.avif" alt="banner" />
-		<img src="@/assets/img-3.avif" alt="banner" />
-		<img src="@/assets/img-4.avif" alt="banner" />
-		<img src="@/assets/img-5.avif" alt="banner" />
-		<img src="@/assets/img-6.avif" alt="banner" />
-		<img src="@/assets/img-7.avif" alt="banner" />
-		<img src="@/assets/img-8.avif" alt="banner" />
-		<img src="@/assets/img-9.avif" alt="banner" />
+		<ResponsiveImage name="img-1" original-tag="jpeg" alt="1st image" />
+		<ResponsiveImage name="img-2" original-tag="jpeg" alt="banner" />
+		<ResponsiveImage name="img-3" original-tag="jpeg" alt="banner" />
+		<ResponsiveImage name="img-4" original-tag="jpeg" alt="banner" />
+		<ResponsiveImage name="img-5" original-tag="jpeg" alt="banner" />
+		<ResponsiveImage name="img-6" original-tag="jpeg" alt="banner" />
+		<ResponsiveImage name="img-7" original-tag="jpeg" alt="banner" />
+		<ResponsiveImage name="img-8" original-tag="jpeg" alt="banner" />
+		<ResponsiveImage name="img-9" original-tag="jpeg" alt="banner" />
 	</section>
 </template>
 
@@ -16,6 +16,7 @@
 import { onMounted } from 'vue';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import ResponsiveImage from './ResponsiveImage.vue';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -43,11 +44,6 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
-img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
 .images {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -56,7 +52,7 @@ img {
 	@media only screen and (max-width: 768px) {
 		grid-template-columns: 1fr;
 	}
-	img {
+	picture {
 		border-radius: 10px;
 		&:first-child {
 			grid-row: span 4;

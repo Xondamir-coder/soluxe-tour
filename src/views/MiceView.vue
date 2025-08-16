@@ -1,12 +1,36 @@
 <template>
 	<main class="main">
 		<section class="hero">
-			<img class="hero__image hero__image--1" src="@/assets/img-5.avif" alt="img 1" />
-			<img class="hero__image hero__image--2" src="@/assets/hero-image-5.avif" alt="img 2" />
-			<img class="hero__image hero__image--3" src="@/assets/experts-4.avif" alt="img 3" />
-			<img class="hero__image hero__image--4" src="@/assets/img-9.avif" alt="img 4" />
-			<img class="hero__image hero__image--5" src="@/assets/about-img-3.avif" alt="img 5" />
-			<img class="hero__image hero__image--6" src="@/assets/hero-image-3.avif" alt="img 6" />
+			<ResponsiveImage
+				original-tag="jpeg"
+				name="img-5"
+				alt="img 1"
+				class="hero__image hero__image--1" />
+			<ResponsiveImage
+				original-tag="jpeg"
+				name="hero-image-5"
+				alt="img 2"
+				class="hero__image hero__image--2" />
+			<ResponsiveImage
+				original-tag="jpeg"
+				name="experts-4"
+				alt="img 3"
+				class="hero__image hero__image--3" />
+			<ResponsiveImage
+				original-tag="jpeg"
+				name="img-9"
+				alt="img 4"
+				class="hero__image hero__image--4" />
+			<ResponsiveImage
+				original-tag="jpg"
+				name="about-img-3"
+				alt="img 5"
+				class="hero__image hero__image--5" />
+			<ResponsiveImage
+				original-tag="jpeg"
+				name="hero-image-3"
+				alt="img 6"
+				class="hero__image hero__image--6" />
 			<div class="hero__content">
 				<h1 class="heading-style-h1">{{ $t('mice-hero-title') }}</h1>
 				<p class="text-size-medium">
@@ -51,7 +75,7 @@
 				</div>
 			</div>
 			<div class="us__image">
-				<img src="@/assets/hero-image-2.avif" alt="banner" />
+				<ResponsiveImage original-tag="jpeg" name="hero-image-2" alt="banner" />
 			</div>
 		</section>
 		<section class="cards" data-animate>
@@ -65,7 +89,7 @@
 					<h1 class="heading">{{ content.title }}</h1>
 					<p>{{ content.text }}</p>
 				</div>
-				<img class="cards__image" :src="content.img" alt="img" />
+				<ResponsiveImage class="cards__image" :name="content.img" original-tag="jpg" />
 			</div>
 		</section>
 	</main>
@@ -75,17 +99,19 @@
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { computed, onMounted } from 'vue';
-import chatIcon from '@/assets/icons/chat.svg';
-import contactIcon from '@/assets/icons/contact.svg';
-import puzzleIcon from '@/assets/icons/puzzle.svg';
+import chatIcon from '@/icons/chat.svg';
+import contactIcon from '@/icons/contact.svg';
+import puzzleIcon from '@/icons/puzzle.svg';
 import Tours from '@/components/Tours.vue';
-import cardsBanner1 from '@/assets/mice-1.avif';
-import cardsBanner2 from '@/assets/mice-2.avif';
-import cardsBanner3 from '@/assets/mice-3.avif';
-import cardsBanner4 from '@/assets/mice-4.avif';
 import { i18n } from '@/locale';
+import ResponsiveImage from '@/components/ResponsiveImage.vue';
 
 gsap.registerPlugin(ScrollTrigger);
+
+const cardsBanner1 = 'mice-1';
+const cardsBanner2 = 'mice-2';
+const cardsBanner3 = 'mice-3';
+const cardsBanner4 = 'mice-4';
 
 const businessContent = computed(() => [
 	{
@@ -284,10 +310,8 @@ onMounted(() => {
 			left: auto;
 			right: -4%;
 		}
-		img {
-			width: 100%;
+		picture {
 			height: 100%;
-			object-fit: cover;
 		}
 	}
 	&__content {

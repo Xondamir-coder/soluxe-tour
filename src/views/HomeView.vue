@@ -3,15 +3,51 @@
 		<section data-animate class="hero">
 			<div class="hero__wrapper">
 				<div class="hero__images">
-					<img class="hero__image" src="@/assets/hero-3.avif" alt="hero img" />
-					<img class="hero__image" src="@/assets/hero-image-2.avif" alt="hero img" />
-					<img class="hero__image" src="@/assets/hero-image-3.avif" alt="hero img" />
-					<img class="hero__image" src="@/assets/hero-image-4.avif" alt="hero img" />
-					<img class="hero__image" src="@/assets/hero-main.avif" alt="hero img" />
-					<img class="hero__image" src="@/assets/hero-image-5.avif" alt="hero img" />
-					<img class="hero__image" src="@/assets/hero-4.avif" alt="hero img" />
-					<img class="hero__image" src="@/assets/hero-image-8.avif" alt="hero img" />
-					<img class="hero__image" src="@/assets/hero-2.avif" alt="hero img" />
+					<ResponsiveImage
+						original-tag="jpeg"
+						name="hero-3"
+						alt="hero img"
+						class="hero__image" />
+					<ResponsiveImage
+						original-tag="jpeg"
+						name="hero-image-2"
+						alt="hero img"
+						class="hero__image" />
+					<ResponsiveImage
+						original-tag="jpeg"
+						name="hero-image-3"
+						alt="hero img"
+						class="hero__image" />
+					<ResponsiveImage
+						original-tag="jpeg"
+						name="hero-image-4"
+						alt="hero img"
+						class="hero__image" />
+					<ResponsiveImage
+						original-tag="jpeg"
+						name="hero-main"
+						alt="hero img"
+						class="hero__image" />
+					<ResponsiveImage
+						original-tag="jpeg"
+						name="hero-image-5"
+						alt="hero img"
+						class="hero__image" />
+					<ResponsiveImage
+						original-tag="jpeg"
+						name="hero-4"
+						alt="hero img"
+						class="hero__image" />
+					<ResponsiveImage
+						original-tag="jpeg"
+						name="hero-image-8"
+						alt="hero img"
+						class="hero__image" />
+					<ResponsiveImage
+						original-tag="jpeg"
+						name="hero-3"
+						alt="hero img"
+						class="hero__image" />
 				</div>
 				<div class="hero__overlay"></div>
 				<h1 class="hero__title">
@@ -34,22 +70,26 @@
 		</section>
 		<section data-animate class="about">
 			<div class="about__images">
-				<img
-					class="about__image about__image-1"
-					src="@/assets/about-img-1.avif"
-					alt="about img" />
-				<img
-					class="about__image about__image-2"
-					src="@/assets/about-img-2.avif"
-					alt="about img" />
-				<img
-					class="about__image about__image-3"
-					src="@/assets/about-img-3.avif"
-					alt="about img" />
-				<img
-					class="about__image about__image-4"
-					src="@/assets/about-img-4.avif"
-					alt="about img" />
+				<ResponsiveImage
+					original-tag="jpeg"
+					name="about-img-1"
+					alt="about img"
+					class="about__image about__image-1" />
+				<ResponsiveImage
+					original-tag="jpeg"
+					name="about-img-2"
+					alt="about img"
+					class="about__image about__image-2" />
+				<ResponsiveImage
+					original-tag="jpg"
+					name="about-img-3"
+					alt="about img"
+					class="about__image about__image-3" />
+				<ResponsiveImage
+					original-tag="jpeg"
+					name="about-img-4"
+					alt="about img"
+					class="about__image about__image-4" />
 			</div>
 			<div class="about__content">
 				<div
@@ -96,7 +136,10 @@
 				v-for="(content, index) in aboutContent"
 				:key="content.title"
 				:class="`about__row-${index + 1}`">
-				<img class="about__row-img" :src="content.img" />
+				<ResponsiveImage
+					class="about__row-img"
+					:name="content.img"
+					:original-tag="content.tag" />
 				<div class="about__box about__box--small" :class="`about__box-${index + 1}`">
 					<span class="about__label">{{ content.label }}</span>
 					<h1 class="about__title">{{ content.title }}</h1>
@@ -133,7 +176,7 @@
 			</div>
 		</section>
 		<section data-animate>
-			<img class="big-img" src="@/assets/big-img.avif" alt="big img" />
+			<ResponsiveImage name="big-img" original-tag="jpeg" alt="big img" class="big-img" />
 		</section>
 		<Tours />
 		<section data-animate class="everyone">
@@ -160,7 +203,7 @@
 			</div>
 			<div class="experts__container">
 				<div class="experts__box" v-for="content in expertsContent" :key="content.title">
-					<img :src="content.img" alt="banner" />
+					<ResponsiveImage :name="content.img" :original-tag="content.tag" />
 					<h5 class="heading-5">{{ content.title }}</h5>
 					<p>{{ content.text }}</p>
 				</div>
@@ -190,43 +233,43 @@
 				</RouterLink>
 				<ul class="partners__list">
 					<li class="partners__item">
-						<img src="@/assets/partners/hilton.png" alt="partner" />
+						<img src="@/images/partners/hilton.png" alt="partner" />
 					</li>
 					<li class="partners__item">
-						<img src="@/assets/partners/hyatt.png" alt="partner" />
+						<img src="@/images/partners/hyatt.png" alt="partner" />
 					</li>
 					<li class="partners__item">
-						<img src="@/assets/partners/Intercontinental.png" alt="partner" />
+						<img src="@/images/partners/Intercontinental.png" alt="partner" />
 					</li>
 					<li class="partners__item">
-						<img src="@/assets/partners/international.png" alt="partner" />
+						<img src="@/images/partners/international.png" alt="partner" />
 					</li>
 					<li class="partners__item">
-						<img src="@/assets/partners/lia.svg" alt="partner" />
+						<img src="@/images/partners/lia.svg" alt="partner" />
 					</li>
 					<li class="partners__item">
-						<img src="@/assets/partners/lotte.png" alt="partner" />
+						<img src="@/images/partners/lotte.png" alt="partner" />
 					</li>
 					<li class="partners__item">
-						<img src="@/assets/partners/minyoun.svg" alt="partner" />
+						<img src="@/images/partners/minyoun.svg" alt="partner" />
 					</li>
 					<li class="partners__item">
-						<img src="@/assets/partners/movenpick.png" alt="partner" />
+						<img src="@/images/partners/movenpick.png" alt="partner" />
 					</li>
 					<li class="partners__item">
-						<img src="@/assets/partners/radisson.png" alt="partner" />
+						<img src="@/images/partners/radisson.png" alt="partner" />
 					</li>
 					<li class="partners__item">
-						<img src="@/assets/partners/ramada-tashkent.png" alt="partner" />
+						<img src="@/images/partners/ramada-tashkent.png" alt="partner" />
 					</li>
 					<li class="partners__item">
-						<img src="@/assets/partners/ramada.png" alt="partner" />
+						<img src="@/images/partners/ramada.png" alt="partner" />
 					</li>
 					<li class="partners__item">
-						<img src="@/assets/partners/travel cars.png" alt="partner" />
+						<img src="@/images/partners/travel cars.png" alt="partner" />
 					</li>
 					<li class="partners__item">
-						<img src="@/assets/partners/Wyndham.png" alt="partner" />
+						<img src="@/images/partners/Wyndham.png" alt="partner" />
 					</li>
 				</ul>
 			</div>
@@ -239,48 +282,81 @@ import gsap from 'gsap';
 import Lenis from 'lenis';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { computed, onMounted, onUnmounted } from 'vue';
-gsap.registerPlugin(ScrollTrigger);
-import aboutImg1 from '@/assets/about-img-1.avif';
-import aboutImg2 from '@/assets/about-img-2.avif';
-import aboutImg3 from '@/assets/about-img-3.avif';
-import aboutImg4 from '@/assets/about-img-4.avif';
-import baby from '@/assets/icons/baby.svg';
-import love from '@/assets/icons/love.svg';
-import mountain from '@/assets/icons/mountain.svg';
-import work from '@/assets/icons/work.svg';
-import expertsImg1 from '@/assets/experts-1.avif';
-import expertsImg2 from '@/assets/experts-2.avif';
-import expertsImg3 from '@/assets/experts-3.avif';
-import expertsImg4 from '@/assets/experts-4.avif';
+import baby from '@/icons/baby.svg';
+import love from '@/icons/love.svg';
+import mountain from '@/icons/mountain.svg';
+import work from '@/icons/work.svg';
+const aboutImg1 = 'about-img-1';
+const aboutImg2 = 'about-img-2';
+const aboutImg3 = 'about-img-3';
+const aboutImg4 = 'about-img-4';
+const expertsImg1 = 'experts-1';
+const expertsImg2 = 'experts-2';
+const expertsImg3 = 'experts-3';
+const expertsImg4 = 'experts-4';
 import Tours from '@/components/Tours.vue';
 import GridImages from '@/components/GridImages.vue';
 import { i18n } from '@/locale';
+import ResponsiveImage from '@/components/ResponsiveImage.vue';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const letters = computed(() => i18n.global.t('hero-title').split(''));
 const aboutContent = computed(() => [
 	{
 		img: aboutImg1,
+		tag: 'jpeg',
 		label: i18n.global.t('about-label-1'),
 		title: i18n.global.t('about-title-1'),
 		desc: i18n.global.t('about-text-1')
 	},
 	{
 		img: aboutImg2,
+		tag: 'jpeg',
 		label: i18n.global.t('about-label-2'),
 		title: i18n.global.t('about-title-2'),
 		desc: i18n.global.t('about-text-2')
 	},
 	{
 		img: aboutImg3,
+		tag: 'jpg',
 		label: i18n.global.t('about-label-3'),
 		title: i18n.global.t('about-title-3'),
 		desc: i18n.global.t('about-text-3')
 	},
 	{
 		img: aboutImg4,
+		tag: 'jpeg',
 		label: i18n.global.t('about-label-4'),
 		title: i18n.global.t('about-title-4'),
 		desc: i18n.global.t('about-text-4')
+	}
+]);
+
+const expertsContent = computed(() => [
+	{
+		img: expertsImg1,
+		tag: 'jpeg',
+		title: i18n.global.t('experts-title-1'),
+		text: i18n.global.t('experts-text-1')
+	},
+	{
+		img: expertsImg2,
+		tag: 'jpg',
+		title: i18n.global.t('experts-title-2'),
+		text: i18n.global.t('experts-text-2')
+	},
+	{
+		img: expertsImg3,
+		tag: 'jpg',
+		title: i18n.global.t('experts-title-3'),
+		text: i18n.global.t('experts-text-3')
+	},
+	{
+		img: expertsImg4,
+		tag: 'jpeg',
+		title: i18n.global.t('experts-title-4'),
+		text: i18n.global.t('experts-text-4')
 	}
 ]);
 const everyoneContent = computed(() => [
@@ -305,28 +381,7 @@ const everyoneContent = computed(() => [
 		text: i18n.global.t('everyone-text-4')
 	}
 ]);
-const expertsContent = computed(() => [
-	{
-		img: expertsImg1,
-		title: i18n.global.t('experts-title-1'),
-		text: i18n.global.t('experts-text-1')
-	},
-	{
-		img: expertsImg2,
-		title: i18n.global.t('experts-title-2'),
-		text: i18n.global.t('experts-text-2')
-	},
-	{
-		img: expertsImg3,
-		title: i18n.global.t('experts-title-3'),
-		text: i18n.global.t('experts-text-3')
-	},
-	{
-		img: expertsImg4,
-		title: i18n.global.t('experts-title-4'),
-		text: i18n.global.t('experts-text-4')
-	}
-]);
+
 const animations = [];
 
 onMounted(() => {
@@ -538,7 +593,8 @@ gsap.ticker.lagSmoothing(0);
 		display: flex;
 		flex-direction: column;
 		gap: 16px;
-		img {
+		picture {
+			aspect-ratio: 3/2;
 			border-radius: 6px;
 		}
 	}
@@ -804,6 +860,8 @@ gsap.ticker.lagSmoothing(0);
 	}
 	&__image {
 		aspect-ratio: 3 / 1;
+		width: 100%;
+		height: 100%;
 	}
 	&__title {
 		max-width: 95%;
@@ -842,10 +900,5 @@ section {
 }
 .big-img {
 	border-radius: 25px;
-}
-img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
 }
 </style>

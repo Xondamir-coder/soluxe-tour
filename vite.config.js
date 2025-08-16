@@ -1,18 +1,36 @@
-import { fileURLToPath, URL } from 'node:url';
-
 import { defineConfig } from 'vite';
+import { fileURLToPath } from 'url';
+import autoprefixer from 'autoprefixer';
 import vue from '@vitejs/plugin-vue';
-import vueDevTools from 'vite-plugin-vue-devtools';
+import viteCompression from 'vite-plugin-compression';
+import Sitemap from 'vite-plugin-sitemap';
 
-// https://vitejs.dev/config/
 export default defineConfig({
-	plugins: [vue(), vueDevTools()],
+	plugins: [
+		vue(),
+		Sitemap({
+			hostname: 'https://soluxetour.uz'
+		}),
+		viteCompression({ algorithm: 'brotliCompress' })
+	],
 	css: {
-		postcss: './postcss.config.js'
+		postcss: {
+			plugins: [autoprefixer]
+		}
 	},
 	resolve: {
 		alias: {
 			'@': fileURLToPath(new URL('./src', import.meta.url))
+		}
+	},
+	build: {
+		target: 'es2020',
+		minify: 'terser',
+		cssCodeSplit: true,
+		chunkSizeWarningLimit: 500,
+		terserOptions: {
+			compress: { drop_console: true, drop_debugger: true },
+			format: { comments: false }
 		}
 	}
 });

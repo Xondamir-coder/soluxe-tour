@@ -37,6 +37,16 @@ body {
 	line-height: 1.5;
 	overflow-x: hidden;
 }
+picture {
+	width: 100%;
+	display: flex;
+	overflow: hidden;
+}
+img {
+	object-fit: cover;
+	width: 100%;
+	height: auto;
+}
 body.bg-white {
 	background-color: #fff !important;
 }

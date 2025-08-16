@@ -37,7 +37,11 @@
 							{{ $t('card-text-1') }}
 						</p>
 					</div>
-					<img class="cards__image" src="@/assets/card-1.avif" alt="banner" />
+					<ResponsiveImage
+						original-tag="jpeg"
+						name="card-1"
+						alt="banner"
+						class="cards__image" />
 				</div>
 			</div>
 			<div class="cards__item">
@@ -53,7 +57,11 @@
 							{{ $t('card-text-1') }}
 						</p>
 					</div>
-					<img class="cards__image" src="@/assets/card-2.avif" alt="banner" />
+					<ResponsiveImage
+						original-tag="jpeg"
+						name="card-2"
+						alt="banner"
+						class="cards__image" />
 				</div>
 			</div>
 			<div class="cards__item cards__item--last">
@@ -79,43 +87,43 @@
 			<p class="partners__title text-size-medium">{{ $t('best-title') }}</p>
 			<ul class="partners__list">
 				<li class="partners__item">
-					<img src="@/assets/partners/hilton.png" alt="partner" />
+					<img src="@/images/partners/hilton.png" alt="partner" />
 				</li>
 				<li class="partners__item">
-					<img src="@/assets/partners/hyatt.png" alt="partner" />
+					<img src="@/images/partners/hyatt.png" alt="partner" />
 				</li>
 				<li class="partners__item">
-					<img src="@/assets/partners/Intercontinental.png" alt="partner" />
+					<img src="@/images/partners/Intercontinental.png" alt="partner" />
 				</li>
 				<li class="partners__item">
-					<img src="@/assets/partners/international.png" alt="partner" />
+					<img src="@/images/partners/international.png" alt="partner" />
 				</li>
 				<li class="partners__item">
-					<img src="@/assets/partners/lia.svg" alt="partner" />
+					<img src="@/images/partners/lia.svg" alt="partner" />
 				</li>
 				<li class="partners__item">
-					<img src="@/assets/partners/lotte.png" alt="partner" />
+					<img src="@/images/partners/lotte.png" alt="partner" />
 				</li>
 				<li class="partners__item">
-					<img src="@/assets/partners/minyoun.svg" alt="partner" />
+					<img src="@/images/partners/minyoun.svg" alt="partner" />
 				</li>
 				<li class="partners__item">
-					<img src="@/assets/partners/movenpick.png" alt="partner" />
+					<img src="@/images/partners/movenpick.png" alt="partner" />
 				</li>
 				<li class="partners__item">
-					<img src="@/assets/partners/radisson.png" alt="partner" />
+					<img src="@/images/partners/radisson.png" alt="partner" />
 				</li>
 				<li class="partners__item">
-					<img src="@/assets/partners/ramada-tashkent.png" alt="partner" />
+					<img src="@/images/partners/ramada-tashkent.png" alt="partner" />
 				</li>
 				<li class="partners__item">
-					<img src="@/assets/partners/ramada.png" alt="partner" />
+					<img src="@/images/partners/ramada.png" alt="partner" />
 				</li>
 				<li class="partners__item">
-					<img src="@/assets/partners/travel cars.png" alt="partner" />
+					<img src="@/images/partners/travel cars.png" alt="partner" />
 				</li>
 				<li class="partners__item">
-					<img src="@/assets/partners/Wyndham.png" alt="partner" />
+					<img src="@/images/partners/Wyndham.png" alt="partner" />
 				</li>
 			</ul>
 		</section>
@@ -148,12 +156,13 @@
 <script setup>
 import { computed, onMounted } from 'vue';
 import gsap from 'gsap';
-import heartIcon from '@/assets/icons/heart.svg';
-import checkIcon from '@/assets/icons/check.svg';
-import idIcon from '@/assets/icons/id.svg';
+import heartIcon from '@/icons/heart.svg';
+import checkIcon from '@/icons/check.svg';
+import idIcon from '@/icons/id.svg';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Ornament from '@/components/Ornament.vue';
 import { i18n } from '@/locale';
+import ResponsiveImage from '@/components/ResponsiveImage.vue';
 gsap.registerPlugin(ScrollTrigger);
 
 const letters = computed(() => i18n.global.t('about-hero-title').split(''));
@@ -319,7 +328,7 @@ onMounted(() => {
 		align-items: center;
 		overflow-x: hidden;
 
-		img {
+		picture {
 			height: 100%;
 			width: 100%;
 			object-fit: contain;

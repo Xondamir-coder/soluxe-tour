@@ -10,10 +10,14 @@
 					<h6 class="heading-6">{{ content.title }}</h6>
 					<p>{{ content.text }}</p>
 				</div>
-				<img class="hero__banner" src="@/assets/services-hero.avif" alt="hero" />
+				<ResponsiveImage
+					original-tag="jpeg"
+					name="services-hero"
+					alt="hero"
+					class="hero__banner" />
 			</div>
 			<div class="hero__grid">
-				<img src="@/assets/icons/checklist.svg" alt="icon" />
+				<img src="@/icons/checklist.svg" alt="icon" />
 				<h6 class="heading-5">{{ $t('services-hero-title-5') }}</h6>
 				<p>
 					{{ $t('services-hero-text-5') }}
@@ -38,18 +42,21 @@
 					</div>
 				</div>
 				<div class="offer__images">
-					<img
-						:class="{ active: chosenServiceIndex == 0 }"
-						src="@/assets/img-2.avif"
-						alt="banner" />
-					<img
-						:class="{ active: chosenServiceIndex == 1 }"
-						src="@/assets/services-2.avif"
-						alt="banner" />
-					<img
-						:class="{ active: chosenServiceIndex == 2 }"
-						src="@/assets/about-img-4.avif"
-						alt="banner" />
+					<ResponsiveImage
+						original-tag="jpeg"
+						name="img-2"
+						alt="banner"
+						:class="{ active: chosenServiceIndex == 0 }" />
+					<ResponsiveImage
+						original-tag="jpeg"
+						name="services-2"
+						alt="banner"
+						:class="{ active: chosenServiceIndex == 1 }" />
+					<ResponsiveImage
+						original-tag="jpeg"
+						name="about-img-4"
+						alt="banner"
+						:class="{ active: chosenServiceIndex == 2 }" />
 				</div>
 			</div>
 		</section>
@@ -60,7 +67,7 @@
 			</div>
 			<div class="better__container">
 				<div class="better__box" v-for="content in betterContent" :key="content.title">
-					<img :src="content.img" alt="banner" />
+					<ResponsiveImage :name="content.img" :original-tag="content.tag" />
 					<h1 class="heading">{{ content.title }}</h1>
 					<p>{{ content.text }}</p>
 				</div>
@@ -77,7 +84,7 @@
 			</div>
 		</section>
 		<section class="travel" data-animate>
-			<img src="@/assets/services-big.avif" alt="travel" />
+			<ResponsiveImage original-tag="jpeg" name="services-big" alt="travel" />
 			<div class="travel__content">
 				<h1 class="travel__title">{{ $t('travel-title') }}</h1>
 				<p class="text-size-medium">
@@ -95,14 +102,15 @@
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { computed, onMounted, ref } from 'vue';
-import globalIcon from '@/assets/icons/global.svg';
-import ringsIcon from '@/assets/icons/rings.svg';
-import workIcon from '@/assets/icons/work-white.svg';
-import friendshipIcon from '@/assets/icons/friendship.svg';
-import betterImg1 from '@/assets/services-safety.avif';
-import betterImg2 from '@/assets/grid-img-3.avif';
-import betterImg3 from '@/assets/services-humans.avif';
+import globalIcon from '@/icons/global.svg';
+import ringsIcon from '@/icons/rings.svg';
+import workIcon from '@/icons/work-white.svg';
+import friendshipIcon from '@/icons/friendship.svg';
+const betterImg1 = 'services-safety';
+const betterImg2 = 'grid-img-3';
+const betterImg3 = 'services-humans';
 import { i18n } from '@/locale';
+import ResponsiveImage from '@/components/ResponsiveImage.vue';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -145,16 +153,19 @@ const offerContent = computed(() => [
 const betterContent = computed(() => [
 	{
 		img: betterImg1,
+		tag: 'jpg',
 		title: i18n.global.t('better-title-1'),
 		text: i18n.global.t('better-text-1')
 	},
 	{
 		img: betterImg2,
+		tag: 'jpeg',
 		title: i18n.global.t('better-title-2'),
 		text: i18n.global.t('better-text-2')
 	},
 	{
 		img: betterImg3,
+		tag: 'jpg',
 		title: i18n.global.t('better-title-3'),
 		text: i18n.global.t('better-text-3')
 	}
@@ -195,7 +206,7 @@ onMounted(() => {
 	flex-direction: column;
 	gap: 7rem;
 	&.active {
-		img {
+		picture {
 			opacity: 1;
 			transform: translateX(0);
 		}
@@ -224,7 +235,7 @@ onMounted(() => {
 			transition-delay: 400ms;
 		}
 	}
-	img {
+	picture {
 		opacity: 0;
 		transform: translateX(-50%);
 		transition: opacity 1s, transform 1s;
@@ -342,7 +353,7 @@ onMounted(() => {
 			transition-delay: 600ms;
 		}
 
-		img {
+		picture {
 			width: 100%;
 			height: 30rem;
 			object-fit: cover;
@@ -355,7 +366,7 @@ onMounted(() => {
 	flex-direction: column;
 	gap: 8rem;
 	&.active {
-		.offer__images img {
+		.offer__images picture {
 			transform: scale(1);
 		}
 		.offer__grid {
@@ -402,7 +413,7 @@ onMounted(() => {
 			height: 53rem;
 			flex-basis: initial;
 		}
-		img {
+		picture {
 			position: absolute;
 			opacity: 0;
 			transform: scale(0.5);
