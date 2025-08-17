@@ -2,8 +2,8 @@ import sharp from 'sharp';
 import fs from 'fs';
 import path from 'path';
 
-const inputDir = 'src/images/originals';
-const outputDir = 'src/images/resized';
+const inputDir = 'src/images/original';
+const outputDir = 'src/images/processed';
 
 const resizeMap = {
 	512: 0.6,
@@ -20,7 +20,6 @@ const run = async () => {
 
 	for (const file of files) {
 		const inputPath = path.join(inputDir, file);
-		const ext = path.extname(file).slice(1).toLowerCase(); // 'jpg' or 'png'
 		const baseName = path.basename(file, path.extname(file));
 
 		const metadata = await sharp(inputPath).metadata();
@@ -30,14 +29,6 @@ const run = async () => {
 			const targetWidth = Math.round(originalWidth * scale);
 			const image = sharp(inputPath).resize({ width: targetWidth });
 
-			// Only generate fallback (.png/.jpg) for 1920
-			if (label === '1920') {
-				const fallbackPath = path.join(outputDir, `${baseName}-1920.${ext}`);
-				await image.toFile(fallbackPath);
-				console.log(`✅ Created fallback: ${fallbackPath}`);
-			}
-
-			// Always generate AVIF and WebP for all sizes
 			for (const format of additionalFormats) {
 				const outputPath = path.join(outputDir, `${baseName}-${label}.${format}`);
 				await image.toFormat(format).toFile(outputPath);

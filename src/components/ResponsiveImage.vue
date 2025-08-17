@@ -14,6 +14,7 @@
 			:srcset="webp1024"
 			type="image/webp"
 			media="(min-width: 513px) and (max-width: 1024px)" />
+		<source :srcset="webp512" type="image/webp" media="(max-width: 512px)" />
 
 		<!-- Fallback -->
 		<img :src="original" :alt="alt" />
@@ -27,11 +28,12 @@ const props = defineProps({
 	alt: { type: String, default: 'image' }
 });
 
-const avif1920 = new URL(`../images/resized/${props.name}-1920.avif`, import.meta.url).href;
-const avif1024 = new URL(`../images/resized/${props.name}-1024.avif`, import.meta.url).href;
-const avif512 = new URL(`../images/resized/${props.name}-512.avif`, import.meta.url).href;
-const webp1920 = new URL(`../images/resized/${props.name}-1920.webp`, import.meta.url).href;
-const webp1024 = new URL(`../images/resized/${props.name}-1024.webp`, import.meta.url).href;
-const original = new URL(`../images/originals/${props.name}.${props.originalTag}`, import.meta.url)
+const avif1920 = new URL(`../images/processed/${props.name}-1920.avif`, import.meta.url).href;
+const avif1024 = new URL(`../images/processed/${props.name}-1024.avif`, import.meta.url).href;
+const avif512 = new URL(`../images/processed/${props.name}-512.avif`, import.meta.url).href;
+const webp1920 = new URL(`../images/processed/${props.name}-1920.webp`, import.meta.url).href;
+const webp1024 = new URL(`../images/processed/${props.name}-1024.webp`, import.meta.url).href;
+const webp512 = new URL(`../images/processed/${props.name}-512.webp`, import.meta.url).href;
+const original = new URL(`../images/original/${props.name}.${props.originalTag}`, import.meta.url)
 	.href;
 </script>

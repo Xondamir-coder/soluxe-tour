@@ -157,7 +157,7 @@ onUnmounted(() => document.body.classList.remove('bg-white'));
 		font-weight: 400;
 	}
 	&__left {
-		background-image: url(@/images/resized/contacts-1920.avif);
+		background-image: url(@/images/processed/contacts-1920.avif);
 		background-size: cover;
 		background-repeat: no-repeat;
 		display: grid;
